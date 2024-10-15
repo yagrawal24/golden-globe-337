@@ -10,7 +10,6 @@ For CS 337
 3) Remove "@" symbols, remove usernames
 4) Potentially remove #'s
 5) Translate all languages to English
-6) Spell corrections
-7) Username, timestamp
+6) Username, timestamp
 
 ### Second: 

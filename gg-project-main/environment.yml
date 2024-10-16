@@ -14,3 +14,5 @@ dependencies:
       - langdetect  # Install langdetect via pip
       - pandas
       - emoji
+      - cairosvg
+      - matplotlib

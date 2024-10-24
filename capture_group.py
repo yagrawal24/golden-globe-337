@@ -13,7 +13,8 @@ doc = nlp(text)
 
 # Define a regex pattern to capture award-related words
 # win_keywords = r"(wins|winner|awarded|received)"
-win_keywords = r"(win|wins|won|winner|victor|victory|receive|received|receives|awarded)"
+# win_keywords = r"(win|wins|won|winner|victor|victory|receive|received|receives|awarded)"
+win_keywords = r"(\bwin\b|\bwins\b)"
 
 def extract_entities(doc):
     """Extract named entities from the SpaCy doc."""

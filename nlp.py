@@ -189,6 +189,12 @@ def extract_entities(text):
 ('jodie foster', 'PERSON')
 '''
 
+# for token in doc:
+#     if (token.dep_ == 'nsubj'):
+#         nsubj = token.text
+#     elif (token.dep_ == 'dobj'):
+#         dobj = token.text
+
 alleged_winner = ""
 subject = []
 actual_winner = ""
@@ -197,17 +203,10 @@ for ent in extract_entities(text):
     if ent[1] == "PERSON":
         alleged_winner = ent[0]
 
-# for token in doc:
-#     if (token.dep_ == 'nsubj'):
-#         nsubj = token.text
-#     elif (token.dep_ == 'dobj'):
-#         dobj = token.text
-
 for token in doc:
     # extract subject
     if (token.dep_ == 'nsubj'):
         subject.append(token.text)
-        
 
 # print(subject)
 # print(alleged_winner)

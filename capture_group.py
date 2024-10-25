@@ -1,5 +1,6 @@
 import spacy
 import re
+import pandas as pd
 
 # Load the SpaCy English language model
 nlp = spacy.load('en_core_web_sm')
@@ -45,6 +46,23 @@ def is_winner_keyword_near_person(doc, person_name):
                         return True
     return False
 
+def extract_award_name(text, win_match):
+    if win_match is not None:
+        words_after = text.split()[win_match + 1 : win_match + 4]
+        if "best" in words_after:
+            # Use spaCy NLP processing
+            doc = nlp(text)
+            
+            # Look for noun phrases containing the word "best"
+            award_candidates = []
+            for chunk in doc.noun_chunks:
+                # Check if the phrase contains "best" and has relevant structure
+                if "best" in chunk.text.lower():
+                    award_candidates.append(chunk.text)
+
+            return award_candidates if award_candidates else None
+    return None
+
 def find_award_winner(text):
     """Attempt to extract the person who won an award based on text."""
     # Apply the NLP pipeline to the text
@@ -52,9 +70,13 @@ def find_award_winner(text):
     
     # First, find if the tweet talks about winning or awards using regex
     if re.search(win_keywords, text, re.IGNORECASE):
+
+        win_match = next((index for index, word in enumerate(text.split()) if re.search(win_keywords, word, re.IGNORECASE)), None)
         
         alleged_winner = None
         subject = None
+        award = ""
+        confident_pred = False
         
         # Extract named entities
         entities = extract_entities(doc)
@@ -74,14 +96,35 @@ def find_award_winner(text):
                 if subject and is_name_match(alleged_winner, subject):
                     # Check if a win-related keyword is near the PERSON
                     if is_winner_keyword_near_person(doc, alleged_winner):
-                        return f"The award winner is: {alleged_winner}"
+                        confident_pred = True
+                        # return f"The award winner is: {alleged_winner}"
         
-        # If no clear winner keyword is near the PERSON, return possible winner
-        if alleged_winner:
-            return f"Possible award winner: {alleged_winner}"
+        # # If no clear winner keyword is near the PERSON, return possible winner
+        # if alleged_winner:
+        #     return f"Possible award winner: {alleged_winner}"
+
+        # Getting award name
+        award = extract_award_name(text, win_match)
+
+        return award
+        # pattern = rf"(?:{'|'.join(win_keywords)})\s+(.+?)\s+(award|prize|honor|medal|trophy)"
+        # match = re.search(pattern, text, re.IGNORECASE)
+        
+        # if match:
+        #     award_name = match.group(1) + " " + match.group(2)
+        #     return f"The award winner is: {alleged_winner} for {award_name}"
     
     return "No award mention found."
 
-
 # Test the function
-print(find_award_winner(text))
+win_data = pd.read_csv('wins.csv')['text']
+# print(win_data)
+# output = win_data.head(500).apply(lambda x: find_award_winner(x))
+
+# output.to_csv('award_names.csv')
+
+output = win_data.head(500).apply(lambda x: (x, find_award_winner(x)))
+output_df = pd.DataFrame(output.tolist(), columns=["text", "extracted_award"])
+
+# Save the DataFrame to a CSV file
+output_df.to_csv('award_names_with_text.csv', index=False)

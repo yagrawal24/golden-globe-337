@@ -107,74 +107,71 @@ win_keywords = r"(win|wins|won|winner|awarded|receive|received|gets)"
 #     ]
 
 def extract_entities(doc):
-    """Extract contiguous PERSON entities, including multi-token names."""
-    entities = []
-    temp_entity = []
+    """Extract named entities from the SpaCy doc, ensuring full names are captured."""
+    return [
+        ent.text for ent in doc.ents
+        if ent.label_ == "PERSON" and not (ent.text.startswith('@') or ent.text.lower().startswith('rt @'))
+    ]
 
-    for ent in doc.ents:
-        if ent.label_ == "PERSON" and not (ent.text.startswith('@') or ent.text.lower().startswith('rt @')):
-            if temp_entity and ent.start == temp_entity[-1].end:
-                temp_entity.append(ent)  # Add contiguous name parts
-            else:
-                if temp_entity:
-                    entities.append((" ".join([e.text for e in temp_entity]), "PERSON"))
-                temp_entity = [ent]  # Start new entity
+def is_name_match(person_name, subject_name):
+    """Compare if parts of the names match (case insensitive)."""
+    person_parts = person_name.lower().split()
+    subject_parts = subject_name.lower().split()
+    return any(part in person_parts for part in subject_parts)
 
-    # Append last entity if exists
-    if temp_entity:
-        entities.append((" ".join([e.text for e in temp_entity]), "PERSON"))
-
-    return entities
+def is_winner_keyword_near_person(doc, person_name):
+    """Check if win-related keywords appear near a PERSON entity in the text."""
+    for token in doc:
+        if re.search(win_keywords, token.text, re.IGNORECASE):
+            for ent in doc.ents:
+                if ent.label_ == "PERSON" and person_name.lower() in ent.text.lower():
+                    if abs(token.i - ent.start) <= 3 or abs(token.i - ent.end) <= 3:
+                        return True
+    return False
 
 def extract_award_category(text, doc):
-    """Extract award category by first using regex to find a match, and then using SpaCy token parsing."""
-    # Step 1: Try to extract award category using regex for common patterns
-    # regex_pattern = re.compile(r"(?:(?:\w+\s)*?)(?:win|wins|won|winner|awarded|receive|received|gets)(?:\s+(.*?))(?:\s*http)?")
-    # match = regex_pattern.search(text)
-    # if match:
-    #     return match.group(1)  # Return if regex finds a match
+    """Extract award category using regex and SpaCy noun phrase parsing."""
+    win_match = re.search(win_keywords, text, re.IGNORECASE)
+    if win_match:
+        win_index = win_match.end()
+        words_after = text[win_index:].split()[:4]
+        
+        if "best" in [word.lower() for word in words_after]:
+            award_candidates = [chunk.text for chunk in doc.noun_chunks if "best" in chunk.text.lower()]
+            return award_candidates[0] if award_candidates else None
 
-    # Step 2: Fallback - Use SpaCy dependency parsing for additional flexibility
     award_tokens = []
     capturing = False
     for token in doc:
-        # Only add to award tokens if token doesn't start with "@" or "rt @"
         if token.dep_ in {'amod', 'compound', 'dobj'} and token.pos_ in {'ADJ', 'NOUN'}:
             if not token.text.startswith('@') and not token.text.lower().startswith('rt @'):
                 award_tokens.append(token.text)
                 capturing = True
         elif capturing and token.dep_ not in {'amod', 'compound', 'dobj'}:
             break
-
     return " ".join(award_tokens) if award_tokens else None
-
 
 def find_award_winner(text):
     """Extract award information from text."""
     doc = nlp(text)
-    
-    # Check if the tweet mentions winning or awards
     if re.search(win_keywords, text, re.IGNORECASE):
         winners = []
         entities = extract_entities(doc)
-        award_category = extract_award_category(text, doc)  # Pass both text and doc here
+        award_category = extract_award_category(text, doc)
 
-        # Identify all PERSON entities
         for ent in entities:
-            if re.search(win_keywords, text, re.IGNORECASE):
-                winners.append(ent[0])  # Append full name
+            if is_winner_keyword_near_person(doc, ent):
+                winners.append(ent)
         
-        # Return structured dictionary with possible award information
-        if winners:
-            return {
-                "winner": winners,
-                "nominees": winners,  # This could be further refined if more data is available
-                "presenters": [],
-                "award_category": award_category or "N/A"
-            }
+        return {
+            "winner": winners or None,
+            "nominees": winners or None,
+            "presenters": [],
+            "award_category": award_category or "N/A"
+        }
 
     return {"winner": None, "nominees": None, "presenters": None, "award_category": None}
 
-# Apply function and save to CSV
+# Example usage with test DataFrame
 test['spacy'] = test['text'].apply(find_award_winner)
 test.to_csv('results.csv', index=False)

@@ -46,21 +46,38 @@ def is_winner_keyword_near_person(doc, person_name):
                         return True
     return False
 
-def extract_award_name(text, win_match):
-    if win_match is not None:
-        words_after = text.split()[win_match + 1 : win_match + 4]
-        if "best" in words_after:
-            # Use spaCy NLP processing
-            doc = nlp(text)
+# def extract_award_name(text, win_match):
+#     if win_match is not None:
+#         words_after = text.split()[win_match + 1 : win_match + 4]
+#         if "best" in words_after:
+#             # Use spaCy NLP processing
+#             doc = nlp(text)
             
-            # Look for noun phrases containing the word "best"
-            award_candidates = []
-            for chunk in doc.noun_chunks:
-                # Check if the phrase contains "best" and has relevant structure
-                if "best" in chunk.text.lower():
-                    award_candidates.append(chunk.text)
+#             # Look for noun phrases containing the word "best"
+#             award_candidates = []
+#             for chunk in doc.noun_chunks:
+#                 # Check if the phrase contains "best" and has relevant structure
+#                 if "best" in chunk.text.lower():
+#                     award_candidates.append(chunk.text)
 
-            return award_candidates if award_candidates else None
+#             return award_candidates if award_candidates else None
+#     return None
+
+def extract_award_name_after_best(doc):
+    """Extract the full award name starting from 'best' using dependency parsing."""
+    for token in doc:
+        if token.text.lower() == 'best':
+            # Start from the 'best' token
+            award_tokens = [token]
+            # Use a list to collect tokens to the right of 'best' that are part of the award name
+            for right_token in doc[token.i + 1:]:
+                # Stop if we reach a punctuation mark or a coordinating conjunction
+                if right_token.pos_ in ('PUNCT', 'CCONJ', 'VERB') or right_token.dep_ == 'punct':
+                    break
+                award_tokens.append(right_token)
+            # Combine the tokens to form the award name
+            award_name = ' '.join([t.text for t in award_tokens])
+            return award_name
     return None
 
 def find_award_winner(text):
@@ -71,7 +88,7 @@ def find_award_winner(text):
     # First, find if the tweet talks about winning or awards using regex
     if re.search(win_keywords, text, re.IGNORECASE):
 
-        win_match = next((index for index, word in enumerate(text.split()) if re.search(win_keywords, word, re.IGNORECASE)), None)
+        # win_match = next((index for index, word in enumerate(text.split()) if re.search(win_keywords, word, re.IGNORECASE)), None)
         
         alleged_winner = None
         subject = None
@@ -104,7 +121,8 @@ def find_award_winner(text):
         #     return f"Possible award winner: {alleged_winner}"
 
         # Getting award name
-        award = extract_award_name(text, win_match)
+        # award = extract_award_name(text, win_match)
+        award = extract_award_name_after_best(doc)
 
         return award
         # pattern = rf"(?:{'|'.join(win_keywords)})\s+(.+?)\s+(award|prize|honor|medal|trophy)"
@@ -119,12 +137,12 @@ def find_award_winner(text):
 # Test the function
 win_data = pd.read_csv('wins.csv')['text']
 # print(win_data)
-# output = win_data.head(500).apply(lambda x: find_award_winner(x))
+output = win_data.apply(lambda x: find_award_winner(x))
 
-# output.to_csv('award_names.csv')
+output.to_csv('award_names.csv')
 
-output = win_data.head(500).apply(lambda x: (x, find_award_winner(x)))
-output_df = pd.DataFrame(output.tolist(), columns=["text", "extracted_award"])
+# output = win_data.head(500).apply(lambda x: (x, find_award_winner(x)))
+# output_df = pd.DataFrame(output.tolist(), columns=["text", "extracted_award"])
 
 # Save the DataFrame to a CSV file
-output_df.to_csv('award_names_with_text.csv', index=False)
+# output_df.to_csv('award_names_with_text.csv', index=False)

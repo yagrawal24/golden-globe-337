@@ -124,8 +124,13 @@ def find_award_winner(text):
         # award = extract_award_name(text, win_match)
         award = extract_award_name_after_best(doc)
         
+        hope_regex = "hope|wish|think|believe|should"
+        nominee_match = re.search(hope_regex, text, re.IGNORECASE)
+        
         if award != None:
-            return f"{alleged_winner} | {award}"
+            if nominee_match != None:
+                return f"{alleged_winner} | {award} | nominee"
+            return f"{alleged_winner} | {award} | winner"
 
         # return award (?:(win|wins)\s+
         word_list = ["award", "prize", "honor", "medal", "trophy"]
@@ -134,12 +139,14 @@ def find_award_winner(text):
         
         if match:
             award_name = match.group(1)
-            return f"{alleged_winner} | {award_name}"
+            if nominee_match != None:
+                return f"{alleged_winner} | {award_name} | nominee"
+            return f"{alleged_winner} | {award_name} | winner"
     
     return None
 
 # Test the function
-win_data = pd.read_csv('wins.csv')['text'].tail(1000)
+win_data = pd.read_csv('wins.csv')['text']
 # print(win_data)
 output = win_data.apply(lambda x: find_award_winner(x))
 

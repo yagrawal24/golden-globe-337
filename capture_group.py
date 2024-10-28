@@ -123,19 +123,23 @@ def find_award_winner(text):
         # Getting award name
         # award = extract_award_name(text, win_match)
         award = extract_award_name_after_best(doc)
-
-        return award
-        # pattern = rf"(?:{'|'.join(win_keywords)})\s+(.+?)\s+(award|prize|honor|medal|trophy)"
-        # match = re.search(pattern, text, re.IGNORECASE)
         
-        # if match:
-        #     award_name = match.group(1) + " " + match.group(2)
-        #     return f"The award winner is: {alleged_winner} for {award_name}"
+        if award != None:
+            return f"{alleged_winner} | {award}"
+
+        # return award (?:(win|wins)\s+
+        word_list = ["award", "prize", "honor", "medal", "trophy"]
+        pattern = r'wins\s+(.*?\b(?:' + '|'.join(word_list) + r')\b)'
+        match = re.search(pattern, text, re.IGNORECASE)
+        
+        if match:
+            award_name = match.group(1)
+            return f"{alleged_winner} | {award_name}"
     
-    return "No award mention found."
+    return None
 
 # Test the function
-win_data = pd.read_csv('wins.csv')['text']
+win_data = pd.read_csv('wins.csv')['text'].tail(1000)
 # print(win_data)
 output = win_data.apply(lambda x: find_award_winner(x))
 

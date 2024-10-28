@@ -216,18 +216,65 @@ import spacy
 # Load the SpaCy model
 nlp = spacy.load('en_core_web_sm')
 
-def extract_full_name(sentence):
-    """Extract full names from a given sentence."""
-    # Process the sentence using the SpaCy model
-    doc = nlp(sentence)
+# def extract_full_name(sentence):
+#     """Extract full names from a given sentence."""
+#     # Process the sentence using the SpaCy model
+#     doc = nlp(sentence)
     
-    # Extract entities of type 'PERSON'
-    full_names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
+#     # Extract entities of type 'PERSON'
+#     full_names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
     
-    return full_names
+#     return full_names
 
-# Example usage
-sentence = "Chris Evans won the award, while Scarlett Johansson was nominated."
-full_names = extract_full_name(sentence)
+# # Example usage
+# sentence = "Chris Evans won the award, while Scarlett Johansson was nominated."
+# full_names = extract_full_name(sentence)
 
-print(full_names)  # Output: ['Chris Evans', 'Scarlett Johansson']
+# print(full_names)  # Output: ['Chris Evans', 'Scarlett Johansson']
+
+# text = 'rt @kriskling pretty sweet they had president clinton introduce the movie lincoln nominated for best motion picture drama'
+'''
+rt: npadvmod
+@kriskling: acl
+pretty: advmod
+sweet: acomp
+they: nsubj
+had: ROOT
+president: compound
+clinton: nsubj
+introduce: ccomp
+the: det
+movie: compound
+lincoln: dobj
+nominated: acl
+for: prep
+best: amod
+motion: compound
+picture: compound
+drama: pobj
+'''
+
+text = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
+'''
+rt: nmod
+@perezhilton: compound
+@benaffleck: compound
+argo: nsubj
+wins: ROOT
+best: amod
+drama: dobj
+at: prep
+the: det
+golden: amod
+globes: pobj
+'''
+
+def extract_nominee(text):
+    doc = nlp(text)
+
+    for token in doc:
+        # if (token.dep_ == 'nsubj'):
+            # print(f'{token}: {token.dep_}')
+        print(f'{token}: {token.dep_}')
+
+extract_nominee(text)

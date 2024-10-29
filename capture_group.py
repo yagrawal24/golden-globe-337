@@ -21,6 +21,13 @@ def extract_entities(doc):
     """Extract named entities from the SpaCy doc."""
     return [(ent.text, ent.label_) for ent in doc.ents]
 
+# def extract_entities(doc):
+#     """Extract named entities from the SpaCy doc, ensuring full names are captured."""
+#     return [
+#         ent.text for ent in doc.ents
+#         if ent.label_ == "PERSON" and not (ent.text.startswith('@') or ent.text.lower().startswith('rt @'))
+#     ]
+
 def is_name_match(person_name, subject_name):
     """Compare if parts of the names match (case insensitive)."""
     # Normalize both names by converting to lowercase
@@ -106,7 +113,7 @@ def find_award_winner(text):
         
         # Find the PERSON entity
         for ent in entities:
-            if ent[1] == "PERSON":
+            if ent[1] == "PERSON" and not (ent[0].startswith('@') or ent[0].lower().startswith('rt @')):
                 alleged_winner = ent[0]
                 
                 # Check if the subject and PERSON entity match
@@ -124,8 +131,13 @@ def find_award_winner(text):
         # award = extract_award_name(text, win_match)
         award = extract_award_name_after_best(doc)
         
+        hope_regex = "hope|wish|think|believe|should"
+        nominee_match = re.search(hope_regex, text, re.IGNORECASE)
+        
         if award != None:
-            return f"{alleged_winner} | {award}"
+            if nominee_match != None:
+                return f"{alleged_winner} | {award} | nominee"
+            return f"{alleged_winner} | {award} | winner"
 
         # return award (?:(win|wins)\s+
         word_list = ["award", "prize", "honor", "medal", "trophy"]
@@ -134,12 +146,14 @@ def find_award_winner(text):
         
         if match:
             award_name = match.group(1)
-            return f"{alleged_winner} | {award_name}"
+            if nominee_match != None:
+                return f"{alleged_winner} | {award_name} | nominee"
+            return f"{alleged_winner} | {award_name} | winner"
     
     return None
 
 # Test the function
-win_data = pd.read_csv('wins.csv')['text'].tail(1000)
+win_data = pd.read_csv('wins.csv')['text']
 # print(win_data)
 output = win_data.apply(lambda x: find_award_winner(x))
 

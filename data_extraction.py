@@ -1,6 +1,9 @@
 import pandas as pd
 import re
 import spacy
+import emoji
+from ftfy import fix_text
+import unidecode
 
 cleaned_data = pd.read_csv('text_cleaned.csv')['text']
 

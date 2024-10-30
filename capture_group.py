@@ -30,18 +30,32 @@ def extract_full_subject_as_nominee(doc):
     return None
 
 def extract_award_name_after_best(doc):
-    """Extract the full award name starting from 'best' using dependency parsing."""
-    for token in doc:
+    """Extract the full award name starting from 'Best' using pattern matching and dependency parsing."""
+    award_phrases = []
+    for i, token in enumerate(doc):
+        # Look for 'Best' (case-insensitive)
         if token.text.lower() == 'best':
             award_tokens = [token]
-            for right_token in doc[token.i + 1:]:
-                if right_token.pos_ in ('PUNCT', 'CCONJ', 'VERB', 'ADP', 'DET') or right_token.dep_ == 'punct':
+            # Collect tokens that likely belong to the award name
+            for j in range(i + 1, len(doc)):
+                next_token = doc[j]
+                # Stop if we hit punctuation that likely ends the award name
+                if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@') or next_token.dep_ == 'punct':
                     break
-                award_tokens.append(right_token)
-            award_name = ' '.join([t.text for t in award_tokens])
-            return award_name
+                # Stop if we hit verbs that likely indicate the start of a new clause
+                if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
+                    break
+                award_tokens.append(next_token)
+            award_phrase = ' '.join([t.text for t in award_tokens])
+            # Clean up any trailing conjunctions or prepositions
+            award_phrase = award_phrase.strip()
+            if award_phrase:
+                award_phrases.append(award_phrase)
+    # Return the longest award phrase found
+    if award_phrases:
+        return max(award_phrases, key=len)
     return None
-
+    
 def extract_award_name_before_award(doc):
     """Extract the full award name preceding 'award' using dependency parsing."""
     for token in doc:

@@ -40,7 +40,7 @@ def extract_award_name_after_best(doc):
             for j in range(i + 1, len(doc)):
                 next_token = doc[j]
                 # Stop if we hit punctuation that likely ends the award name
-                if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@') or next_token.dep_ == 'punct':
+                if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or next_token.dep_ == 'punct':
                     break
                 # Stop if we hit verbs that likely indicate the start of a new clause
                 if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
@@ -55,7 +55,6 @@ def extract_award_name_after_best(doc):
     if award_phrases:
         return max(award_phrases, key=len)
     return None
-    
 def extract_award_name_before_award(doc):
     """Extract the full award name preceding 'award' using dependency parsing."""
     for token in doc:
@@ -146,4 +145,4 @@ output_df = pd.DataFrame({
 })
 
 # Save the output
-output_df.to_csv('award_names.csv', index=False)
+output_df.to_csv('award_names_2.csv', index=False)

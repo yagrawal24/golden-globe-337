@@ -216,18 +216,96 @@ import spacy
 # Load the SpaCy model
 nlp = spacy.load('en_core_web_sm')
 
-def extract_full_name(sentence):
-    """Extract full names from a given sentence."""
-    # Process the sentence using the SpaCy model
-    doc = nlp(sentence)
+# def extract_full_name(sentence):
+#     """Extract full names from a given sentence."""
+#     # Process the sentence using the SpaCy model
+#     doc = nlp(sentence)
     
-    # Extract entities of type 'PERSON'
-    full_names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
+#     # Extract entities of type 'PERSON'
+#     full_names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
     
-    return full_names
+#     return full_names
 
-# Example usage
-sentence = "Chris Evans won the award, while Scarlett Johansson was nominated."
-full_names = extract_full_name(sentence)
+# # Example usage
+# sentence = "Chris Evans won the award, while Scarlett Johansson was nominated."
+# full_names = extract_full_name(sentence)
 
-print(full_names)  # Output: ['Chris Evans', 'Scarlett Johansson']
+# print(full_names)  # Output: ['Chris Evans', 'Scarlett Johansson']
+
+# text = 'rt @kriskling pretty sweet they had president clinton introduce the movie lincoln nominated for best motion picture drama'
+'''
+rt: npadvmod
+@kriskling: acl
+pretty: advmod
+sweet: acomp
+they: nsubj
+had: ROOT
+president: compound
+clinton: nsubj
+introduce: ccomp
+the: det
+movie: compound
+lincoln: dobj
+nominated: acl
+for: prep
+best: amod
+motion: compound
+picture: compound
+drama: pobj
+'''
+
+text = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
+'''
+rt: nmod
+@perezhilton: compound
+@benaffleck: compound
+argo: nsubj
+wins: ROOT
+best: amod
+drama: dobj
+at: prep
+the: det
+golden: amod
+globes: pobj
+'''
+
+# def extract_nominee(text):
+#     doc = nlp(text)
+
+#     for token in doc:
+#         # if (token.dep_ == 'nsubj'):
+#             # print(f'{token}: {token.dep_}')
+#         print(f'{token}: {token.dep_}')
+
+# extract_nominee(text)
+
+def extract_nominee_and_award(doc):
+    """Extract the nominee (subject) and the award (object)."""
+    nominee = None
+    award = None
+    for token in doc:
+        # Extract the subject (nsubj) which is typically the nominee
+        if token.dep_ == 'nsubj' and token.head.text in ['wins', 'won', 'receives']:
+            nominee = token.text
+        
+        # Extract the award (dobj) and modifier (amod), typically following 'best' or similar
+        if token.dep_ == 'dobj' and token.head.text in ['wins', 'won', 'receives']:
+            # Look for the adjective modifier 'best' or similar award-related words
+            award = ' '.join([child.text for child in token.lefts if child.dep_ == 'amod']) + ' ' + token.text
+            
+    return nominee, award
+
+def find_award_winner(text):
+    """Extract the winner and award from the text."""
+    doc = nlp(text)
+    
+    # Extract the nominee (subject) and the award (direct object)
+    nominee, award = extract_nominee_and_award(doc)
+    
+    if nominee and award:
+        return f"{nominee} | {award} | winner"
+    return None
+
+# Test the function
+result = find_award_winner(text)
+print(result)

@@ -8,7 +8,7 @@ nlp = spacy.load('en_core_web_sm')
 cleaned_df = pd.read_csv('text_cleaned.csv')
 
 # Define presenter-related keywords
-presenter_keywords = r'\b(presenter|presenting|presented|presents|present)\b'
+presenter_keywords = r'\b(presenter|presenting|presented|presents|present|)\b'
 
 # Filter tweets containing presenter-related keywords using the 'text' column
 presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)]

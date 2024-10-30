@@ -65,14 +65,28 @@ def find_award_winner(text):
 
         # Extract the award category
         award_category = extract_award_name_after_best(doc)
+        
+        hope_regex = "hope|wish|think|believe|should"
+        nominee_match = re.search(hope_regex, text, re.IGNORECASE)
+        
+        if award_category != None:
+            if nominee_match != None:
+                return f"{nominee} | {award_category} | nominee"
+            return f"{nominee} | {award_category} | winner"
 
-        # Structure the output as a formatted string
-        if nominee and award_category:
-            return f"Winner: {nominee}, Award Category: {award_category}"
-        elif award_category:
-            return f"Winner: None, Award Category: {award_category}"
+        # return award (?:(win|wins)\s+
+        word_list = ["award", "prize", "honor", "medal", "trophy"]
+        pattern = r'wins\s+(.*?\b(?:' + '|'.join(word_list) + r')\b)'
+        match = re.search(pattern, text, re.IGNORECASE)
+        
+        if match:
+            award_category = match.group(1)
+            if nominee_match != None:
+                return f"{nominee} | {award_category} | nominee"
+            return f"{nominee} | {award_category} | winner"
     
-    return "Winner: None, Award Category: N/A"
+    return None
+
 
 # Test the function with multiple test cases
 text1 = 'game change wins best miniseries or tv movie'
@@ -86,6 +100,7 @@ print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
 
 # Load the dataset and apply the function
 win_data = pd.read_csv('wins.csv')['text']
+
 output = win_data.apply(lambda x: find_award_winner(x))
 
 # Create a DataFrame with "Tweet" and "Output" columns

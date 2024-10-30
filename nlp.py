@@ -269,12 +269,43 @@ golden: amod
 globes: pobj
 '''
 
-def extract_nominee(text):
-    doc = nlp(text)
+# def extract_nominee(text):
+#     doc = nlp(text)
 
+#     for token in doc:
+#         # if (token.dep_ == 'nsubj'):
+#             # print(f'{token}: {token.dep_}')
+#         print(f'{token}: {token.dep_}')
+
+# extract_nominee(text)
+
+def extract_nominee_and_award(doc):
+    """Extract the nominee (subject) and the award (object)."""
+    nominee = None
+    award = None
     for token in doc:
-        # if (token.dep_ == 'nsubj'):
-            # print(f'{token}: {token.dep_}')
-        print(f'{token}: {token.dep_}')
+        # Extract the subject (nsubj) which is typically the nominee
+        if token.dep_ == 'nsubj' and token.head.text in ['wins', 'won', 'receives']:
+            nominee = token.text
+        
+        # Extract the award (dobj) and modifier (amod), typically following 'best' or similar
+        if token.dep_ == 'dobj' and token.head.text in ['wins', 'won', 'receives']:
+            # Look for the adjective modifier 'best' or similar award-related words
+            award = ' '.join([child.text for child in token.lefts if child.dep_ == 'amod']) + ' ' + token.text
+            
+    return nominee, award
 
-extract_nominee(text)
+def find_award_winner(text):
+    """Extract the winner and award from the text."""
+    doc = nlp(text)
+    
+    # Extract the nominee (subject) and the award (direct object)
+    nominee, award = extract_nominee_and_award(doc)
+    
+    if nominee and award:
+        return f"{nominee} | {award} | winner"
+    return None
+
+# Test the function
+result = find_award_winner(text)
+print(result)

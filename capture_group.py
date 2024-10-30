@@ -8,6 +8,8 @@ nlp = spacy.load('en_core_web_sm')
 # Define regex pattern to capture award-related keywords
 win_keywords = r"(\bwin\b|\bwins\b|\bwon\b|\bawarded\b)"
 
+nominee_keywords = r"(\bnominated\b|\bnominee\b|\bnomination\b|\bhope\b|\bwish\b|\bthink\b|\bbelieve\b|\bshould\b)"
+
 def extract_entities_as_nominee(doc):
     """Extract named entities that could serve as a nominee/winner."""
     for ent in doc.ents:
@@ -87,6 +89,19 @@ def find_award_winner(text):
     
     return None
 
+def find_nominee(text):
+    """Extract nominee information."""
+    filtered_text = ignore_rt_and_mentions(text)
+    doc = nlp(filtered_text)
+    
+    if re.search(nominee_keywords, filtered_text, re.IGNORECASE):
+        nominee = extract_full_subject_as_nominee(doc)
+        if not nominee:
+            nominee = extract_entities_as_nominee(doc)
+        award_category = extract_award_name_after_best(doc)
+        if nominee and award_category:
+            return f"{nominee} | {award_category} | nominee"
+    return None
 
 # Test the function with multiple test cases
 text1 = 'game change wins best miniseries or tv movie'
@@ -100,14 +115,14 @@ print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
 
 # Load the dataset and apply the function
 win_data = pd.read_csv('wins.csv')['text']
+# nominee_data = pd.read_csv('nominees.csv')['text']
 
-output = win_data.apply(lambda x: find_award_winner(x))
+win_output = win_data.apply(find_award_winner)
+# nom_output = nominee_data.apply(find_nominee)
 
 # Create a DataFrame with "Tweet" and "Output" columns
-output_df = pd.DataFrame({
-    'Tweet': win_data,
-    'Output': output
-})
+# output = pd.concat([win_output, nom_output])
 
 # Save the output
-output_df.to_csv('award_names.csv', index=False)
+# output.to_csv('winners_nominees.csv', index=False)
+win_output.to_csv('winners_and_awards.csv')

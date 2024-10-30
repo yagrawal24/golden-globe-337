@@ -7,7 +7,6 @@ nlp = spacy.load('en_core_web_sm')
 
 # Define regex pattern to capture award-related keywords
 win_keywords = r"(\bwin\b|\bwins\b|\bwon\b|\bawarded\b)"
-nominee_keywords = r"\bnominated\b|\bnominee\b|\bnomination\b|\bhope\b|\bwish\b|\bthink\b|\bbelieve\b|\bshould\b"
 
 def extract_entities_as_nominee(doc):
     """Extract named entities that could serve as a nominee/winner."""
@@ -50,60 +49,50 @@ def ignore_rt_and_mentions(text):
     return ' '.join(filtered_tokens)
 
 def find_award_winner(text):
-    """Extract award information for winners."""
+    """Attempt to extract award information and return a structured output."""
+    
+    # Ignore 'rt' and mentions but continue with the rest of the tweet
     filtered_text = ignore_rt_and_mentions(text)
+    
     doc = nlp(filtered_text)
     
+    # Check if the tweet mentions winning or awards
     if re.search(win_keywords, filtered_text, re.IGNORECASE):
+        # Extract the nominee (winner)
         nominee = extract_full_subject_as_nominee(doc)
         if not nominee:
             nominee = extract_entities_as_nominee(doc)
-        award_category = extract_award_name_after_best(doc)
-        if nominee and award_category:
-            return {'winner': nominee, 'award_category': award_category}
-    return {'winner': None, 'award_category': None}
 
-def find_nominee(text):
-    """Extract nominee information."""
-    filtered_text = ignore_rt_and_mentions(text)
-    doc = nlp(filtered_text)
+        # Extract the award category
+        award_category = extract_award_name_after_best(doc)
+
+        # Structure the output as a formatted string
+        if nominee and award_category:
+            return f"Winner: {nominee}, Award Category: {award_category}"
+        elif award_category:
+            return f"Winner: None, Award Category: {award_category}"
     
-    if re.search(nominee_keywords, filtered_text, re.IGNORECASE):
-        nominee = extract_full_subject_as_nominee(doc)
-        if not nominee:
-            nominee = extract_entities_as_nominee(doc)
-        award_category = extract_award_name_after_best(doc)
-        if nominee and award_category:
-            return {'nominee': nominee, 'award_category': award_category}
-    return {'nominee': None, 'award_category': None}
+    return "Winner: None, Award Category: N/A"
 
-# Step 1: Load the wins data and extract winners
+# Test the function with multiple test cases
+text1 = 'game change wins best miniseries or tv movie'
+text2 = 'i hope the hour wins best miniseries'
+text3 = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
+
+# Testing outputs
+print(find_award_winner(text1))  # 'Winner: game change, Award Category: best miniseries or tv movie'
+print(find_award_winner(text2))  # 'Winner: the hour, Award Category: best miniseries'
+print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
+
+# Load the dataset and apply the function
 win_data = pd.read_csv('wins.csv')['text']
-win_output = win_data.apply(lambda x: find_award_winner(x))
-winners_df = pd.DataFrame(win_output.tolist())
-winners_df['text'] = win_data
+output = win_data.apply(lambda x: find_award_winner(x))
 
-# Step 2: Load the nominees data and extract nominees
-nominee_data = pd.read_csv('nominees.csv')['text']
-nominee_output = nominee_data.apply(lambda x: find_nominee(x))
-nominees_df = pd.DataFrame(nominee_output.tolist())
-nominees_df['text'] = nominee_data
+# Create a DataFrame with "Tweet" and "Output" columns
+output_df = pd.DataFrame({
+    'Tweet': win_data,
+    'Output': output
+})
 
-# Step 3: Match nominees to the same award categories from wins.csv
-# Merge winners and nominees based on the award category
-merged_df = pd.merge(winners_df, nominees_df, on='award_category', how='left', suffixes=('_winner', '_nominee'))
-
-# Group nominees under the same award
-grouped_df = merged_df.groupby('award_category').agg({
-    'winner': 'first',  # Keep the first winner (since there's only one winner per award)
-    'nominee': lambda x: ', '.join(filter(None, x.astype(str)))  # Ensure nominee is a string and combine all nominees for the same award
-}).reset_index()
-
-# Step 4: Format the output with winners and nominees
-grouped_df['output'] = grouped_df.apply(
-    lambda row: f"Winner: {row['winner']}, Nominees: {row['nominee']}, Award Category: {row['award_category']}",
-    axis=1
-)
-
-# Step 5: Save the final output to a CSV
-grouped_df[['award_category', 'output']].to_csv('winners_and_nominees.csv', index=False)
+# Save the output
+output_df.to_csv('award_names.csv', index=False)

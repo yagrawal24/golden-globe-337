@@ -8,15 +8,25 @@ nlp = spacy.load('en_core_web_sm')
 # Define regex pattern to capture award-related keywords
 win_keywords = r"(\bwin\b|\bwins\b|\bwon\b|\bawarded\b)"
 
-def extract_entities(doc):
-    """Extract named entities from the SpaCy doc."""
-    return [(ent.text, ent.label_) for ent in doc.ents]
+def extract_entities_as_nominee(doc):
+    """Extract named entities that could serve as a nominee/winner."""
+    for ent in doc.ents:
+        # Consider entities such as PERSON, WORK_OF_ART, ORG, PRODUCT (e.g., "Argo")
+        if ent.label_ in ['PERSON', 'WORK_OF_ART', 'ORG', 'PRODUCT']:
+            return ent.text
+    return None
 
-def extract_subject_as_nominee(doc):
-    """Extract the subject (nsubj) of the sentence, which is often the winner/nominee."""
+def extract_full_subject_as_nominee(doc):
+    """Extract the full subject (nsubj) and its modifiers (compound, det)."""
     for token in doc:
         if token.dep_ == 'nsubj' and token.head.text in ['wins', 'won', 'receives']:
-            return token.text
+            subject_tokens = []
+            # Collect compound tokens (like "game" in "game change")
+            for left in token.lefts:
+                if left.dep_ in ['det', 'compound']:  # Determiner or compound part
+                    subject_tokens.append(left.text)
+            subject_tokens.append(token.text)  # Add the main subject token
+            return ' '.join(subject_tokens)  # Return full subject as a string
     return None
 
 def extract_award_name_after_best(doc):
@@ -32,45 +42,57 @@ def extract_award_name_after_best(doc):
             return award_name
     return None
 
-def clean_text(text):
-    """Remove 'rt' and any user mentions that start with '@' from the text."""
-    # Remove "rt" at the start
-    text = re.sub(r'^rt\s+', '', text, flags=re.IGNORECASE)
-    # Remove user mentions (strings starting with '@')
-    text = re.sub(r'@\w+', '', text)
-    # Remove extra whitespace
-    text = re.sub(r'\s+', ' ', text).strip()
-    return text
+def ignore_rt_and_mentions(text):
+    """Ignore 'rt' and '@' usernames but continue parsing the rest."""
+    doc = nlp(text)
+    filtered_tokens = [token.text for token in doc if not (token.text.lower() == 'rt' or token.text.startswith('@'))]
+    return ' '.join(filtered_tokens)
 
 def find_award_winner(text):
-    """Attempt to extract the person, song, or movie that won an award based on text."""
+    """Attempt to extract award information and return a structured output."""
     
-    # Clean the text by removing 'rt' and user mentions
-    cleaned_text = clean_text(text)
+    # Ignore 'rt' and mentions but continue with the rest of the tweet
+    filtered_text = ignore_rt_and_mentions(text)
     
-    doc = nlp(cleaned_text)
+    doc = nlp(filtered_text)
     
     # Check if the tweet mentions winning or awards
-    if re.search(win_keywords, cleaned_text, re.IGNORECASE):
-        # Try to extract the winner or nominee from subject (nsubj)
-        nominee = extract_subject_as_nominee(doc)
-        award = extract_award_name_after_best(doc)
+    if re.search(win_keywords, filtered_text, re.IGNORECASE):
+        # Extract the nominee (winner)
+        nominee = extract_full_subject_as_nominee(doc)
+        if not nominee:
+            nominee = extract_entities_as_nominee(doc)
 
-        if nominee and award:
-            return f"{nominee} | {award} | winner"
-        elif award:
-            return f"None | {award} | winner"
+        # Extract the award category
+        award_category = extract_award_name_after_best(doc)
+
+        # Structure the output as a formatted string
+        if nominee and award_category:
+            return f"Winner: {nominee}, Award Category: {award_category}"
+        elif award_category:
+            return f"Winner: None, Award Category: {award_category}"
     
-    return None
+    return "Winner: None, Award Category: N/A"
 
-# Test the function
-text = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
-print(find_award_winner(text))
+# Test the function with multiple test cases
+text1 = 'game change wins best miniseries or tv movie'
+text2 = 'i hope the hour wins best miniseries'
+text3 = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
+
+# Testing outputs
+print(find_award_winner(text1))  # 'Winner: game change, Award Category: best miniseries or tv movie'
+print(find_award_winner(text2))  # 'Winner: the hour, Award Category: best miniseries'
+print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
 
 # Load the dataset and apply the function
 win_data = pd.read_csv('wins.csv')['text']
 output = win_data.apply(lambda x: find_award_winner(x))
 
+# Create a DataFrame with "Tweet" and "Output" columns
+output_df = pd.DataFrame({
+    'Tweet': win_data,
+    'Output': output
+})
+
 # Save the output
-output_df = pd.DataFrame({'text': win_data, 'extracted_award': output})
 output_df.to_csv('award_names.csv', index=False)

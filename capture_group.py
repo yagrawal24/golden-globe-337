@@ -42,6 +42,28 @@ def extract_award_name_after_best(doc):
             return award_name
     return None
 
+def extract_award_name_before_award(doc):
+    """Extract the full award name preceding 'award' using dependency parsing."""
+    for token in doc:
+        if token.text.lower() == 'award':
+            award_tokens = []
+            for left_token in reversed(doc[:token.i]):  # Look backwards from 'award'
+                if left_token.pos_ in ('PUNCT', 'CCONJ', 'VERB', 'ADP', 'DET') or left_token.dep_ == 'punct':
+                    break
+                award_tokens.insert(0, left_token)  # Add to the start of the list to maintain order
+            if award_tokens:
+                award_name = ' '.join([t.text for t in award_tokens])
+                return award_name
+    return None
+
+def extract_award_names(text):
+    """Extract award names using both 'best' and 'award' triggers."""
+    doc = nlp(text)
+    best_award = extract_award_name_after_best(doc)
+    award_name = extract_award_name_before_award(doc)
+    
+    return best_award or award_name  # Return whichever is found first, preferring 'best' awards
+
 def ignore_rt_and_mentions(text):
     """Ignore 'rt' and '@' usernames but continue parsing the rest."""
     doc = nlp(text)
@@ -64,7 +86,7 @@ def find_award_winner(text):
             nominee = extract_entities_as_nominee(doc)
 
         # Extract the award category
-        award_category = extract_award_name_after_best(doc)
+        award_category = extract_award_names(doc)
         
         hope_regex = "hope|wish|think|believe|should"
         nominee_match = re.search(hope_regex, text, re.IGNORECASE)

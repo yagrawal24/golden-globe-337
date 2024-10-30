@@ -5,34 +5,41 @@ from ftfy import fix_text
 import unidecode
 # from langdetect import detect, detect_langs
 
-# df = pd.read_json(r'C:\Users\rockm\golden-globe-337\gg2013.json')['text']
+import pandas as pd
+import re
+
+import pandas as pd
+import re
+
+# Load data
 df = pd.read_json('gg2013.json')['text']
 
-df.to_csv('text.csv')
-
+# Define cleaning function
 def clean(text):
-    text = fix_text(text)
+    # Check for foreign language characters (alphabets beyond basic ASCII)
+    if re.search(r'[^\x00-\x7F\u263a-\U0001f645]', text):  # Exclude common emoji Unicode ranges
+        return None  # Mark as None to drop later
+    
     # Remove URLs
     text = re.sub(r'http\S+|www\S+|pic.twitter\S+', '', text)
-    # Remove emojis
-    # new_text = unidecode(text)
-    text = emoji.replace_emoji(text, replace='')
-    # Remove hashtags
-    text = re.sub(r'#\S+', '', text)
     
-    text = re.sub(r'[^A-Za-z0-9@ "]+', '', text)
+    # Remove emojis (keep only non-emoji characters)
+    text = re.sub(r'[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F700-\U0001F77F]', '', text)
     
-    text = re.sub(' +', ' ', text)
-    
-    text = text.lower()
-    
-    # if text.str.strip() != '':
-    #     detect(text.split(' ')[0])
+    # Remove excess whitespace
+    text = re.sub(r' +', ' ', text).strip()
     
     return text
 
+# Apply cleaning function
 df = df.apply(clean)
 
-cleaned_data = df[df.str.strip() != ""]
-cleaned_data.to_csv('text_cleaned.csv')
-cleaned_data[cleaned_data.apply(lambda x: re.search('(?=.*award|AWARD)(?=.*wins|Wins|WINS|winner|WINNER).*', x) != None)]
+# Remove rows that are None, empty strings, or contain only whitespace
+cleaned_data = df.dropna()
+cleaned_data = cleaned_data[cleaned_data.str.strip() != ""]
+
+# Save cleaned data to CSV
+cleaned_data.to_csv('text_cleaned.csv', index=False)
+
+print("Data cleaned and saved as 'text_cleaned.csv'")
+

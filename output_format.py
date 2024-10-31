@@ -1,3 +1,5 @@
+import pandas as pd
+
 # award class to store information about each award
 class award:
     def __init__(self, name):
@@ -66,21 +68,23 @@ class award:
 
 
 # list of awards and their respective winners, nominees, and presenters, along with the number of times they appear in our data
-awards = {}
+awards_list = {}
 
 # Split up each row of our dataframe and apply appropriate function to update our answers
 def extract_answers(text):
     nominee, curr_award, role = text.split(' | ')
+    nominee = nominee.lower()
+    curr_award = curr_award.lower()
     
-    if curr_award not in awards:
-        awards.update({curr_award:award(curr_award)})
+    if curr_award not in awards_list:
+        awards_list.update({curr_award:award(curr_award)})
     else:
-        awards[curr_award].award_vote()
+        awards_list[curr_award].award_vote()
         
-    if not awards[curr_award].contains(nominee, role):
-        awards[curr_award].new_person(nominee, role)
+    if not awards_list[curr_award].contains(nominee, role):
+        awards_list[curr_award].new_person(nominee, role)
     else:
-        awards[curr_award].person_vote(nominee, role)
+        awards_list[curr_award].person_vote(nominee, role)
 
 # function to move data from one award to another
 def move_data(a1: award, a2:award):
@@ -104,3 +108,17 @@ def move_data(a1: award, a2:award):
 ### NEED TO AGGREGATE AWARD DATA
 
 ### NEED TO JSONIFY OUTPUT
+
+
+if __name__ == "__main__":
+    answers = pd.read_csv('winners_and_awards.csv')['text']
+    answers = answers.dropna()
+    
+    answers.apply(extract_answers)
+    
+    top_awards = dict(sorted(awards_list.items(), key=lambda item: item[1].votes, reverse=True))
+    for i in top_awards:
+        print(top_awards[i].output())
+        
+    
+    

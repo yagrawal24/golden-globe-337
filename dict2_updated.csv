@@ -1,27 +1,27 @@
 award_name,winner_name
-best screenplay - motion picture,Quentin Tarantino
-best director - motion picture,ARGO
-best performance by an actress in a television series - comedy or musical,Claire Danes
-best foreign language film,Amour
-best performance by an actor in a supporting role in a motion picture,Daniel Day Lewis
-"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",Claire Danes
-best motion picture - comedy or musical,GoldenGlobes Les Miserables
-best performance by an actress in a motion picture - comedy or musical,Lena Dunham
-best mini-series or motion picture made for television,Kevin Costner
-best original score - motion picture,Skyfall
-best performance by an actress in a television series - drama,Claire Danes
-best performance by an actress in a motion picture - drama,Daniel Day Lewis
-cecil b. demille award,Jodie Foster
-best performance by an actor in a motion picture - comedy or musical,Daniel Day Lewis
-best motion picture - drama,Argo
-"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",Claire Danes
-best performance by an actress in a supporting role in a motion picture,Anne Hathaway
-best television series - drama,Girls
-best performance by an actor in a mini-series or motion picture made for television,Daniel Day Lewis
-best performance by an actress in a mini-series or motion picture made for television,Claire Danes
-best animated feature film,Brave
-best original song - motion picture,Skyfall
-best performance by an actor in a motion picture - drama,Daniel Day Lewis
-best television series - comedy or musical,Girls
-best performance by an actor in a television series - drama,Claire Danes
-best performance by an actor in a television series - comedy or musical,Claire Danes
+best screenplay - motion picture,"['Amanda Seyfried', 'Robert Pattinson']"
+best director - motion picture,"['Ben', 'Ben Affleck', 'Halle Berry']"
+best performance by an actress in a television series - comedy or musical,"['Jessica Chastain', 'GoldenGlobes', 'George Clooney']"
+best foreign language film,['GoldenGlobes']
+best performance by an actor in a supporting role in a motion picture,"['Bradley Cooper', 'Kate Hudson', 'Christoph Waltz']"
+"best performance by an actress in a supporting role in a series, mini-series or motion picture made for television","['Dennis Quaid', 'Kerry Washington']"
+best motion picture - comedy or musical,"['GoldenGlobes', 'Julia Roberts']"
+best performance by an actress in a motion picture - comedy or musical,"['GoldenGlobes', 'Julia Roberts']"
+best mini-series or motion picture made for television,"['GoldenGlobes', 'Julia Roberts']"
+best original score - motion picture,"['GoldenGlobes', 'Mychael Danna', 'Jason Statham']"
+best performance by an actress in a television series - drama,"['Jessica Chastain', 'GoldenGlobes', 'George Clooney']"
+best performance by an actress in a motion picture - drama,"['GoldenGlobes', 'Julia Roberts']"
+cecil b. demille award,"['Bradley Cooper', 'Kate Hudson', 'Christoph Waltz']"
+best performance by an actor in a motion picture - comedy or musical,"['GoldenGlobes', 'Julia Roberts']"
+best motion picture - drama,"['GoldenGlobes', 'Julia Roberts']"
+"best performance by an actor in a supporting role in a series, mini-series or motion picture made for television","['Bradley Cooper', 'Kate Hudson', 'Christoph Waltz']"
+best performance by an actress in a supporting role in a motion picture,"['Dennis Quaid', 'Kerry Washington']"
+best television series - drama,['GoldenGlobes']
+best performance by an actor in a mini-series or motion picture made for television,"['GoldenGlobes', 'Julia Roberts']"
+best performance by an actress in a mini-series or motion picture made for television,"['GoldenGlobes', 'Julia Roberts']"
+best animated feature film,"['GoldenGlobes', 'Bill']"
+best original song - motion picture,['J. Lo']
+best performance by an actor in a motion picture - drama,"['GoldenGlobes', 'Julia Roberts']"
+best television series - comedy or musical,"['Jay Leno', 'Jimmy Fallon']"
+best performance by an actor in a television series - drama,"['Bradley Cooper', 'Kate Hudson', 'Christoph Waltz']"
+best performance by an actor in a television series - comedy or musical,"['Jay Leno', 'Jimmy Fallon']"

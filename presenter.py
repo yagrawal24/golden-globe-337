@@ -138,6 +138,24 @@ def extract_presenter_award_pairs(text):
     award_presenters = {k: list(v) for k, v in award_presenters.items()}
     return award_presenters
 
+award_show_names = [
+    'GoldenGlobes', 'Golden Globes', 'Oscars', 'Academy Awards', 'Emmys',
+    'Grammy Awards', 'BAFTA', 'SAG Awards', 'Tony Awards', 'Cannes Film Festival',
+    'MTV Video Music Awards', 'American Music Awards', 'Critics Choice Awards',
+    "People's Choice Awards", 'Billboard Music Awards', 'BET Awards',
+    'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
+    'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
+]
+
+nlp = spacy.load('en_core_web_sm')
+cleaned_df = pd.read_csv('text_cleaned.csv')
+presenter_keywords = r'\b(presenter|presenting|presented|presents|present)\b'
+presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)]
+presenter_data = presenter_data.reset_index(drop=True)
+
+print(f"Number of tweets mentioning presenters: {len(presenter_data)}")
+
+presenter_data.to_csv('presenter_data.csv', index=False)
 # Apply entity extraction and pair extraction functions
 presenter_data['Presenters'] = presenter_data['text'].apply(extract_person_entities)
 presenter_data['Presenter_Award_Pairs'] = presenter_data['text'].apply(extract_presenter_award_pairs)

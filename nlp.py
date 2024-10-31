@@ -1,6 +1,7 @@
 import json
 from collections import defaultdict
 from difflib import SequenceMatcher
+import pandas as pd
 
 class Award:
     def __init__(self, name):
@@ -121,14 +122,16 @@ def jsonify_simple_output(aggregated_awards):
         json.dump(simplified_json_output, f, indent=2)
 
 # Test data
-test_data = [
-    "Christoph Waltz | Best Supporting Actor in a Motion Picture | winner",
-    "Christoph Waltz | Best Supporting Actor | winner",
-    "Christoph Waltz | Best Supporting Actor in Motion Picture | winner",
-    "Daniel Day-Lewis | Best Actor in a Motion Picture | winner",
-    "Jessica Chastain | Best Actress | winner",
-    "Jessica Chastain | Best Actress in a Motion Picture Drama | winner"
-]
+# test_data = [
+#     "Christoph Waltz | Best Supporting Actor in a Motion Picture | winner",
+#     "Christoph Waltz | Best Supporting Actor | winner",
+#     "Christoph Waltz | Best Supporting Actor in Motion Picture | winner",
+#     "Daniel Day-Lewis | Best Actor in a Motion Picture | winner",
+#     "Jessica Chastain | Best Actress | winner",
+#     "Jessica Chastain | Best Actress in a Motion Picture Drama | winner"
+# ]
+
+test_data = pd.read_csv("winners_nominees.csv")['text'].dropna().head(200).tolist()
 
 # Parse, aggregate, and save the awards data
 awards_dict = parse_award_data(test_data)

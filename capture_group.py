@@ -28,45 +28,43 @@ def extract_full_subject_as_nominee(doc):
             subject_tokens.append(token.text)  # Add the main subject token
             return ' '.join(subject_tokens)  # Return full subject as a string
     return None
-
 def extract_award_name_after_best(doc):
     """Extract the full award name starting from 'Best' using pattern matching and dependency parsing."""
     award_phrases = []
     for i, token in enumerate(doc):
-        # Look for 'Best' (case-insensitive)
         if token.text.lower() == 'best':
             award_tokens = [token]
-            # Collect tokens that likely belong to the award name
             for j in range(i + 1, len(doc)):
                 next_token = doc[j]
-                # Stop if we hit punctuation that likely ends the award name
                 if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or next_token.dep_ == 'punct':
                     break
-                # Stop if we hit verbs that likely indicate the start of a new clause
                 if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
                     break
                 award_tokens.append(next_token)
-            award_phrase = ' '.join([t.text for t in award_tokens])
-            # Clean up any trailing conjunctions or prepositions
-            award_phrase = award_phrase.strip()
+            award_phrase = ' '.join([t.text for t in award_tokens]).strip()
             if award_phrase:
                 award_phrases.append(award_phrase)
-    # Return the longest award phrase found
     if award_phrases:
         return max(award_phrases, key=len)
     return None
+
 def extract_award_name_before_award(doc):
-    """Extract the full award name preceding 'award' using dependency parsing."""
-    for token in doc:
+    """Extract the full award name preceding 'award' using pattern matching and dependency parsing."""
+    award_phrases = []
+    for i, token in enumerate(doc):
         if token.text.lower() == 'award':
             award_tokens = []
-            for left_token in reversed(doc[:token.i]):  # Look backwards from 'award'
-                if left_token.pos_ in ('PUNCT', 'CCONJ', 'VERB', 'ADP', 'DET') or left_token.dep_ == 'punct':
+            for left_token in reversed(doc[:i]):
+                if left_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or left_token.dep_ == 'punct':
                     break
-                award_tokens.insert(0, left_token)  # Add to the start of the list to maintain order
-            if award_tokens:
-                award_name = ' '.join([t.text for t in award_tokens])
-                return award_name
+                if left_token.pos_ in ('VERB', 'AUX') and left_token.dep_ in ('ROOT', 'conj'):
+                    break
+                award_tokens.insert(0, left_token)
+            award_phrase = ' '.join([t.text for t in award_tokens]).strip()
+            if award_phrase:
+                award_phrases.append(award_phrase)
+    if award_phrases:
+        return max(award_phrases, key=len)
     return None
 
 def extract_award_names(text):
@@ -74,7 +72,6 @@ def extract_award_names(text):
     doc = nlp(text)
     best_award = extract_award_name_after_best(doc)
     award_name = extract_award_name_before_award(doc)
-    
     return best_award or award_name  # Return whichever is found first, preferring 'best' awards
 
 def ignore_rt_and_mentions(text):

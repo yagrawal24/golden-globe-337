@@ -42,7 +42,18 @@ def similarity(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 def can_consolidate(name1, name2):
-    keywords = ["Actor", "Actress", "Director", "Screenplay"]
+    keywords = [
+        "Actor", "Actress", "Director", "Screenplay", "Singer", "Composer", 
+        "Entertainer", "Songwriter", "Performer", "Producer", "Cinematographer", 
+        "Editor", "Musician", "Host", "Presenter", "Writer", "Animator", 
+        "Designer", "Artist", "Documentary", "Short", "Series", "Feature", 
+        "Television", "Film", "Movie", "Drama", "Comedy", "Supporting", 
+        "Lead", "Ensemble", "Vocalist", "Cast", "Voice", "Newcomer", 
+        "Debut", "Breakthrough", "Soundtrack", "Score", "Original", 
+        "Visual Effects", "Stunt", "Choreographer", "Makeup", "Costume", 
+        "Production", "Set", "Lighting", "Special Effects", "Casting", 
+        "Narrator", "Voiceover", "Reality", "Variety", "Talk Show", "Game Show"
+    ]
     for keyword in keywords:
         if (keyword in name1 and keyword not in name2) or (keyword in name2 and keyword not in name1):
             return False

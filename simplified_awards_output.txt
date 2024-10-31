@@ -61,37 +61,13 @@ Hathaway | best song for the theme to Skyfall and Maggie Smith wins best support
 # Goldenglobes | best song for the theme to Skyfall and Maggie Smith wins best supporting actress in a s | winner
 Skyfall | best song for the theme to Skyfall and Maggie Smith wins best supporting actress in a s | winner
 Kevin Costner | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Damian Lewis | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Don Cheadle | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Ben Affleck | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Hugh Jackman | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-LesMis | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Daniel Day Lewis | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Les Miserables | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Day Lewis | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-Mitt Romney | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
-McCoys | Best Actor in a Miniseries or Motion Picture Made for Television for Hatfields & amp | winner
 GoldenGlobes | Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables | winner
-Hugh Jackman | Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables | winner
-Daniel Day Lewis | Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables | winner
-This | Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables | winner
-Day Lewis | Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables | winner
 .@_JulianneMoore | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-Jennifer Lawrence | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-J Law | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-Claire Danes | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-Globes Jennifer Lawrence | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-None | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-Jessica Chastain | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-girl | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-The Jessica Chastain | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
-a video Jennifer Lawrence | Best Actress in a Miniseries or Motion Picture Made for Television for Game Change | winner
 Christoph Waltz | Best Supporting Actor in a Motion Picture for his role in Django Unchained | winner
 Actress | Best Supporting Actor in a Motion Picture for his role in Django Unchained | winner
 Ed Harris | Best Supporting Actor in a Motion Picture for his role in Django Unchained | winner
 GoldenGlobes Ed Harris | Best Supporting Actor in a Motion Picture for his role in Django Unchained | winner
 Jennifer Lawrence | Best Actress Motion Picture Comedy or Musical for Silver Linings Playbook | winner
-JenniferLawrence | Best Actress Motion Picture Comedy or Musical for Silver Linings Playbook | winner
 Anne Hathaway | Best Supporting Actress in a Motion Picture for Les Miserables at the | winner
 Maggie Smith | Best Supporting Actress in a Motion Picture for Les Miserables at the | winner
 she | Best Supporting Actress in a Motion Picture for Les Miserables at the | winner
@@ -123,18 +99,18 @@ BenAffleck | Best Director right now after being snubbed of an Oscar nomination 
 Argo director | Best Director right now after being snubbed of an Oscar nomination | winner
 Day Lewis | Best Actor in a Motion Picture in the Drama category for Lincoln | winner
 Kevin Costner | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Damian Lewis | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Don Cheadle | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Ben Affleck | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Hugh Jackman | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+LesMis | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Daniel Day Lewis | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Les Miserables | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Day Lewis | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+Mitt Romney | Best Actor in a Miniseries for the History Channel 's brilliant | winner
+McCoys | Best Actor in a Miniseries for the History Channel 's brilliant | winner
 Argo | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-Les Miserables | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-Best Motion Picture | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-LesMis | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-# LesMiserables | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-.@LesMiserables | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-The film | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-Ben Affleck | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
 # Argo | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-None | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-# LesMis | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
-LesMiserables | Best Motion Picture Drama yet it was n't nominated for an Oscar | winner
 Maggie Smith | Best Supporting Actress for TV performance for Downton Abbey | winner
 Anne Hathaway | Best Supporting Actress for TV performance for Downton Abbey | winner
 Lena Dunham | best performance by an actress in a TV musical or comedy for | winner
@@ -147,7 +123,14 @@ ARGO | best dramatic role during comedy at a musical or awards show | winner
 it | best dramatic role during comedy at a musical or awards show | winner
 Maggie Smith | supporting actress, foreigners living in America give award | winner
 Jennifer Lawrence | Best Actress for her performance in Silver Linings Playbook | winner
+J Law | Best Actress for her performance in Silver Linings Playbook | winner
+Claire Danes | Best Actress for her performance in Silver Linings Playbook | winner
+Globes Jennifer Lawrence | Best Actress for her performance in Silver Linings Playbook | winner
+None | Best Actress for her performance in Silver Linings Playbook | winner
 Jessica Chastain | Best Actress for her performance in Silver Linings Playbook | winner
+girl | Best Actress for her performance in Silver Linings Playbook | winner
+The Jessica Chastain | Best Actress for her performance in Silver Linings Playbook | winner
+a video Jennifer Lawrence | Best Actress for her performance in Silver Linings Playbook | winner
 Hugh Jackman | Best Actor and Anne Hathaway wins Best Featured Actress for | winner
 Skyfall | best Original Song for Motion Picture at the Golden Globes | winner
 Maggie Smith | Best Supporting Actress in a miniseries for Downton Abbey | winner
@@ -176,7 +159,6 @@ Jessica Chastain | Best Actress for Drama for the movie ZERO DARK THIRTY | winne
 ADELE | Best Original Song goes to Skyfall 2013 Golden Globes | winner
 Julianne Moore | Best Performance by an Actress in a TV series at the | winner
 Damian Lewis | Best Supporting Ginger Who Also Makes My Panties Wet | winner
-Christoph Waltz | Best Supporting Ginger Who Also Makes My Panties Wet | winner
 Anne Hathaway | Best Supporting Ginger Who Also Makes My Panties Wet | winner
 Jennifer Lawrence | best actress in a comedy for Silver Linings Playbook | winner
 Anne Hathaway | best actress in a comedy for Silver Linings Playbook | winner
@@ -186,7 +168,6 @@ Jessica Chastain | best actress in a comedy for Silver Linings Playbook | winner
 WINNER | best actress in a comedy for Silver Linings Playbook | winner
 Mandy Patinkin | best beard on an old guy who played Inigo Montoya in | winner
 The actress | Best Actress In A Comedy for Silver Linings Playbook | winner
-Jennifer Lawrence | Best Actress In A Comedy for Silver Linings Playbook | winner
 Adele | Best Original Song Motion Picture Golden Globes 2013 | winner
 Skyfall | Best Original Song Motion Picture Golden Globes 2013 | winner
 # goldenglobes | Best American accent by a Brit in a major TV series | winner
@@ -268,7 +249,6 @@ Quentin Tarantino | best incorporating foot fetishes into a script | winner
 Claire Danes | best actress in a TV series drama for Homeland | winner
 Lena Dunham | best actress in a TV series drama for Homeland | winner
 Claire Danes | Best Actress in a TV Series Drama for Homeland | winner
-Best Actress | Best Actress in a TV Series Drama for Homeland | winner
 Maggie Smith | best supporting actress for TV performance in | winner
 Julianne Moore | best actress for TV movie role in Game Change | winner
 J. Lawrence | best actress for TV movie role in Game Change | winner
@@ -287,7 +267,6 @@ Ben Affleck | Best Director Award at Golden Globes for Argo | winner
 Day Lewis | Best Actor Award for the movie Lincoln at the | winner
 Argo | Best Picture and Best Director but Affleck is | winner
 Julianne Moore | Best Actress in a Miniseries or TV Movie for | winner
-GoldenGlobes Julianne Moore | Best Actress in a Miniseries or TV Movie for | winner
 Julianne Moore | Best Actress in a Miniseries for Game Change | winner
 Homeland | Best Telelvision Series at the Golden Globes | winner
 Anne Hathaway | best supporting actress for Lay Mizzerablues | winner
@@ -319,6 +298,7 @@ Anne Hathaway | Best Supporting Actress for Les Miserables | winner
 Anne Hathaway | Best Supporting Actress for LES MISERABLES | winner
 Hugh Jackman | best actor in a musical or comedy award at | winner
 Julianne Moore | best actress in a TV Movie for playing in | winner
+GoldenGlobes Julianne Moore | Best Actress in a Mini Series or TV movie | winner
 Homeland | Best Drama after awkward technical mishap | winner
 Argo | Best Drama after awkward technical mishap | winner
 Lawrence | best actress in a comedic or musical film | winner
@@ -330,6 +310,7 @@ Christoph Waltz | Best Supporting Actor for motion picture | winner
 Julianne Moore | best TV actress for Sara Palin portrayal | winner
 Julianne Moore | best actress in a TV miniseries or movie | winner
 Kevin Costner | best actress in a TV miniseries or movie | winner
+Jennifer Lawrence | Best Actress for Silver Linings Playbook | winner
 Don Cheadle | best actor in a comedy for House of Lies | winner
 Claire Danes | best actress in TV drama for her work on | winner
 A Claire Danes | best actress in TV drama for her work on | winner
@@ -349,7 +330,6 @@ Les Miserable | best comedy or musical TV series at the | winner
 Les Miserables | best comedy or musical TV series at the | winner
 Les Mis | best comedy or musical TV series at the | winner
 Jessica Chastain | Best Actress in a Motion Picture- Drama | winner
-Jennifer Lawrence | Best Actress in a Motion Picture- Drama | winner
 a Dowager Countess | him we need a Dowager Countess wins an | winner
 Skyfall | Best Original Song in a Motion Picture | winner
 Kevin Costner | Best Actor Miniseries and is currently | winner
@@ -360,7 +340,6 @@ Jack | Best TV Actress in a Comedy from Girls | winner
 Lena Dunham | Best Actress in a Comedy for the great | winner
 Jessica Chastain | best actress in the great Zero Dark 30 | winner
 # MaggieSmith | Best Supporting Actress in a TV Movie | winner
-Maggie Smith | Best Supporting Actress in a TV Movie | winner
 Quentin Tarantino | Best Screenplay but Quentin Tarantino | winner
 Quentin | Best Screenplay but Quentin Tarantino | winner
 Django Unchained | Best Screenplay but Quentin Tarantino | winner
@@ -373,6 +352,7 @@ GoldenGlobes Les Miserables | Best Motion Picture Comedy or Musical | winner
 # LesMiserables | Best Motion Picture Comedy or Musical | winner
 Daniel Day Lewis | best actor in a drama for his role in | winner
 Jessica Chastain | Best Dressed and Best Eloquently Kick | winner
+Maggie Smith | Best Supporting Actress in a TV show | winner
 J Law | Best Actress in a Comedy at the 2013 | winner
 Quentin Tarantino | best screenplay for Django Unchained | winner
 Tarantino | best screenplay for Django Unchained | winner
@@ -404,7 +384,6 @@ Life | best original score for LIFE OF PI | winner
 Adele | best thank you speech so far lolol | winner
 Quentin Tarantino | best motion picture screenplay for | winner
 Claire Danes | Best Actress in a TV Series- Drama | winner
-JulianneMoore | Best Actress in a TV Series- Drama | winner
 # ClaireDanes | Best Actress in a TV Series- Drama | winner
 Claire Danes | best TV drama actress for Homeland | winner
 GoldenGlobes | best TV drama actress for Homeland | winner
@@ -446,21 +425,23 @@ Jessica Chastain | best actress at the Golden Globes | winner
 Jennifer Lawrence | best actress at the Golden Globes | winner
 Christoph Waltz | Best Supporting Actor for Django | winner
 HOMELAND | Best Actor and Best Drama Series | winner
+Jennifer Lawrence | Best Actress in a Motion Picture | winner
+Jessica Chastain | Best Actress in a Motion Picture | winner
+JenniferLawrence | Best Actress in a Motion Picture | winner
 Jennifer Lawrence | Best actress in a motion picture | winner
 Hugh Jackman | Best actress in a motion picture | winner
 Anne Hathaway | Best Supporting Actress in flick | winner
 Claire Danes | Best Actess in a TV series Drama | winner
 # Brave | best animated feature film award | winner
 Brave | best animated feature film award | winner
+Girls | Best TV Series Comedy or Musical | winner
 Lena Dunham | Best Comedy Series at the Globes | winner
-# GIRLS | Best Comedy Series at the Globes | winner
-Girls | Best Comedy Series at the Globes | winner
-# LesMiserables | Best Comedy Series at the Globes | winner
-Congrats Les Mis | Best Comedy Series at the Globes | winner
-Les Miserables | Best Comedy Series at the Globes | winner
 he | best surprised face when he wins | winner
 Argo | Best Motion Picture Drama at the | winner
 # Argo | Best Motion Picture Drama at the | winner
+JulianneMoore | Best Actress in a TV Series for | winner
+Claire Danes | Best Actress in a TV Series for | winner
+Best Actress | Best Actress in a TV Series for | winner
 Yay | Best Actor for Django Unchained | winner
 Adele | best bond theme in a generation | winner
 Adele | Best Original Song w/ ' Skyfall | winner
@@ -483,6 +464,10 @@ Kevin Costner | Best Actor for Hatfields & amp | winner
 Jennifer Lawrence | Best Actress Comedy Or Musical | winner
 Non - Oscar | best director for awesome Argo | winner
 Ben Affleck | best director for awesome Argo | winner
+Hugh Jackman | Best Actor in a Motion Picture | winner
+Daniel Day Lewis | Best Actor in a Motion Picture | winner
+This | Best Actor in a Motion Picture | winner
+Day Lewis | Best Actor in a Motion Picture | winner
 Les Miserables | Best Motion Picture for Comedy | winner
 anddd Les Miserables | Best Motion Picture for Comedy | winner
 Anne Hathaway | Best Kanye Interruption at the | winner
@@ -492,15 +477,12 @@ Jessica Chastain | best actress in a drama at the | winner
 jessica chastain | the most excellent human being | winner
 Daniel Day Lewis | best lead actor in a drama for | winner
 Damian Lewis | best lead actor in a drama for | winner
-Hugh Jackman | Best Actor In a Motion Picture | winner
-Daniel Day Lewis | Best Actor In a Motion Picture | winner
 Bill Murray | best facial hair of the night | winner
 Billy Murray | best facial hair of the night | winner
 MaggieSmith | Best Supporting Actress & amp | winner
 Anne Hathaway | Best Supporting Actress & amp | winner
 Damien Lewis | Best Actor TV Series or Drama | winner
 Damien Lewis | Best Actor Drama for Homeland | winner
-Damian Lewis | Best Actor Drama for Homeland | winner
 Adele | best acceptance speech so far | winner
 Skyfall | best acceptance speech so far | winner
 Kevin Costner | Best Actor in a TV Miniseries | winner
@@ -525,6 +507,9 @@ XOXOXOXO | Best Television Show Musical | winner
 # LesMiserables | Best Musical or Comedy after | winner
 # GIRLS | Best Musical or Comedy after | winner
 Hugh Jackman | Best Actor and Anne Hathaway | winner
+BRAVE | Best Animated Feature at the | winner
+Brave | Best Animated Feature at the | winner
+Game Change | Best Miniseries or TV Movie | winner
 Game Change | Best TV Movie or Miniseries | winner
 Julianna Moore | best actress for miniseries | winner
 she | so ratchet when she wins an | winner
@@ -551,6 +536,7 @@ Maggie Smith | whenever Maggie Smith wins | winner
 Quentin # Tarantino | best Screenplay for Django | winner
 Lena Dunham | Best Actress for TV series | winner
 Affleck | Best Director award at the | winner
+Argo | best Motion Picture at the | winner
 ARGO | Best Picture at the Oscars | winner
 it | best picture over Lincoln | winner
 Canada | best Score for Life of Pi | winner
@@ -558,7 +544,6 @@ Don Cheadle | best actor in a TV comedy | winner
 Claire Danes | Best Actress for Homeland | winner
 Claire Danes | Best Drama TV Actress for | winner
 Daniel Day Lewis | Best Actor in a drama for | winner
-Damian Lewis | Best Actor in a drama for | winner
 Argo | Best Drama Motion Picture | winner
 Argo | best Motion picture Drama | winner
 Argo | Best Drama Film at Globes | winner
@@ -566,8 +551,6 @@ Christoph Waltz | best supporting actor at | winner
 # GoldenGlobes | best supporting actor at | winner
 christoph Waltz | best supporting actor at | winner
 Julianne Moore | Best Actress in TV Movie | winner
-Jennifer Lawrence | Best Actress in TV Movie | winner
-Lena Dunham | Best Actress in TV Movie | winner
 Adele | best speech of the night | winner
 Quentin Tarantino | best original screenplay | winner
 # LenaDunham | best TV comedy for Girls | winner
@@ -576,11 +559,19 @@ Hugh Jackmon | Best Husband of the Year | winner
 Damian Lewis | best show on television | winner
 Jon Hamm | Best Actor in a TV show | winner
 Damian Lewis | best actor for TV drama | winner
+Damian Lewis | Best Actor for Homeland | winner
 Homeland | best TV drama series at | winner
 Adele | best winner 's reaction | winner
 Taylor Swift | best winner 's reaction | winner
 Anne Hathaway | Best Eight Year Old Boy | winner
+Jennifer Lawrence | Best Actress in a movie | winner
 Ben Affleck | Best Director award for | winner
+Hugh Jackman | Best Actor in a Musical | winner
+Jean Valjean | Best Actor in a Musical | winner
+# GIRLS | Best Comedy or Musicial | winner
+Girls | Best Comedy or Musicial | winner
+# LesMiserables | Best Comedy or Musicial | winner
+Congrats Les Mis | Best Comedy or Musicial | winner
 Les Miserables | Best Comedy or Musicial | winner
 Les Mis | Best Comedy or Musicial | winner
 Affleck | Best Picture Oscar race | winner
@@ -596,6 +587,7 @@ Homeland | Best Television Series | winner
 Girls | Best Television Series | winner
 Kevin Costner | Best Actor Mini Series | winner
 Tommy Lee Jones | best facial expression | winner
+Jennifer Lawrence | Best Actress in Comedy | winner
 Whohoooo # JenniferLawrence | best movie of the year | winner
 who | best director on these | winner
 Amour | If Amour wins one more | winner
@@ -616,6 +608,9 @@ Daniel Day Lewis | best actor for Lincoln | winner
 he | Lewis melts down every | winner
 # Argo | Best Picture- congrats | winner
 Ben Affleck | Best Tux of the night | winner
+Damian Lewis | Best Actor in a Drama | winner
+Daniel Day Lewis | Best Actor in a Drama | winner
+Day Lewis | Best Actor in a Drama | winner
 OoOoO # Homeland | best show on the tube | winner
 Life | best song for Skyfall | winner
 Adele | best song for Skyfall | winner
@@ -634,7 +629,6 @@ Django | GoldenGlobes director | winner
 Girls | GoldenGlobes director | winner
 Girls | Best Comedy TV Series | winner
 Hugh Jackman | best actor for comedy | winner
-Jean Valjean | Best Actor in Musical | winner
 Argo | best dramatic picture | winner
 # Argo | best dramatic picture | winner
 # Argo | best picture drama at | winner
@@ -642,12 +636,14 @@ Argo | best picture drama at | winner
 Katherine Bigelow | the Leni Riefenstahl | winner
 Julianne Moore | Best Actress in Mini | winner
 Homeland | Best TV Series Drama | winner
-Girls | Best TV Series Drama | winner
-FuckYeah # Homeland | Best TV Series Drama | winner
-# Homeland | Best TV Series Drama | winner
+Homeland | best TV series drama | winner
+FuckYeah # Homeland | best TV series drama | winner
+# Homeland | best TV series drama | winner
+# Girls | best TV series drama | winner
+# GIRLS | best TV series drama | winner
 # Homeland | Best TV Drama Series | winner
-Homeland | Best TV Drama Series | winner
-None | Best TV Drama Series | winner
+Homeland | Best TV Series drama | winner
+Girls | Best TV Series drama | winner
 GoldenGlobes Kevin Costner | Best Actor in a mini | winner
 None | best TV drama at the | winner
 Homeland | best TV drama at the | winner
@@ -661,7 +657,7 @@ LifeOfPie | Best Original Score | winner
 Life | Best Original Score | winner
 Skyfall | Best Original Score | winner
 # Argo | Best Original Score | winner
-GoldenGlobes Life | Best Original Score | winner
+GoldenGlobes Life | Best original score | winner
 favorite | Best Score category | winner
 Life | Best Score category | winner
 Mychael Danna | Best Score category | winner
@@ -673,22 +669,28 @@ adele | golden globes
 Ben Affleck | Best Director prize | winner
 Adele | Golden Globes 
   No | winner
+Les Miserables | Best Motion Picture | winner
+Best Motion Picture | Best Motion Picture | winner
+LesMis | Best Motion Picture | winner
+# LesMiserables | Best Motion Picture | winner
+.@LesMiserables | Best Motion Picture | winner
+Argo | Best Motion Picture | winner
+The film | Best Motion Picture | winner
+Ben Affleck | Best Motion Picture | winner
+# Argo | Best Motion Picture | winner
+None | Best Motion Picture | winner
+# LesMis | Best Motion Picture | winner
+LesMiserables | Best Motion Picture | winner
 who | someone who wins an | winner
 Aaaand Hugh Jackman | Best Husband at the | winner
 Les Miserables | Best Picture Comedy | winner
-Day Lewis | Best Actor in Drama | winner
-Best Actor- Drama | Best Actor in Drama | winner
 Argo | Best Picture -Drama | winner
 Brave | best animated movie | winner
 Woah Ben Affleck | best drama for Argo | winner
-# Argo | Best Motion PIcture | winner
 Ben Affleck | best director & amp | winner
 Argo | best picture at the | winner
 Gandhi school | best school in asia | winner
 Game Change | best TV miniseries | winner
-Homeland | best TV miniseries | winner
-# Girls | best TV miniseries | winner
-# GIRLS | best TV miniseries | winner
 Adele | best speech so far | winner
 Jennifer Lawrence | Best Actress Award | winner
 Jessica Chastain | Best Actress Award | winner
@@ -696,6 +698,8 @@ Amanda Seyfried | Best Gauze Bandage | winner
 LOLOL Amanda Seyfried | Best Gauze Bandage | winner
 Brave | Best Animated Film | winner
 YAY | Best Animated Film | winner
+Lena Dunham | Best Actress in TV | winner
+Claire Danes | Best Actress in TV | winner
 Mel Gibson | best speech writer | winner
 Ben Affleck | best film director | winner
 Girls | best comedy series | winner
@@ -709,6 +713,7 @@ Argo | best Drama series | winner
 Life | best score at the | winner
 AMOUR | Best Foreign Film | winner
 Amour | Best Foreign Film | winner
+Best Actor- Drama | Best Actor- Drama | winner
 The Best Actor | Best Actor of All | winner
 Day Lewis | best award speech | winner
 The actor | best actor alive | winner
@@ -718,19 +723,18 @@ Adele | best song at the | winner
 people | best part of the | winner
 Best Actor & | Best Actor & amp | winner
 Argo | Best Drama Movie | winner
-movies | Best Drama Movie | winner
 # Argo | Best Movie Drama | winner
-Les Miserables | Best Movie Drama | winner
 Argo | best movie drama | winner
 Christoph Waltz | a well deserved | winner
+Game Change | Best Miniseries | winner
 GAME CHANGE | Best Miniseries | winner
 jessica alba | best everything | winner
 who | na announce the | winner
 Tarantino | best writer for | winner
 Don Cheadle | the Token Black | winner
-Claire Danes | Best Actress TV | winner
 Lena Dunham | Best TV actress | winner
 Globes | best hosts ever | winner
+movies | Best Drama over | winner
 ARGO | best film drama | winner
 who | best and worst | winner
 Homeland | best something | winner
@@ -740,8 +744,10 @@ Girls | Best Comedy at | winner
 the Palin thing | best TV movie | winner
 HBO | best TV movie | winner
 # Argo | Best tv movie | winner
+# Homeland | Best TV Drama | winner
+Homeland | Best TV Drama | winner
+None | Best TV Drama | winner
 Homeland | Best Drama TV | winner
-Homeland | best TV Drama | winner
 Jessica Alba | best necklace | winner
 Hugh Jackman | best actor at | winner
 Claire Danes | how her last | winner
@@ -757,10 +763,12 @@ every award | With every | winner
 I | a separate | winner
 Jennifer Gardner | the pretty | winner
 Daniel Day - Lewis | Lewis wins | winner
+Les Miserables | Best Movie | winner
 Bill Murray | the beard | winner
 Christoph Waltz | the first | winner
 Django | the first | winner
 I | the first | winner
+Christoph Waltz | Best Supp | winner
 Bill Murray | best Life | winner
 Ben Affleck | best Life | winner
 Homeland | Best Well | winner

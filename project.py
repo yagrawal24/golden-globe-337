@@ -1,93 +1,97 @@
-import pandas as pd
+import json
 import re
-import spacy
+from collections import defaultdict
+from difflib import SequenceMatcher
 
-# Load SpaCy model
-nlp = spacy.load('en_core_web_sm')
+def load_json_data(file_path):
+    """Load JSON data from a file, ensuring it's read as a dictionary."""
+    with open(file_path, 'r') as f:
+        data = json.load(f)
+        if isinstance(data, list):
+            # Convert list to dictionary if the JSON is structured incorrectly
+            data = {str(i): item for i, item in enumerate(data)}
+        return data
 
-# Load data
-win_data = pd.read_csv('wins.csv')['text']
-cleaned_data = pd.read_csv('text_cleaned.csv')['text']
-spacy_data = pd.read_csv('spacy_info.csv')
-spacy_size = 200  # Processing top 200 entries for SpaCy
-test = win_data.head(spacy_size).to_frame()
+def similarity(a, b):
+    """Calculate similarity between two strings."""
+    return SequenceMatcher(None, a, b).ratio()
 
-# Define regex pattern to capture award-related keywords
-win_keywords = r"(win|wins|won|winner|awarded|receive|received|gets)"
+def aggregate_awards(award_dict, threshold=0.85):
+    """Aggregate awards by consolidating similar award names."""
+    award_keys = sorted(award_dict.keys(), key=len, reverse=True)
+    consolidated_awards = {}
 
-# def extract_entities(doc):
-#     """Extract named entities from the SpaCy doc, excluding entities starting with '@' or 'rt @'."""
-#     return [
-#         (ent.text, ent.label_) for ent in doc.ents
-#         if ent.label_ == "PERSON" and not (ent.text.startswith('@') or ent.text.lower().startswith('rt @'))
-#     ]
+    for key in award_keys:
+        if key not in award_dict:
+            continue
 
-def extract_entities(doc):
-    """Extract named entities from the SpaCy doc, ensuring full names are captured."""
-    return [
-        ent.text for ent in doc.ents
-        if ent.label_ == "PERSON" and not (ent.text.startswith('@') or ent.text.lower().startswith('rt @'))
+        main_award = award_dict[key]
+        consolidated_awards[key] = main_award
+
+        for other_key in list(award_dict.keys()):
+            if other_key == key or other_key not in award_dict:
+                continue
+
+            if similarity(key, other_key) >= threshold:
+                other_award = award_dict[other_key]
+                main_award['nominees'].extend(other_award['nominees'])
+                main_award['winner'].extend(other_award['winner'])
+                del award_dict[other_key]
+
+    return consolidated_awards
+
+def filter_entities(entity_list):
+    """Filter out unwanted words from the list of nominees or winners."""
+    filtered_entities = [
+        entity for entity in entity_list
+        if isinstance(entity, str) and entity.istitle() and len(entity) > 1
     ]
+    return list(set(filtered_entities))
 
-def is_name_match(person_name, subject_name):
-    """Compare if parts of the names match (case insensitive)."""
-    person_parts = person_name.lower().split()
-    subject_parts = subject_name.lower().split()
-    return any(part in person_parts for part in subject_parts)
+def merge_nominees_and_winners(nominees_data, winners_data):
+    """Merge nominees and winners and then aggregate similar awards."""
+    all_awards = defaultdict(lambda: {'nominees': [], 'winner': []})
 
-def is_winner_keyword_near_person(doc, person_name):
-    """Check if win-related keywords appear near a PERSON entity in the text."""
-    for token in doc:
-        if re.search(win_keywords, token.text, re.IGNORECASE):
-            for ent in doc.ents:
-                if ent.label_ == "PERSON" and person_name.lower() in ent.text.lower():
-                    if abs(token.i - ent.start) <= 3 or abs(token.i - ent.end) <= 3:
-                        return True
-    return False
+    # Combine nominees into the all_awards structure
+    for award_name, data in nominees_data.items():
+        all_awards[award_name]['nominees'].extend(data.get('nominees', []))
 
-def extract_award_category(text, doc):
-    """Extract award category using regex and SpaCy noun phrase parsing."""
-    win_match = re.search(win_keywords, text, re.IGNORECASE)
-    if win_match:
-        win_index = win_match.end()
-        words_after = text[win_index:].split()[:4]
-        
-        if "best" in [word.lower() for word in words_after]:
-            award_candidates = [chunk.text for chunk in doc.noun_chunks if "best" in chunk.text.lower()]
-            return award_candidates[0] if award_candidates else None
+    # Combine winners into the all_awards structure
+    for award_name, data in winners_data.items():
+        all_awards[award_name]['winner'].extend(data.get('winner', []))
 
-    award_tokens = []
-    capturing = False
-    for token in doc:
-        if token.dep_ in {'amod', 'compound', 'dobj'} and token.pos_ in {'ADJ', 'NOUN'}:
-            if not token.text.startswith('@') and not token.text.lower().startswith('rt @'):
-                award_tokens.append(token.text)
-                capturing = True
-        elif capturing and token.dep_ not in {'amod', 'compound', 'dobj'}:
-            break
-    return " ".join(award_tokens) if award_tokens else None
+    # Aggregate similar awards
+    aggregated_awards = aggregate_awards(all_awards)
 
-def find_award_winner(text):
-    """Extract award information from text."""
-    doc = nlp(text)
-    if re.search(win_keywords, text, re.IGNORECASE):
-        winners = []
-        entities = extract_entities(doc)
-        award_category = extract_award_category(text, doc)
+    # Format the awards for final output
+    formatted_awards = {}
+    for award_name, data in aggregated_awards.items():
+        # Filter and flatten lists for both nominees and winners
+        nominees = filter_entities(data['nominees'])
+        winners = filter_entities(data['winner'])
 
-        for ent in entities:
-            if is_winner_keyword_near_person(doc, ent):
-                winners.append(ent)
-        
-        return {
-            "winner": winners or None,
-            "nominees": winners or None,
-            "presenters": [],
-            "award_category": award_category or "N/A"
+        # Select the most frequent winner, if available
+        top_winner = max(set(winners), key=winners.count) if winners else None
+
+        formatted_awards[award_name] = {
+            "nominees": nominees,
+            "winner": top_winner
         }
 
-    return {"winner": None, "nominees": None, "presenters": None, "award_category": None}
+    return formatted_awards
 
-# Example usage with test DataFrame
-test['spacy'] = test['text'].apply(find_award_winner)
-test.to_csv('results.csv', index=False)
+# Paths to the nominee and winner JSON files
+nominees_path = './aggregated_nominees.json'
+winners_path = './consolidated_awards.json'
+
+# Load nominee and winner data from JSON files
+nominees_data = load_json_data(nominees_path)
+winners_data = load_json_data(winners_path)
+
+# Merge nominees and winners, then aggregate
+final_awards = merge_nominees_and_winners(nominees_data, winners_data)
+
+# Save the final formatted awards to a JSON file
+with open('formatted_awards.json', 'w') as f:
+    json.dump(final_awards, f, indent=2)
+print("Aggregation complete. Output saved to formatted_awards.json.")

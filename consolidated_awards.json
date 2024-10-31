@@ -209,84 +209,7 @@
     "winner": [
       [
         "Kevin Costner",
-        10
-      ],
-      [
-        "Damian Lewis",
-        1
-      ],
-      [
-        "Don Cheadle",
-        1
-      ],
-      [
-        "Ben Affleck",
-        1
-      ],
-      [
-        "Hugh Jackman",
-        8
-      ],
-      [
-        "LesMis",
-        1
-      ],
-      [
-        "Daniel Day Lewis",
         5
-      ],
-      [
-        "Les Miserables",
-        1
-      ],
-      [
-        "Day Lewis",
-        6
-      ],
-      [
-        "Mitt Romney",
-        1
-      ],
-      [
-        "McCoys",
-        6
-      ]
-    ],
-    "nominees": [
-      [
-        "Tina Fey",
-        5
-      ],
-      [
-        "Damian Fransisco",
-        1
-      ]
-    ],
-    "presenters": [],
-    "votes": 4
-  },
-  {
-    "name": "Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables",
-    "winner": [
-      [
-        "GoldenGlobes",
-        1
-      ],
-      [
-        "Hugh Jackman",
-        36
-      ],
-      [
-        "Daniel Day Lewis",
-        21
-      ],
-      [
-        "This",
-        1
-      ],
-      [
-        "Day Lewis",
-        1
       ]
     ],
     "nominees": [],
@@ -294,65 +217,28 @@
     "votes": 2
   },
   {
+    "name": "Best Actor in a Motion Picture in the Comedy or Musical category for Les Miserables",
+    "winner": [
+      [
+        "GoldenGlobes",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "Best Actress in a Miniseries or Motion Picture Made for Television for Game Change",
     "winner": [
       [
         ".@_JulianneMoore",
         4
-      ],
-      [
-        "Jennifer Lawrence",
-        7
-      ],
-      [
-        "J Law",
-        1
-      ],
-      [
-        "Claire Danes",
-        2
-      ],
-      [
-        "Globes Jennifer Lawrence",
-        1
-      ],
-      [
-        "None",
-        1
-      ],
-      [
-        "Jessica Chastain",
-        2
-      ],
-      [
-        "girl",
-        1
-      ],
-      [
-        "The Jessica Chastain",
-        1
-      ],
-      [
-        "a video Jennifer Lawrence",
-        1
       ]
     ],
-    "nominees": [
-      [
-        "Best Actress",
-        1
-      ],
-      [
-        "NONE",
-        1
-      ],
-      [
-        "Best Actress - Musical",
-        1
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Supporting Actor in a Motion Picture for his role in Django Unchained",
@@ -389,15 +275,11 @@
       [
         "Jennifer Lawrence",
         3
-      ],
-      [
-        "JenniferLawrence",
-        11
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Supporting Actress in a Motion Picture for Les Miserables at the",
@@ -631,85 +513,82 @@
     "winner": [
       [
         "Kevin Costner",
-        2
+        7
+      ],
+      [
+        "Damian Lewis",
+        1
+      ],
+      [
+        "Don Cheadle",
+        1
+      ],
+      [
+        "Ben Affleck",
+        1
+      ],
+      [
+        "Hugh Jackman",
+        8
+      ],
+      [
+        "LesMis",
+        1
+      ],
+      [
+        "Daniel Day Lewis",
+        5
+      ],
+      [
+        "Les Miserables",
+        1
+      ],
+      [
+        "Day Lewis",
+        6
+      ],
+      [
+        "Mitt Romney",
+        1
+      ],
+      [
+        "McCoys",
+        6
       ]
     ],
-    "nominees": [],
+    "nominees": [
+      [
+        "Tina Fey",
+        5
+      ],
+      [
+        "Damian Fransisco",
+        1
+      ]
+    ],
     "presenters": [],
-    "votes": 1
+    "votes": 3
   },
   {
     "name": "Best Motion Picture Drama yet it was n't nominated for an Oscar",
     "winner": [
       [
         "Argo",
-        35
-      ],
-      [
-        "Les Miserables",
-        99
-      ],
-      [
-        "Best Motion Picture",
-        1
-      ],
-      [
-        "LesMis",
-        4
-      ],
-      [
-        "# LesMiserables",
-        3
-      ],
-      [
-        ".@LesMiserables",
-        9
-      ],
-      [
-        "The film",
-        4
-      ],
-      [
-        "Ben Affleck",
-        2
+        6
       ],
       [
         "# Argo",
-        3
-      ],
-      [
-        "None",
-        1
-      ],
-      [
-        "# LesMis",
-        1
-      ],
-      [
-        "LesMiserables",
-        1
+        2
       ]
     ],
     "nominees": [
       [
         "Argo",
         1
-      ],
-      [
-        "Moonrise Kingdom",
-        1
-      ],
-      [
-        "Clinton",
-        1
-      ],
-      [
-        "Bill Clinton",
-        10
       ]
     ],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "Best Supporting Actress for TV performance for Downton Abbey",
@@ -809,16 +688,57 @@
     "winner": [
       [
         "Jennifer Lawrence",
+        8
+      ],
+      [
+        "J Law",
+        1
+      ],
+      [
+        "Claire Danes",
+        2
+      ],
+      [
+        "Globes Jennifer Lawrence",
+        1
+      ],
+      [
+        "None",
         1
       ],
       [
         "Jessica Chastain",
+        3
+      ],
+      [
+        "girl",
+        1
+      ],
+      [
+        "The Jessica Chastain",
+        1
+      ],
+      [
+        "a video Jennifer Lawrence",
         1
       ]
     ],
-    "nominees": [],
+    "nominees": [
+      [
+        "Best Actress",
+        1
+      ],
+      [
+        "NONE",
+        1
+      ],
+      [
+        "Best Actress - Musical",
+        1
+      ]
+    ],
     "presenters": [],
-    "votes": 2
+    "votes": 3
   },
   {
     "name": "Best Actor and Anne Hathaway wins Best Featured Actress for",
@@ -1129,17 +1049,13 @@
         1
       ],
       [
-        "Christoph Waltz",
-        1
-      ],
-      [
         "Anne Hathaway",
         1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "best actress in a comedy for Silver Linings Playbook",
@@ -1191,15 +1107,11 @@
       [
         "The actress",
         1
-      ],
-      [
-        "Jennifer Lawrence",
-        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Original Song Motion Picture Golden Globes 2013",
@@ -1877,21 +1789,12 @@
     "winner": [
       [
         "Claire Danes",
-        14
-      ],
-      [
-        "Best Actress",
         1
       ]
     ],
-    "nominees": [
-      [
-        "Lena Dunham",
-        1
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best actress at next year 's Golden Globes lol",
@@ -2059,15 +1962,11 @@
       [
         "Julianne Moore",
         7
-      ],
-      [
-        "GoldenGlobes Julianne Moore",
-        2
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Actress in a Miniseries for Game Change",
@@ -2089,14 +1988,9 @@
         1
       ]
     ],
-    "nominees": [
-      [
-        "Catherine Zeta Jones",
-        4
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best supporting actress for Lay Mizzerablues",
@@ -2409,6 +2303,18 @@
     "votes": 1
   },
   {
+    "name": "Best Actress in a Mini Series or TV movie",
+    "winner": [
+      [
+        "GoldenGlobes Julianne Moore",
+        2
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "Best Drama after awkward technical mishap",
     "winner": [
       [
@@ -2514,6 +2420,18 @@
     "votes": 2
   },
   {
+    "name": "Best Actress for Silver Linings Playbook",
+    "winner": [
+      [
+        "Jennifer Lawrence",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "best actor in a comedy for House of Lies",
     "winner": [
       [
@@ -2558,12 +2476,12 @@
     "winner": [
       [
         "Girls",
-        2
+        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best actor in a drama for Lincoln at the",
@@ -2723,16 +2641,12 @@
     "winner": [
       [
         "Jessica Chastain",
-        27
-      ],
-      [
-        "Jennifer Lawrence",
-        13
+        2
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 4
+    "votes": 1
   },
   {
     "name": "Best Drama- one of the best shows on tv",
@@ -2869,15 +2783,11 @@
       [
         "# MaggieSmith",
         7
-      ],
-      [
-        "Maggie Smith",
-        7
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Screenplay but Quentin Tarantino",
@@ -2987,6 +2897,18 @@
       [
         "Jessica Chastain",
         1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Supporting Actress in a TV show",
+    "winner": [
+      [
+        "Maggie Smith",
+        7
       ]
     ],
     "nominees": [],
@@ -3299,17 +3221,13 @@
         1
       ],
       [
-        "JulianneMoore",
-        1
-      ],
-      [
         "# ClaireDanes",
         2
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "best TV drama actress for Homeland",
@@ -3534,11 +3452,11 @@
     "winner": [
       [
         "Brave",
-        4
+        2
       ],
       [
         "BRAVE",
-        2
+        1
       ],
       [
         "Best Animated Feature Film",
@@ -3557,14 +3475,10 @@
       [
         "AskGlobes",
         1
-      ],
-      [
-        "ParaNorman",
-        1
       ]
     ],
     "presenters": [],
-    "votes": 4
+    "votes": 2
   },
   {
     "name": "best drama TV series for season 2",
@@ -3583,7 +3497,7 @@
     "winner": [
       [
         "Hugh Jackman",
-        2
+        1
       ]
     ],
     "nominees": [
@@ -3593,7 +3507,7 @@
       ]
     ],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "Best Actor in a comedy or musical",
@@ -3736,6 +3650,26 @@
     "votes": 1
   },
   {
+    "name": "Best Actress in a Motion Picture",
+    "winner": [
+      [
+        "Jennifer Lawrence",
+        13
+      ],
+      [
+        "Jessica Chastain",
+        25
+      ],
+      [
+        "JenniferLawrence",
+        11
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 4
+  },
+  {
     "name": "Best actress in a motion picture",
     "winner": [
       [
@@ -3792,41 +3726,28 @@
     "votes": 3
   },
   {
+    "name": "Best TV Series Comedy or Musical",
+    "winner": [
+      [
+        "Girls",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "Best Comedy Series at the Globes",
     "winner": [
       [
         "Lena Dunham",
         3
-      ],
-      [
-        "# GIRLS",
-        1
-      ],
-      [
-        "Girls",
-        2
-      ],
-      [
-        "# LesMiserables",
-        1
-      ],
-      [
-        "Congrats Les Mis",
-        1
-      ],
-      [
-        "Les Miserables",
-        2
       ]
     ],
-    "nominees": [
-      [
-        "Smash",
-        1
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best surprised face when he wins",
@@ -3845,7 +3766,7 @@
     "winner": [
       [
         "Argo",
-        2
+        1
       ],
       [
         "# Argo",
@@ -3854,7 +3775,7 @@
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "best nominee to not win an award",
@@ -3879,6 +3800,31 @@
     ],
     "presenters": [],
     "votes": 1
+  },
+  {
+    "name": "Best Actress in a TV Series for",
+    "winner": [
+      [
+        "JulianneMoore",
+        1
+      ],
+      [
+        "Claire Danes",
+        13
+      ],
+      [
+        "Best Actress",
+        1
+      ]
+    ],
+    "nominees": [
+      [
+        "Lena Dunham",
+        1
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
   },
   {
     "name": "Best Actor for Django Unchained",
@@ -4160,6 +4106,30 @@
     "votes": 1
   },
   {
+    "name": "Best Actor in a Motion Picture",
+    "winner": [
+      [
+        "Hugh Jackman",
+        39
+      ],
+      [
+        "Daniel Day Lewis",
+        33
+      ],
+      [
+        "This",
+        1
+      ],
+      [
+        "Day Lewis",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 3
+  },
+  {
     "name": "Best Motion Picture for Comedy",
     "winner": [
       [
@@ -4244,22 +4214,6 @@
     "votes": 2
   },
   {
-    "name": "Best Actor In a Motion Picture",
-    "winner": [
-      [
-        "Hugh Jackman",
-        3
-      ],
-      [
-        "Daniel Day Lewis",
-        12
-      ]
-    ],
-    "nominees": [],
-    "presenters": [],
-    "votes": 2
-  },
-  {
     "name": "best facial hair of the night",
     "winner": [
       [
@@ -4299,14 +4253,9 @@
         1
       ]
     ],
-    "nominees": [
-      [
-        "Best Actor TV Series",
-        1
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Actor Drama for Homeland",
@@ -4314,15 +4263,11 @@
       [
         "Damien Lewis",
         1
-      ],
-      [
-        "Damian Lewis",
-        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best acceptance speech so far",
@@ -4554,17 +4499,12 @@
     "winner": [
       [
         "Game Change",
-        7
-      ]
-    ],
-    "nominees": [
-      [
-        "GoldenGlobes",
         1
       ]
     ],
+    "nominees": [],
     "presenters": [],
-    "votes": 3
+    "votes": 1
   },
   {
     "name": "Best Animation Golden Globes",
@@ -4672,6 +4612,27 @@
     "votes": 2
   },
   {
+    "name": "Best Animated Feature at the",
+    "winner": [
+      [
+        "BRAVE",
+        1
+      ],
+      [
+        "Brave",
+        2
+      ]
+    ],
+    "nominees": [
+      [
+        "ParaNorman",
+        1
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
+  },
+  {
     "name": "Best Director Oscar and just",
     "winner": [],
     "nominees": [
@@ -4692,6 +4653,18 @@
         1
       ]
     ],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Miniseries or TV Movie",
+    "winner": [
+      [
+        "Game Change",
+        1
+      ]
+    ],
+    "nominees": [],
     "presenters": [],
     "votes": 1
   },
@@ -4788,7 +4761,7 @@
       ],
       [
         "Jennifer Lawrence",
-        3
+        2
       ]
     ],
     "nominees": [
@@ -4798,7 +4771,7 @@
       ]
     ],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "Best Director for film Argo",
@@ -4988,6 +4961,18 @@
     "votes": 2
   },
   {
+    "name": "best Motion Picture at the",
+    "winner": [
+      [
+        "Argo",
+        2
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 2
+  },
+  {
     "name": "Best Picture at the Oscars",
     "winner": [
       [
@@ -5093,16 +5078,12 @@
     "winner": [
       [
         "Daniel Day Lewis",
-        2
-      ],
-      [
-        "Damian Lewis",
         1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Drama Motion Picture",
@@ -5124,14 +5105,9 @@
         1
       ]
     ],
-    "nominees": [
-      [
-        "Ben Affleck",
-        1
-      ]
-    ],
+    "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Drama Film at Globes",
@@ -5151,6 +5127,18 @@
     "nominees": [
       [
         "Tarantino",
+        1
+      ]
+    ],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "best motion picture drama",
+    "winner": [],
+    "nominees": [
+      [
+        "Ben Affleck",
         1
       ]
     ],
@@ -5195,19 +5183,11 @@
       [
         "Julianne Moore",
         1
-      ],
-      [
-        "Jennifer Lawrence",
-        1
-      ],
-      [
-        "Lena Dunham",
-        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 3
+    "votes": 1
   },
   {
     "name": "best speech of the night",
@@ -5318,6 +5298,18 @@
     "votes": 1
   },
   {
+    "name": "Best Actor for Homeland",
+    "winner": [
+      [
+        "Damian Lewis",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "best TV drama series at",
     "winner": [
       [
@@ -5358,6 +5350,18 @@
     "votes": 1
   },
   {
+    "name": "Best Actress in a movie",
+    "winner": [
+      [
+        "Jennifer Lawrence",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "Everyone watching every",
     "winner": [],
     "nominees": [
@@ -5387,11 +5391,48 @@
     "votes": 2
   },
   {
+    "name": "Best Actor in a Musical",
+    "winner": [
+      [
+        "Hugh Jackman",
+        1
+      ],
+      [
+        "Jean Valjean",
+        1
+      ]
+    ],
+    "nominees": [
+      [
+        "Jean Valjean",
+        4
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
+  },
+  {
     "name": "Best Comedy or Musicial",
     "winner": [
       [
-        "Les Miserables",
+        "# GIRLS",
         1
+      ],
+      [
+        "Girls",
+        2
+      ],
+      [
+        "# LesMiserables",
+        1
+      ],
+      [
+        "Congrats Les Mis",
+        1
+      ],
+      [
+        "Les Miserables",
+        3
       ],
       [
         "Les Mis",
@@ -5402,10 +5443,14 @@
       [
         "# LesMiserables",
         2
+      ],
+      [
+        "Smash",
+        1
       ]
     ],
     "presenters": [],
-    "votes": 2
+    "votes": 3
   },
   {
     "name": "Best Picture Oscar race",
@@ -5576,15 +5621,32 @@
         1
       ]
     ],
-    "nominees": [],
+    "nominees": [
+      [
+        "Best Actor TV Series",
+        1
+      ]
+    ],
     "presenters": [],
-    "votes": 1
+    "votes": 2
   },
   {
     "name": "best facial expression",
     "winner": [
       [
         "Tommy Lee Jones",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Actress in Comedy",
+    "winner": [
+      [
+        "Jennifer Lawrence",
         1
       ]
     ],
@@ -5833,9 +5895,34 @@
         1
       ]
     ],
+    "nominees": [
+      [
+        "Catherine Zeta Jones",
+        4
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
+  },
+  {
+    "name": "Best Actor in a Drama",
+    "winner": [
+      [
+        "Damian Lewis",
+        1
+      ],
+      [
+        "Daniel Day Lewis",
+        1
+      ],
+      [
+        "Day Lewis",
+        1
+      ]
+    ],
     "nominees": [],
     "presenters": [],
-    "votes": 1
+    "votes": 2
   },
   {
     "name": "best show on the tube",
@@ -6015,23 +6102,6 @@
     "votes": 1
   },
   {
-    "name": "Best Actor in Musical",
-    "winner": [
-      [
-        "Jean Valjean",
-        1
-      ]
-    ],
-    "nominees": [
-      [
-        "Jean Valjean",
-        4
-      ]
-    ],
-    "presenters": [],
-    "votes": 1
-  },
-  {
     "name": "best dramatic picture",
     "winner": [
       [
@@ -6104,11 +6174,19 @@
     "winner": [
       [
         "Homeland",
-        22
-      ],
+        2
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "best TV series drama",
+    "winner": [
       [
-        "Girls",
-        13
+        "Homeland",
+        17
       ],
       [
         "FuckYeah # Homeland",
@@ -6117,40 +6195,51 @@
       [
         "# Homeland",
         1
-      ]
-    ],
-    "nominees": [
-      [
-        "Girls",
-        1
       ],
       [
-        "Homeland",
-        4
+        "# Girls",
+        6
+      ],
+      [
+        "# GIRLS",
+        2
       ]
     ],
+    "nominees": [],
     "presenters": [],
-    "votes": 4
+    "votes": 2
   },
   {
     "name": "Best TV Drama Series",
     "winner": [
       [
         "# Homeland",
-        2
-      ],
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best TV Series drama",
+    "winner": [
       [
         "Homeland",
-        1
+        15
       ],
       [
-        "None",
-        1
+        "Girls",
+        13
       ]
     ],
     "nominees": [
       [
-        "Best TV Drama",
+        "Homeland",
+        4
+      ],
+      [
+        "Girls",
         1
       ]
     ],
@@ -6235,12 +6324,12 @@
     "winner": [
       [
         "Argo",
-        2
+        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best Hollywood movie",
@@ -6284,7 +6373,15 @@
       [
         "# Argo",
         1
-      ],
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best original score",
+    "winner": [
       [
         "GoldenGlobes Life",
         2
@@ -6292,7 +6389,7 @@
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Score category",
@@ -6387,6 +6484,75 @@
     "votes": 2
   },
   {
+    "name": "Best Motion Picture",
+    "winner": [
+      [
+        "Les Miserables",
+        99
+      ],
+      [
+        "Best Motion Picture",
+        1
+      ],
+      [
+        "LesMis",
+        4
+      ],
+      [
+        "# LesMiserables",
+        3
+      ],
+      [
+        ".@LesMiserables",
+        9
+      ],
+      [
+        "Argo",
+        29
+      ],
+      [
+        "The film",
+        4
+      ],
+      [
+        "Ben Affleck",
+        2
+      ],
+      [
+        "# Argo",
+        2
+      ],
+      [
+        "None",
+        1
+      ],
+      [
+        "# LesMis",
+        1
+      ],
+      [
+        "LesMiserables",
+        1
+      ]
+    ],
+    "nominees": [
+      [
+        "Moonrise Kingdom",
+        1
+      ],
+      [
+        "Clinton",
+        1
+      ],
+      [
+        "Bill Clinton",
+        10
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
+  },
+  {
     "name": "someone who wins an",
     "winner": [
       [
@@ -6421,22 +6587,6 @@
     "nominees": [],
     "presenters": [],
     "votes": 1
-  },
-  {
-    "name": "Best Actor in Drama",
-    "winner": [
-      [
-        "Day Lewis",
-        1
-      ],
-      [
-        "Best Actor- Drama",
-        1
-      ]
-    ],
-    "nominees": [],
-    "presenters": [],
-    "votes": 2
   },
   {
     "name": "Best Picture -Drama",
@@ -6476,18 +6626,6 @@
         1
       ]
     ],
-    "presenters": [],
-    "votes": 1
-  },
-  {
-    "name": "Best Motion PIcture",
-    "winner": [
-      [
-        "# Argo",
-        1
-      ]
-    ],
-    "nominees": [],
     "presenters": [],
     "votes": 1
   },
@@ -6550,18 +6688,6 @@
       [
         "Game Change",
         1
-      ],
-      [
-        "Homeland",
-        12
-      ],
-      [
-        "# Girls",
-        6
-      ],
-      [
-        "# GIRLS",
-        2
       ]
     ],
     "nominees": [
@@ -6571,7 +6697,7 @@
       ]
     ],
     "presenters": [],
-    "votes": 3
+    "votes": 2
   },
   {
     "name": "best speech so far",
@@ -6649,12 +6775,24 @@
       [
         "Best Animated Film \" & amp",
         4
+      ]
+    ],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Actress in TV",
+    "winner": [
+      [
+        "Lena Dunham",
+        1
       ],
       [
-        "Brave",
+        "Claire Danes",
         1
       ]
     ],
+    "nominees": [],
     "presenters": [],
     "votes": 2
   },
@@ -6763,6 +6901,18 @@
     "votes": 1
   },
   {
+    "name": "Best Animated film",
+    "winner": [],
+    "nominees": [
+      [
+        "Brave",
+        1
+      ]
+    ],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "best Drama series",
     "winner": [
       [
@@ -6804,6 +6954,18 @@
       ],
       [
         "Amour",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Actor- Drama",
+    "winner": [
+      [
+        "Best Actor- Drama",
         1
       ]
     ],
@@ -6953,15 +7115,11 @@
       [
         "Argo",
         1
-      ],
-      [
-        "movies",
-        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "Best Movie Drama",
@@ -6969,15 +7127,11 @@
       [
         "# Argo",
         1
-      ],
-      [
-        "Les Miserables",
-        1
       ]
     ],
     "nominees": [],
     "presenters": [],
-    "votes": 2
+    "votes": 1
   },
   {
     "name": "best movie drama",
@@ -7007,6 +7161,10 @@
     "name": "Best Miniseries",
     "winner": [
       [
+        "Game Change",
+        5
+      ],
+      [
         "GAME CHANGE",
         1
       ]
@@ -7015,10 +7173,14 @@
       [
         "the Hour",
         1
+      ],
+      [
+        "GoldenGlobes",
+        1
       ]
     ],
     "presenters": [],
-    "votes": 2
+    "votes": 3
   },
   {
     "name": "best everything",
@@ -7069,18 +7231,6 @@
     "votes": 1
   },
   {
-    "name": "Best Actress TV",
-    "winner": [
-      [
-        "Claire Danes",
-        1
-      ]
-    ],
-    "nominees": [],
-    "presenters": [],
-    "votes": 1
-  },
-  {
     "name": "Best TV actress",
     "winner": [
       [
@@ -7097,6 +7247,18 @@
     "winner": [
       [
         "Globes",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Drama over",
+    "winner": [
+      [
+        "movies",
         1
       ]
     ],
@@ -7251,23 +7413,36 @@
     "votes": 2
   },
   {
+    "name": "Best TV Drama",
+    "winner": [
+      [
+        "# Homeland",
+        1
+      ],
+      [
+        "Homeland",
+        3
+      ],
+      [
+        "None",
+        1
+      ]
+    ],
+    "nominees": [
+      [
+        "Best TV Drama",
+        1
+      ]
+    ],
+    "presenters": [],
+    "votes": 2
+  },
+  {
     "name": "Best Drama TV",
     "winner": [
       [
         "Homeland",
         1
-      ]
-    ],
-    "nominees": [],
-    "presenters": [],
-    "votes": 1
-  },
-  {
-    "name": "best TV Drama",
-    "winner": [
-      [
-        "Homeland",
-        2
       ]
     ],
     "nominees": [],
@@ -7507,6 +7682,18 @@
     "votes": 1
   },
   {
+    "name": "Best Movie",
+    "winner": [
+      [
+        "Les Miserables",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
     "name": "BEST ACTOR",
     "winner": [],
     "nominees": [
@@ -7543,6 +7730,18 @@
       ],
       [
         "I",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  },
+  {
+    "name": "Best Supp",
+    "winner": [
+      [
+        "Christoph Waltz",
         1
       ]
     ],

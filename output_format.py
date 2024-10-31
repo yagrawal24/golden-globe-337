@@ -8,13 +8,16 @@ class award:
         self.votes = 1
     
     # add a new person associted with the award
-    def new_person(self, name, role):
+    def new_person(self, name, role, pcount=1):
         if role == 'winner':
-            self.winner.update({name:1})
+            self.winner.update({name:pcount})
         elif role == 'nominee':
-            self.nominees.update({name:1})
+            self.nominees.update({name:pcount})
         elif role == 'presenter':
-            self.presenters.update({name:1})
+            self.presenters.update({name:pcount})
+        
+        if pcount > 1:
+            self.votes += pcount - 1
     
     # a repeat-appearence of a person in a role gives them an additional vote for that role (more votes = more likely)
     def person_vote(self, name, role):
@@ -24,6 +27,19 @@ class award:
             self.nominees[name] += 1
         elif role == 'presenter':
             self.presenters[name] += 1
+    
+    def remove_person(self, name, role):
+        if role == 'winner':
+            pcount = self.winner.pop(name)
+            self.votes -= pcount
+        elif role == 'nominee':
+            pcount = self.nominees.pop(name)
+            self.votes -= pcount
+        elif role == 'presenter':
+            pcount = self.presenters.pop(name)
+            self.votes -= pcount
+        
+        return name, role, pcount
     
     # a repeat award gets more votes (more votes = more likely)
     def award_vote(self):
@@ -65,5 +81,26 @@ def extract_answers(text):
         awards[curr_award].new_person(nominee, role)
     else:
         awards[curr_award].person_vote(nominee, role)
+
+# function to move data from one award to another
+def move_data(a1: award, a2:award):
+    win_temp = a1.winner.keys()
+    nom_temp = a1.nominees.keys()
+    pres_temp = a1.presenters.keys()
+    for w in win_temp:
+        if a2.contains(w, "winner"):
+            name, role, pcount = a1.remove_person(w, "winner")
+            a2.new_person(name, role, pcount)
+    for n in nom_temp:
+        if a2.contains(n, "nominee"):
+            name, role, pcount = a1.remove_person(n, "nominee")
+            a2.new_person(name, role, pcount)
+    for p in pres_temp:
+        if a2.contains(p, "presenters"):
+            name, role, pcount = a1.remove_person(p, "presenters")
+            a2.new_person(name, role, pcount)
+
+
+### NEED TO AGGREGATE AWARD DATA
 
 ### NEED TO JSONIFY OUTPUT

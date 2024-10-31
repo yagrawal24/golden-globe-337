@@ -135,26 +135,29 @@ def find_nominee(text):
             return f"{nominee} | {award_category} | nominee"
     return None
 
-# Test the function with multiple test cases
-text1 = 'game change wins best miniseries or tv movie'
-text2 = 'i hope the hour wins best miniseries'
-text3 = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
 
-# Testing outputs
-print(find_award_winner(text1))  # 'Winner: game change, Award Category: best miniseries or tv movie'
-print(find_award_winner(text2))  # 'Winner: the hour, Award Category: best miniseries'
-print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
 
-# Load the dataset and apply the function
-win_data = pd.read_csv('wins.csv')['text']
-# nominee_data = pd.read_csv('nominees.csv')['text']
+if __name__ == "__main__":
+   # Test the function with multiple test cases
+    text1 = 'game change wins best miniseries or tv movie'
+    text2 = 'i hope the hour wins best miniseries'
+    text3 = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
 
-win_output = win_data.apply(find_award_winner)
-# nom_output = nominee_data.apply(find_nominee)
+    # Testing outputs
+    print(find_award_winner(text1))  # 'Winner: game change, Award Category: best miniseries or tv movie'
+    print(find_award_winner(text2))  # 'Winner: the hour, Award Category: best miniseries'
+    print(find_award_winner(text3))  # 'Winner: argo, Award Category: best drama'
 
-# Create a DataFrame with "Tweet" and "Output" columns
-# output = pd.concat([win_output, nom_output])
+    # Load the dataset and apply the function
+    win_data = pd.read_csv('wins.csv')['text']
+    nominee_data = pd.read_csv('nominees.csv')['text']
 
-# Save the output
-# output.to_csv('winners_nominees.csv', index=False)
-win_output.to_csv('winners_and_awards.csv')
+    win_output = win_data.apply(find_award_winner)
+    # nom_output = nominee_data.apply(find_nominee)
+
+    # Create a DataFrame with "Tweet" and "Output" columns
+    # output = pd.concat([win_output, nom_output])
+
+    # Save the output
+    # output.to_csv('winners_nominees.csv', index=False)
+    win_output.to_csv('winners_and_awards.csv')

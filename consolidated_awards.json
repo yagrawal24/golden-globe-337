@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Best Supporting Actor in a Motion Picture",
+    "winner": [
+      [
+        "Christoph Waltz",
+        3
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 3
+  },
+  {
+    "name": "Best Actress in a Motion Picture Drama",
+    "winner": [
+      [
+        "Jessica Chastain",
+        2
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 2
+  },
+  {
+    "name": "Best Actor in a Motion Picture",
+    "winner": [
+      [
+        "Daniel Day-Lewis",
+        1
+      ]
+    ],
+    "nominees": [],
+    "presenters": [],
+    "votes": 1
+  }
+]

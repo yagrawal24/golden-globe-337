@@ -1,311 +1,130 @@
-# import spacy
-# from spacy import displacy
-# import cairosvg
-# import re
+import pandas as pd
+import json
+from collections import defaultdict
 
-# # load english language model
-# nlp = spacy.load('en_core_web_sm')
-# # text = "This is a sample sentence."
-
-# # create spacy
-# # doc = nlp(text)
-
-# '''
-# Determine Parts of Speech
-# '''
-# # for token in doc:
-# #     print(token.text, '->', token.pos_)
-
-# '''
-# RESULT:
-
-# This -> PRON
-# is -> AUX
-# a -> DET
-# sample -> NOUN
-# sentence -> NOUN
-# . -> PUNCT
-# '''
-
-# '''
-# Extract Nouns
-# '''
-# # for token in doc:
-# #     # check token pos
-# #     if token.pos_ == 'NOUN':
-# #         # print token
-# #         print(token.text)
-
-# '''
-# RESULT:
-
-# sample
-# sentence
-# '''
-
-# # text = "The children love cream biscuits"
-
-# # create spacy
-# # doc = nlp(text)
-
-# # for token in doc:
-# #     print(token.text, '->', token.pos_)
-
-# '''
-# RESULT:
-
-# The -> DET
-# children -> NOUN
-# love -> VERB
-# cream -> NOUN
-# biscuits -> NOUN
-# '''
-
-# # for token in doc:
-# #     # extract subject
-# #     if (token.dep_ == 'nsubj'):
-# #         print(token.text)
-# #     # extract object
-# #     elif (token.dep_ == 'dobj'):
-# #         print(token.text)
-
-# '''
-# RESULT:
-
-# children
-# biscuits
-# '''
-
-# '''
-# Dependency Graph
-
-# 1. The arrowhead points to the words that are dependent on the word pointed by the origin of the arrow
-# 2. The former is referred to as the child node of the latter. For example, “children” is the child node of “love”
-# 3. The word which has no incoming arrow is called the root node of the sentence
-# '''
-# # displacy.render(doc, style = 'dep', jupyter = True)
-
-# # Render the dependency tree as SVG
-# # svg = displacy.render(doc, style='dep', jupyter=False, options={'compact': True})
-
-# # Save the SVG content to a file
-# # with open("dependency_parse.svg", "w", encoding="utf-8") as file:
-# #     file.write(svg)
-
-# # print("Dependency parse saved as 'dependency_parse.svg'")
-
-# # Convert the SVG to PNG
-# # cairosvg.svg2png(url="dependency_parse.svg", write_to="dependency_parse.png")
-
-# # print("Dependency parse saved as 'dependency_parse.png'")
-
-# '''
-# PROJECT 1 TEST
-# '''
-
-# text = "rt @galaxiemag lifetime achievement award winner jodie foster is 50 she has been acting for 47 of those years amazing"
-
-# # create spacy
-# doc = nlp(text)
-
-# # for token in doc:
-# #     print(token.text, '->', token.pos_)
-# '''
-# rt -> INTJ
-# @galaxiemag -> PROPN
-# lifetime -> NOUN
-# achievement -> NOUN
-# award -> NOUN
-# winner -> NOUN
-# jodie -> PROPN
-# foster -> PROPN
-# is -> AUX
-# 50 -> NUM
-# she -> PRON
-# has -> AUX
-# been -> AUX
-# acting -> VERB
-# for -> ADP
-# 47 -> NUM
-# of -> ADP
-# those -> DET
-# years -> NOUN
-# amazing -> ADJ
-# '''
-
-# # displacy.render(doc, style = 'dep', jupyter = True)
-
-# # svg = displacy.render(doc, style='dep', jupyter=False, options={'compact': True})
-
-# # with open("test.svg", "w", encoding="utf-8") as file:
-# #     file.write(svg)
-
-# # print("Dependency parse saved as 'test.svg'")
-
-# # cairosvg.svg2png(url="test.svg", write_to="test.png")
-
-# # print("Dependency parse saved as 'test.png'")
-
-# # for token in doc:
-# #     # extract subject
-# #     if (token.dep_ == 'nsubj'):
-# #         print(token.text)
-# #     # extract object
-# #     elif (token.dep_ == 'dobj'):
-# #         print(token.text)
-# '''
-# foster
-# she
-# '''
-
-# # print(re.findall(r"(.+) (wins|Wins|won|Won|winner|Winner|winner|Winners) (.+)", text))
-# '''
-# [('rt @galaxiemag lifetime achievement award', 'winner', 'jodie foster is 50 she has been acting for 47 of those years amazing')]
-# '''
-
-# def extract_entities(text):
-#     doc = nlp(text)
-#     entities = [(ent.text, ent.label_) for ent in doc.ents]
-#     return entities
-
-# # print(extract_entities(text))
-
-# '''
-# [('jodie foster', 'PERSON'), ('50', 'DATE'), ('47', 'CARDINAL')]
-# '''
-
-# # for i in extract_entities(text):
-# #     print(i)
-# '''
-# ('jodie foster', 'PERSON')
-# ('50', 'DATE')
-# ('47', 'CARDINAL')
-# '''
-
-# # for i in extract_entities(text):
-# #     if i[1] == "PERSON":
-# #         print(i)
-# '''
-# ('jodie foster', 'PERSON')
-# '''
-
-# # for token in doc:
-# #     if (token.dep_ == 'nsubj'):
-# #         nsubj = token.text
-# #     elif (token.dep_ == 'dobj'):
-# #         dobj = token.text
-
-# alleged_winner = ""
-# subject = []
-# actual_winner = ""
-
-# for ent in extract_entities(text):
-#     if ent[1] == "PERSON":
-#         alleged_winner = ent[0]
-
-# for token in doc:
-#     # extract subject
-#     if (token.dep_ == 'nsubj'):
-#         subject.append(token.text)
-
-# # print(subject)
-# # print(alleged_winner)
-
-import spacy
-
-# Load the SpaCy model
-nlp = spacy.load('en_core_web_sm')
-
-# def extract_full_name(sentence):
-#     """Extract full names from a given sentence."""
-#     # Process the sentence using the SpaCy model
-#     doc = nlp(sentence)
+# Award class to store information about each award
+class Award:
+    def __init__(self, name):
+        self.name = name
+        self.winner = {}
+        self.nominees = {}
+        self.presenters = {}
+        self.votes = 1
     
-#     # Extract entities of type 'PERSON'
-#     full_names = [ent.text for ent in doc.ents if ent.label_ == "PERSON"]
+    def new_person(self, name, role, pcount=1):
+        """Add a new person associated with the award."""
+        if role == 'winner':
+            self.winner[name] = pcount
+        elif role == 'nominee':
+            self.nominees[name] = pcount
+        elif role == 'presenter':
+            self.presenters[name] = pcount
+        if pcount > 1:
+            self.votes += pcount - 1
     
-#     return full_names
+    def person_vote(self, name, role):
+        """Increase the vote count for a person in a specific role."""
+        if role == 'winner':
+            self.winner[name] += 1
+        elif role == 'nominee':
+            self.nominees[name] += 1
+        elif role == 'presenter':
+            self.presenters[name] += 1
+    
+    def remove_person(self, name, role):
+        """Remove a person from a role and adjust the vote count."""
+        if role == 'winner':
+            pcount = self.winner.pop(name)
+            self.votes -= pcount
+        elif role == 'nominee':
+            pcount = self.nominees.pop(name)
+            self.votes -= pcount
+        elif role == 'presenter':
+            pcount = self.presenters.pop(name)
+            self.votes -= pcount
+        return name, role, pcount
+    
+    def award_vote(self):
+        """Increase vote count for this award."""
+        self.votes += 1
+    
+    def contains(self, name, role):
+        """Check if a person is already in a specific role for this award."""
+        if role == 'winner':
+            return name in self.winner
+        elif role == 'nominee':
+            return name in self.nominees
+        elif role == 'presenter':
+            return name in self.presenters
+        return False
+    
+    def output(self):
+        """Prepare the award information for JSON output."""
+        return {
+            self.name: {
+                "nominees": [(n, self.nominees[n]) for n in self.nominees],
+                "presenters": [(p, self.presenters[p]) for p in self.presenters],
+                "winner": [(w, self.winner[w]) for w in self.winner],
+                "votes": self.votes
+            }
+        }
 
-# # Example usage
-# sentence = "Chris Evans won the award, while Scarlett Johansson was nominated."
-# full_names = extract_full_name(sentence)
+# Dictionary to hold all awards
+awards = {}
 
-# print(full_names)  # Output: ['Chris Evans', 'Scarlett Johansson']
-
-# text = 'rt @kriskling pretty sweet they had president clinton introduce the movie lincoln nominated for best motion picture drama'
-'''
-rt: npadvmod
-@kriskling: acl
-pretty: advmod
-sweet: acomp
-they: nsubj
-had: ROOT
-president: compound
-clinton: nsubj
-introduce: ccomp
-the: det
-movie: compound
-lincoln: dobj
-nominated: acl
-for: prep
-best: amod
-motion: compound
-picture: compound
-drama: pobj
-'''
-
-text = 'rt @perezhilton @benaffleck argo wins best drama at the golden globes'
-'''
-rt: nmod
-@perezhilton: compound
-@benaffleck: compound
-argo: nsubj
-wins: ROOT
-best: amod
-drama: dobj
-at: prep
-the: det
-golden: amod
-globes: pobj
-'''
-
-# def extract_nominee(text):
-#     doc = nlp(text)
-
-#     for token in doc:
-#         # if (token.dep_ == 'nsubj'):
-#             # print(f'{token}: {token.dep_}')
-#         print(f'{token}: {token.dep_}')
-
-# extract_nominee(text)
-
-def extract_nominee_and_award(doc):
-    """Extract the nominee (subject) and the award (object)."""
-    nominee = None
-    award = None
-    for token in doc:
-        # Extract the subject (nsubj) which is typically the nominee
-        if token.dep_ == 'nsubj' and token.head.text in ['wins', 'won', 'receives']:
-            nominee = token.text
+# Function to extract answers from the data
+def extract_answers(text):
+    try:
+        nominee, curr_award, role = text.split(' | ')
         
-        # Extract the award (dobj) and modifier (amod), typically following 'best' or similar
-        if token.dep_ == 'dobj' and token.head.text in ['wins', 'won', 'receives']:
-            # Look for the adjective modifier 'best' or similar award-related words
-            award = ' '.join([child.text for child in token.lefts if child.dep_ == 'amod']) + ' ' + token.text
+        if curr_award not in awards:
+            awards[curr_award] = Award(curr_award)
+        else:
+            awards[curr_award].award_vote()
             
-    return nominee, award
-
-def find_award_winner(text):
-    """Extract the winner and award from the text."""
-    doc = nlp(text)
+        if not awards[curr_award].contains(nominee, role):
+            awards[curr_award].new_person(nominee, role)
+        else:
+            awards[curr_award].person_vote(nominee, role)
     
-    # Extract the nominee (subject) and the award (direct object)
-    nominee, award = extract_nominee_and_award(doc)
-    
-    if nominee and award:
-        return f"{nominee} | {award} | winner"
-    return None
+    except ValueError:
+        print(f"Skipping invalid entry: {text}")  # Log any problematic entries
 
-# Test the function
-result = find_award_winner(text)
-print(result)
+# Function to move data from one award to another to prevent duplicates
+def move_data(a1: Award, a2: Award):
+    """Move people from one award to another to consolidate data."""
+    for role, attr in [("winner", a1.winner), ("nominee", a1.nominees), ("presenter", a1.presenters)]:
+        for name in list(attr):
+            if a2.contains(name, role):
+                name, role, pcount = a1.remove_person(name, role)
+                a2.new_person(name, role, pcount)
+
+# Load the data and apply the function to extract answers
+data = pd.read_csv('award_names_2.csv')
+data['Output'].dropna().apply(extract_answers)
+
+# Function to aggregate award data by merging similar award names
+def aggregate_awards():
+    award_names = list(awards.keys())
+    for i in range(len(award_names)):
+        for j in range(i + 1, len(award_names)):
+            a1 = awards[award_names[i]]
+            a2 = awards[award_names[j]]
+            # Check if awards are similar enough to be merged
+            if a1.name.lower() in a2.name.lower() or a2.name.lower() in a1.name.lower():
+                move_data(a1, a2)
+                a2.votes += a1.votes
+                del awards[a1.name]
+                break
+
+# Aggregate awards to remove duplicates
+aggregate_awards()
+
+# Convert the final output to JSON
+final_output = {award: awards[award].output() for award in awards}
+
+# Save the output to JSON file
+with open('unique_award_winners.json', 'w') as f:
+    json.dump(final_output, f, indent=4)
+
+print("Unique, non-repetitive award winners saved to 'unique_award_winners.json'.")

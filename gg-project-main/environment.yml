@@ -17,3 +17,4 @@ dependencies:
           - cairosvg
           - matplotlib
           - scikit-learn
+          - rapidfuzz

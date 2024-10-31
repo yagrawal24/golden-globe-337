@@ -6,7 +6,9 @@ from difflib import SequenceMatcher
 from capture_group import extract_award_names, extract_entities_as_nominee
 
 # Load SpaCy English language model
+print("Loading SpaCy model for nominee extraction...")
 nlp = spacy.load('en_core_web_sm')
+print("SpaCy model loaded.")
 
 class Award:
     def __init__(self, name):
@@ -23,9 +25,10 @@ class Award:
         self.votes += other_award.votes
 
     def output(self):
+        sorted_nominees = sorted(self.nominees.items(), key=lambda item: item[1], reverse=True)
         return {
             "name": self.name,
-            "nominees": [nominee for nominee, _ in sorted(self.nominees.items(), key=lambda item: item[1], reverse=True)],
+            "nominees": [nominee for nominee, _ in sorted_nominees],
             "votes": self.votes
         }
 
@@ -71,6 +74,7 @@ def aggregate_awards(award_dict, threshold=0.85):
                 main_award.consolidate(other_award)
                 del award_dict[other_key]
 
+    print("Awards consolidated.")
     return consolidated_awards
 
 def build_known_awards(data):
@@ -80,6 +84,7 @@ def build_known_awards(data):
         award_name = extract_award_names(text)
         if award_name:
             known_awards.add(award_name)
+    print("Known awards extracted from data.")
     return list(known_awards)
 
 def extract_nominee_info(tweet, known_awards):
@@ -97,15 +102,15 @@ def extract_nominee_info(tweet, known_awards):
 
 # Load data from CSV file
 file_path = './winners_nominees.csv'
+print("Loading data from CSV...")
 df = pd.read_csv(file_path)
-print("Data loaded from CSV.")
+print("Data loaded successfully.")
 
 tweets = df['text'].dropna().tolist()
-print("Data preprocessed.")
+print("Data preprocessed for award extraction.")
 
 # Build known awards dynamically
 known_awards = build_known_awards(tweets)
-print("Known awards extracted.")
 
 # Extract nominee information and aggregate data
 nominees_dict = {}
@@ -118,9 +123,9 @@ for tweet in tweets:
 
 # Aggregate similar awards
 aggregated_nominees = aggregate_awards(nominees_dict)
-print("Nominee data aggregated.")
 
 # Save results to JSON and text files
+print("Saving aggregated nominee data...")
 with open('aggregated_nominees.json', 'w') as json_file:
     json.dump({award_name: award_obj.output() for award_name, award_obj in aggregated_nominees.items()}, json_file, indent=2)
 

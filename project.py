@@ -1,97 +1,75 @@
-import json
+import spacy
+import pandas as pd
 import re
-from collections import defaultdict
-from difflib import SequenceMatcher
+import json
 
-def load_json_data(file_path):
-    """Load JSON data from a file, ensuring it's read as a dictionary."""
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-        if isinstance(data, list):
-            # Convert list to dictionary if the JSON is structured incorrectly
-            data = {str(i): item for i, item in enumerate(data)}
-        return data
+# Load SpaCy model without NER for faster processing
+print("Loading SpaCy model without NER...")
+nlp = spacy.load('en_core_web_sm', disable=['ner'])
+print("SpaCy model loaded.")
 
-def similarity(a, b):
-    """Calculate similarity between two strings."""
-    return SequenceMatcher(None, a, b).ratio()
+# Load the cleaned text data
+file_path = './text_cleaned.csv'
+print(f"Loading data from {file_path}...")
+df = pd.read_csv(file_path)
+texts = df['text'].dropna().tolist()
+print("Data loaded successfully.")
 
-def aggregate_awards(award_dict, threshold=0.85):
-    """Aggregate awards by consolidating similar award names."""
-    award_keys = sorted(award_dict.keys(), key=len, reverse=True)
-    consolidated_awards = {}
+# Award lexicon components
+award_descriptors = [
+    "Best", "Outstanding", "Favorite", "Top", "Excellence in", "Achievement in"
+]
+general_award_categories = [
+    "Actor", "Actress", "Director", "Picture", "Screenplay", "Soundtrack",
+    "Album", "Song", "Artist", "Performance", "Music Video", "Television Series",
+    "Drama", "Comedy", "Animated", "Documentary", "Feature Film", "Reality Show",
+    "Supporting Actor", "Supporting Actress"
+]
+action_keywords = ["win", "won", "nominated", "awarded", "presented"]
 
-    for key in award_keys:
-        if key not in award_dict:
-            continue
+# Match award pattern
+def match_award_pattern(doc):
+    for token in doc:
+        if token.lemma_ in action_keywords:
+            award_phrase = extract_award_category(doc)
+            nominee = extract_nominee_name(doc)
+            if award_phrase and nominee:
+                return {"nominee": nominee, "category": award_phrase}
+    return None
 
-        main_award = award_dict[key]
-        consolidated_awards[key] = main_award
+# Extract award category
+def extract_award_category(doc):
+    for token in doc:
+        if token.text in award_descriptors:
+            phrase = " ".join([t.text for t in token.subtree])
+            for category in general_award_categories:
+                if re.search(rf"\b{category}\b", phrase, re.IGNORECASE):
+                    return phrase
+    return None
 
-        for other_key in list(award_dict.keys()):
-            if other_key == key or other_key not in award_dict:
-                continue
+# Extract nominee name (fast method without NER)
+def extract_nominee_name(doc):
+    for chunk in doc.noun_chunks:
+        if chunk.root.pos_ == "PROPN":  # Proper nouns likely to be nominee names
+            return chunk.text
+    return None
 
-            if similarity(key, other_key) >= threshold:
-                other_award = award_dict[other_key]
-                main_award['nominees'].extend(other_award['nominees'])
-                main_award['winner'].extend(other_award['winner'])
-                del award_dict[other_key]
+# Process in batches for efficiency
+print("Starting nominee extraction process...")
+batch_size = 100  # Adjust batch size based on memory and processing speed
+results = []
+for i in range(0, len(texts), batch_size):
+    batch_texts = texts[i:i+batch_size]
+    batch_docs = list(nlp.pipe(batch_texts))
+    for doc in batch_docs:
+        match = match_award_pattern(doc)
+        if match:
+            results.append(match)
 
-    return consolidated_awards
+# Save results to JSON file
+output_path = 'nominee_extraction_results.json'
+print(f"Saving results to {output_path}...")
+with open(output_path, 'w') as f:
+    json.dump(results, f, indent=2)
 
-def filter_entities(entity_list):
-    """Filter out unwanted words from the list of nominees or winners."""
-    filtered_entities = [
-        entity for entity in entity_list
-        if isinstance(entity, str) and entity.istitle() and len(entity) > 1
-    ]
-    return list(set(filtered_entities))
-
-def merge_nominees_and_winners(nominees_data, winners_data):
-    """Merge nominees and winners and then aggregate similar awards."""
-    all_awards = defaultdict(lambda: {'nominees': [], 'winner': []})
-
-    # Combine nominees into the all_awards structure
-    for award_name, data in nominees_data.items():
-        all_awards[award_name]['nominees'].extend(data.get('nominees', []))
-
-    # Combine winners into the all_awards structure
-    for award_name, data in winners_data.items():
-        all_awards[award_name]['winner'].extend(data.get('winner', []))
-
-    # Aggregate similar awards
-    aggregated_awards = aggregate_awards(all_awards)
-
-    # Format the awards for final output
-    formatted_awards = {}
-    for award_name, data in aggregated_awards.items():
-        # Filter and flatten lists for both nominees and winners
-        nominees = filter_entities(data['nominees'])
-        winners = filter_entities(data['winner'])
-
-        # Select the most frequent winner, if available
-        top_winner = max(set(winners), key=winners.count) if winners else None
-
-        formatted_awards[award_name] = {
-            "nominees": nominees,
-            "winner": top_winner
-        }
-
-    return formatted_awards
-
-# Paths to the nominee and winner JSON files
-nominees_path = './aggregated_nominees.json'
-winners_path = './consolidated_awards.json'
-
-# Load nominee and winner data from JSON files
-nominees_data = load_json_data(nominees_path)
-winners_data = load_json_data(winners_path)
-
-# Merge nominees and winners, then aggregate
-final_awards = merge_nominees_and_winners(nominees_data, winners_data)
-
-# Save the final formatted awards to a JSON file
-with open('formatted_awards.json', 'w') as f:
-    json.dump(final_awards, f, indent=2)
-print("Aggregation complete. Output saved to formatted_awards.json.")
+print("Nominee extraction complete. Results saved to 'nominee_extraction_results.json'")

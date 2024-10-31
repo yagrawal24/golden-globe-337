@@ -18,7 +18,7 @@ class Award:
             self.nominees[name] += count
         elif role == 'presenter':
             self.presenters[name] += count
-        self.votes += count - 1 if count > 1 else 0
+        self.votes += max(count - 1, 0)
 
     def consolidate(self, other_award):
         for winner, count in other_award.winner.items():
@@ -30,11 +30,12 @@ class Award:
         self.votes += other_award.votes
 
     def output(self):
+        top_winner = max(self.winner, key=self.winner.get, default=None)
         return {
             "name": self.name,
-            "winner": list(self.winner.items()),
-            "nominees": list(self.nominees.items()),
-            "presenters": list(self.presenters.items()),
+            "winner": top_winner,
+            "nominees": list(self.nominees.keys()),
+            "presenters": list(self.presenters.keys()),
             "votes": self.votes
         }
 
@@ -99,9 +100,9 @@ def jsonify_simple_output(aggregated_awards):
     simplified_json_output = {}
     for award_name, award_obj in aggregated_awards.items():
         simplified_json_output[award_name] = {
-            'winner': [person for person, count in award_obj.winner.items()],
-            'nominees': [person for person, count in award_obj.nominees.items()],
-            'presenters': [person for person, count in award_obj.presenters.items()]
+            'winner': max(award_obj.winner, key=award_obj.winner.get, default=None),
+            'nominees': list(award_obj.nominees.keys()),
+            'presenters': list(award_obj.presenters.keys())
         }
     with open('condensed_awards.json', 'w') as f:
         json.dump(simplified_json_output, f, indent=2)

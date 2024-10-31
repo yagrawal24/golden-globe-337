@@ -1,130 +1,147 @@
-import pandas as pd
 import json
 from collections import defaultdict
+from difflib import SequenceMatcher
+import pandas as pd
 
-# Award class to store information about each award
 class Award:
     def __init__(self, name):
         self.name = name
-        self.winner = {}
-        self.nominees = {}
-        self.presenters = {}
+        self.winner = defaultdict(int)
+        self.nominees = defaultdict(int)
+        self.presenters = defaultdict(int)
         self.votes = 1
-    
-    def new_person(self, name, role, pcount=1):
-        """Add a new person associated with the award."""
+
+    def add_person(self, name, role, count=1):
         if role == 'winner':
-            self.winner[name] = pcount
+            self.winner[name] += count
         elif role == 'nominee':
-            self.nominees[name] = pcount
+            self.nominees[name] += count
         elif role == 'presenter':
-            self.presenters[name] = pcount
-        if pcount > 1:
-            self.votes += pcount - 1
-    
-    def person_vote(self, name, role):
-        """Increase the vote count for a person in a specific role."""
-        if role == 'winner':
-            self.winner[name] += 1
-        elif role == 'nominee':
-            self.nominees[name] += 1
-        elif role == 'presenter':
-            self.presenters[name] += 1
-    
-    def remove_person(self, name, role):
-        """Remove a person from a role and adjust the vote count."""
-        if role == 'winner':
-            pcount = self.winner.pop(name)
-            self.votes -= pcount
-        elif role == 'nominee':
-            pcount = self.nominees.pop(name)
-            self.votes -= pcount
-        elif role == 'presenter':
-            pcount = self.presenters.pop(name)
-            self.votes -= pcount
-        return name, role, pcount
-    
-    def award_vote(self):
-        """Increase vote count for this award."""
-        self.votes += 1
-    
-    def contains(self, name, role):
-        """Check if a person is already in a specific role for this award."""
-        if role == 'winner':
-            return name in self.winner
-        elif role == 'nominee':
-            return name in self.nominees
-        elif role == 'presenter':
-            return name in self.presenters
-        return False
-    
+            self.presenters[name] += count
+        self.votes += count - 1 if count > 1 else 0
+
+    def consolidate(self, other_award):
+        for winner, count in other_award.winner.items():
+            self.winner[winner] += count
+        for nominee, count in other_award.nominees.items():
+            self.nominees[nominee] += count
+        for presenter, count in other_award.presenters.items():
+            self.presenters[presenter] += count
+        self.votes += other_award.votes
+
     def output(self):
-        """Prepare the award information for JSON output."""
         return {
-            self.name: {
-                "nominees": [(n, self.nominees[n]) for n in self.nominees],
-                "presenters": [(p, self.presenters[p]) for p in self.presenters],
-                "winner": [(w, self.winner[w]) for w in self.winner],
-                "votes": self.votes
-            }
+            "name": self.name,
+            "winner": list(self.winner.items()),
+            "nominees": list(self.nominees.items()),
+            "presenters": list(self.presenters.items()),
+            "votes": self.votes
         }
 
-# Dictionary to hold all awards
-awards = {}
+def similarity(a, b):
+    """Calculate similarity between two strings."""
+    return SequenceMatcher(None, a, b).ratio()
 
-# Function to extract answers from the data
-def extract_answers(text):
-    try:
-        nominee, curr_award, role = text.split(' | ')
+def can_consolidate(name1, name2):
+    """Determine if two award names can be consolidated, ensuring Actor/Actress are not merged."""
+    keywords = ["Actor", "Actress", "Director", "Screenplay"]
+    for keyword in keywords:
+        if (keyword in name1 and keyword not in name2) or (keyword in name2 and keyword not in name1):
+            return False  # Do not consolidate if keywords are mismatched
+    return True  # Otherwise, allow consolidation if similarity threshold is met
+
+def aggregate_awards(award_dict, threshold=0.85):
+    """Aggregate awards by consolidating them under the longest, most descriptive award name."""
+    # Sort by longest name first for best aggregation
+    award_keys = sorted(award_dict.keys(), key=lambda k: (len(k), award_dict[k].votes), reverse=True)
+    consolidated_awards = {}
+
+    for key in award_keys:
+        if key not in award_dict:
+            continue
+
+        main_award = award_dict[key]
+        consolidated_awards[key] = main_award
         
-        if curr_award not in awards:
-            awards[curr_award] = Award(curr_award)
-        else:
-            awards[curr_award].award_vote()
-            
-        if not awards[curr_award].contains(nominee, role):
-            awards[curr_award].new_person(nominee, role)
-        else:
-            awards[curr_award].person_vote(nominee, role)
+        for other_key in list(award_dict.keys()):
+            if other_key == key or other_key not in award_dict:
+                continue
+
+            # Enforce consolidation if other_key is a subset or variation of key
+            if (other_key in key or similarity(key, other_key) >= threshold) and can_consolidate(key, other_key):
+                other_award = award_dict[other_key]
+                main_award.consolidate(other_award)
+                del award_dict[other_key]  # Remove after consolidation
+
+    return consolidated_awards
+
+def jsonify_output(aggregated_awards):
+    """Formats output as JSON with all awards consolidated."""
+    final_output = [award.output() for award in aggregated_awards.values()]
+    with open('consolidated_awards.json', 'w') as f:
+        json.dump(final_output, f, indent=2)
+    print("Detailed JSON output:\n", json.dumps(final_output, indent=2))
+
+# Sample function to parse awards data
+def parse_award_data(data):
+    awards_dict = {}
+    for row in data:
+        name, award_name, role = row.split(' | ')
+        if award_name not in awards_dict:
+            awards_dict[award_name] = Award(award_name)
+        awards_dict[award_name].add_person(name, role)
+    return awards_dict
+
+# Function to generate simplified "NAME | AWARD | ROLE" output and print it
+def generate_simple_output(aggregated_awards, role="winner"):
+    with open('simplified_awards_output.txt', 'w') as f:
+        for award_name, award_obj in aggregated_awards.items():
+            for person, count in award_obj.winner.items():  # Assuming 'winner' is the role based on test data
+                output_line = f"{person} | {award_name} | {role}"
+                print(output_line)  # Print each line to console
+                f.write(f"{output_line}\n")
+
+# Function for condensed JSON format
+def jsonify_simple_output(aggregated_awards):
+    """Generate simplified JSON format with each award's winners, nominees, and presenters."""
+    simplified_json_output = {}
     
-    except ValueError:
-        print(f"Skipping invalid entry: {text}")  # Log any problematic entries
+    for award_name, award_obj in aggregated_awards.items():
+        # Create dictionary for each award with structured winners, nominees, and presenters
+        simplified_json_output[award_name] = {
+            'winner': [person for person, count in award_obj.winner.items()],
+            'nominees': [person for person, count in award_obj.nominees.items()],
+            'presenters': [person for person, count in award_obj.presenters.items()]
+        }
+    
+    # Print the formatted output to console
+    print("\nCondensed JSON format:\n", json.dumps(simplified_json_output, indent=2))
 
-# Function to move data from one award to another to prevent duplicates
-def move_data(a1: Award, a2: Award):
-    """Move people from one award to another to consolidate data."""
-    for role, attr in [("winner", a1.winner), ("nominee", a1.nominees), ("presenter", a1.presenters)]:
-        for name in list(attr):
-            if a2.contains(name, role):
-                name, role, pcount = a1.remove_person(name, role)
-                a2.new_person(name, role, pcount)
+    # Save to JSON file
+    with open('formatted_awards_output.json', 'w') as f:
+        json.dump(simplified_json_output, f, indent=2)
 
-# Load the data and apply the function to extract answers
-data = pd.read_csv('award_names_2.csv')
-data['Output'].dropna().apply(extract_answers)
+# Test data
+# test_data = [
+#     "Christoph Waltz | Best Supporting Actor in a Motion Picture | winner",
+#     "Christoph Waltz | Best Supporting Actor | winner",
+#     "Christoph Waltz | Best Supporting Actor in Motion Picture | winner",
+#     "Daniel Day-Lewis | Best Actor in a Motion Picture | winner",
+#     "Jessica Chastain | Best Actress | winner",
+#     "Jessica Chastain | Best Actress in a Motion Picture Drama | winner"
+# ]
 
-# Function to aggregate award data by merging similar award names
-def aggregate_awards():
-    award_names = list(awards.keys())
-    for i in range(len(award_names)):
-        for j in range(i + 1, len(award_names)):
-            a1 = awards[award_names[i]]
-            a2 = awards[award_names[j]]
-            # Check if awards are similar enough to be merged
-            if a1.name.lower() in a2.name.lower() or a2.name.lower() in a1.name.lower():
-                move_data(a1, a2)
-                a2.votes += a1.votes
-                del awards[a1.name]
-                break
+test_data = pd.read_csv("winners_nominees.csv")['text'].dropna().head(200).tolist()
 
-# Aggregate awards to remove duplicates
-aggregate_awards()
+# Parse, aggregate, and save the awards data
+awards_dict = parse_award_data(test_data)
+aggregated_awards = aggregate_awards(awards_dict)
 
-# Convert the final output to JSON
-final_output = {award: awards[award].output() for award in awards}
+# 1. Detailed JSON output
+jsonify_output(aggregated_awards)
 
-# Save the output to JSON file
-with open('unique_award_winners.json', 'w') as f:
-    json.dump(final_output, f, indent=4)
+# 2. Simplified "NAME | AWARD | ROLE" output
+generate_simple_output(aggregated_awards)
 
-print("Unique, non-repetitive award winners saved to 'unique_award_winners.json'.")
+# 3. Condensed JSON format for winners, nominees, and presenters
+jsonify_simple_output(aggregated_awards)

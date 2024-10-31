@@ -1,96 +1,102 @@
 import json
 import pandas as pd
+import csv
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 from collections import defaultdict
-from difflib import SequenceMatcher
 
 class Award:
     def __init__(self, name):
         self.name = name
-        self.winner = defaultdict(int)
-        self.nominees = defaultdict(int)
-        self.presenters = defaultdict(int)
+        self.winner = None  # Store as single value instead of defaultdict
+        self.nominees = []  # Use list for nominees
+        self.presenters = []  # Use list for presenters
         self.votes = 1
 
     def add_person(self, name, role, count=1):
         if role == 'winner':
-            self.winner[name] += count
+            self.winner = name
         elif role == 'nominee':
-            self.nominees[name] += count
+            self.nominees.append(name)
         elif role == 'presenter':
-            self.presenters[name] += count
+            self.presenters.append(name)
         self.votes += count - 1 if count > 1 else 0
 
     def consolidate(self, other_award):
-        for winner, count in other_award.winner.items():
-            self.winner[winner] += count
-        for nominee, count in other_award.nominees.items():
-            self.nominees[nominee] += count
-        for presenter, count in other_award.presenters.items():
-            self.presenters[presenter] += count
+        if other_award.winner:
+            self.winner = other_award.winner
+        self.nominees.extend(other_award.nominees)
+        self.presenters.extend(other_award.presenters)
         self.votes += other_award.votes
 
     def output(self):
         return {
             "name": self.name,
-            "winner": list(self.winner.items()),
-            "nominees": list(self.nominees.items()),
-            "presenters": list(self.presenters.items()),
+            "winner": self.winner,
+            "nominees": list(set(self.nominees)),  # Remove duplicates
+            "presenters": list(set(self.presenters)),  # Remove duplicates
             "votes": self.votes
         }
 
-def similarity(a, b):
-    return SequenceMatcher(None, a, b).ratio()
+def aggregate_awards(award_dict, award_names, threshold=0.85):
+    """Aggregate awards using cosine similarity to match similar awards."""
+    d2 = {award: None for award in award_names}
+    d1 = {k: v for k, v in award_dict.items() if k is not None and v is not None}
 
-def can_consolidate(name1, name2):
-    keywords = ["Actor", "Actress", "Director", "Screenplay"]
-    for keyword in keywords:
-        if (keyword in name1 and keyword not in name2) or (keyword in name2 and keyword not in name1):
-            return False
-    return True  
+    # Vectorize the award names and dictionary keys
+    all_keys = [key for key in list(d2.keys()) + list(d1.keys()) if key is not None]
+    vectorizer = TfidfVectorizer().fit(all_keys)
+    award_vectors = vectorizer.transform(list(d2.keys()))
+    d1_vectors = vectorizer.transform(list(d1.keys()))
 
-def aggregate_awards(award_dict, threshold=0.85):
-    award_keys = sorted(award_dict.keys(), key=lambda k: (len(k), award_dict[k].votes), reverse=True)
-    consolidated_awards = {}
+    # Compute cosine similarity
+    similarity_matrix = cosine_similarity(award_vectors, d1_vectors)
 
-    for key in award_keys:
-        if key not in award_dict:
-            continue
+    # Assign best match
+    best_match_indices = np.argmax(similarity_matrix, axis=1)
+    for idx, award in enumerate(d2.keys()):
+        best_match_key = list(d1.keys())[best_match_indices[idx]]
+        d2[award] = d1[best_match_key]
 
-        main_award = award_dict[key]
-        consolidated_awards[key] = main_award
-        
-        for other_key in list(award_dict.keys()):
-            if other_key == key or other_key not in award_dict:
-                continue
-
-            if (other_key in key or similarity(key, other_key) >= threshold) and can_consolidate(key, other_key):
-                other_award = award_dict[other_key]
-                main_award.consolidate(other_award)
-                del award_dict[other_key]
-
-    return consolidated_awards
+    # Update award_dict with matched awards
+    for award_name, winner in d2.items():
+        if award_name in award_dict and winner:
+            award_dict[award_name].winner = winner
+    return award_dict
 
 def jsonify_output(aggregated_awards):
-    """Generate detailed JSON output."""
-    final_output = [award.output() for award in aggregated_awards.values()]
+    """Generate detailed JSON output by converting Award objects to dictionaries."""
+    final_output = []
+    for award in aggregated_awards.values():
+        # Check if the object is of type Award and convert it to a dictionary
+        if isinstance(award, Award):
+            final_output.append(award.output())
+        else:
+            print("Warning: Non-Award object detected in aggregated_awards.")
+            final_output.append(award)  # Directly append if it's not an Award object
+
+    # Save the converted data to JSON
     with open('consolidated_awards.json', 'w') as f:
         json.dump(final_output, f, indent=2)
+    print("JSON output saved to 'consolidated_awards.json'")
+
 
 def generate_simple_output(aggregated_awards, role="winner"):
-    """Generate simplified "NAME | AWARD | ROLE" format and save to a text file."""
+    """Generate simplified output format for winners."""
     with open('simplified_awards_output.txt', 'w') as f:
         for award_name, award_obj in aggregated_awards.items():
-            for person, count in award_obj.winner.items():
-                f.write(f"{person} | {award_name} | {role}\n")
+            if award_obj.winner:
+                f.write(f"{award_obj.winner} | {award_name} | {role}\n")
 
 def jsonify_simple_output(aggregated_awards):
     """Generate condensed JSON output for winners, nominees, and presenters."""
     simplified_json_output = {}
     for award_name, award_obj in aggregated_awards.items():
         simplified_json_output[award_name] = {
-            'winner': [person for person, count in award_obj.winner.items()],
-            'nominees': [person for person, count in award_obj.nominees.items()],
-            'presenters': [person for person, count in award_obj.presenters.items()]
+            'winner': award_obj.winner,
+            'nominees': list(set(award_obj.nominees)),
+            'presenters': list(set(award_obj.presenters))
         }
     with open('condensed_awards.json', 'w') as f:
         json.dump(simplified_json_output, f, indent=2)
@@ -98,9 +104,9 @@ def jsonify_simple_output(aggregated_awards):
 def parse_award_data(data):
     awards_dict = {}
     for row in data:
-        if pd.notna(row):  
+        if pd.notna(row):
             parts = row.split(' | ')
-            if len(parts) == 3:  
+            if len(parts) == 3:
                 name, award_name, role = parts
                 if award_name not in awards_dict:
                     awards_dict[award_name] = Award(award_name)
@@ -119,12 +125,42 @@ print("Data preprocessed.")
 awards_dict = parse_award_data(test_data)
 print("Award data parsed.")
 
-aggregated_awards = aggregate_awards(awards_dict)
-print("Award data aggregated.")
+# Cosine similarity-based aggregation with hardcoded award names
+award_names = [
+    "best screenplay - motion picture",
+    "best director - motion picture",
+    "best performance by an actress in a television series - comedy or musical",
+    "best foreign language film",
+    "best performance by an actor in a supporting role in a motion picture",
+    "best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",
+    "best motion picture - comedy or musical",
+    "best performance by an actress in a motion picture - comedy or musical",
+    "best mini-series or motion picture made for television",
+    "best original score - motion picture",
+    "best performance by an actress in a television series - drama",
+    "best performance by an actress in a motion picture - drama",
+    "cecil b. demille award",
+    "best performance by an actor in a motion picture - comedy or musical",
+    "best motion picture - drama",
+    "best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",
+    "best performance by an actress in a supporting role in a motion picture",
+    "best television series - drama",
+    "best performance by an actor in a mini-series or motion picture made for television",
+    "best performance by an actress in a mini-series or motion picture made for television",
+    "best animated feature film",
+    "best original song - motion picture",
+    "best performance by an actor in a motion picture - drama",
+    "best television series - comedy or musical",
+    "best performance by an actor in a television series - drama",
+    "best performance by an actor in a television series - comedy or musical"
+]
+
+aggregated_awards = aggregate_awards(awards_dict, award_names)
+print("Award data aggregated with cosine similarity.")
 
 # Generate and save output formats
-jsonify_output(aggregated_awards)  # Save to consolidated_awards.json
-generate_simple_output(aggregated_awards)  # Save to simplified_awards_output.txt
-jsonify_simple_output(aggregated_awards)  # Save to condensed_awards.json
+jsonify_output(aggregated_awards)
+generate_simple_output(aggregated_awards)
+jsonify_simple_output(aggregated_awards)
 
 print("All outputs saved successfully.")

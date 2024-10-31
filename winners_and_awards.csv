@@ -1,9 +1,9 @@
 ,text
-3853,{'best personality on the red carpet tonight': '# EricaRedCarpet'}
+3853,{'best personality on the red carpet tonight': 'Dustin Hoffman'}
 5813,{'best': 'he'}
 6065,{'the beard': 'Bill Murray'}
-7199,{'an': 'hope Django Unchained'}
-8491,{'best movie': 'silver linings'}
+7199,{'Django Unchained wins an': 'GoldenGlobes'}
+8491,{'best movie': 'linings'}
 9150,{'best dressed': 'Tina Fey'}
 10253,{'best facial hair of the night': 'Bill Murray'}
 12350,{'Best Supporting Actor in a Motion Picture': 'Christoph Waltz'}
@@ -59,7 +59,7 @@
 15098,{'Best Supporting Actor in': 'Christoph Waltz'}
 15147,{'Best Supporting Actor in': 'Christoph Waltz'}
 15192,{'best supporting actor': 'Christoph Waltz'}
-15571,{'the first': '# Django'}
+15571,{'the first': 'Django'}
 15573,{'first': 'Christoph Waltz'}
 15673,{'every': 'Maggie Smith'}
 15817,{'Best Supporting Actor': 'Christoph Waltz'}
@@ -74,7 +74,7 @@
 16813,{'best supporting actor at': 'Christoph Waltz'}
 16849,{'Best Supporting Actress in a TV show': 'Maggie Smith'}
 16980,{'Best Director': 'Jared Leto'}
-17069,{'an': 'a Dowager Countess'}
+17069,{'him we need a Dowager Countess wins an': 'a Dowager Countess'}
 17135,{'best supporting actor': 'Christoph Waltz'}
 17153,{'best supporting actor at': 'Christoph Waltz'}
 17168,{'best supporting actor at': 'Christoph Waltz'}
@@ -97,14 +97,14 @@
 18371,{'best supporting actress': 'Maggie Smith'}
 18382,{'the Leni Riefenstahl': 'Katherine Bigelow'}
 18485,{'Best Supporting Actress in a TV show': 'Maggie Smith'}
-18488,{'Best Supporting Actress & amp': '# MaggieSmith'}
+18488,{'Best Supporting Actress & amp': 'MaggieSmith'}
 18640,{'an': 'Leonardo DiCaprio'}
 18782,{'the first': 'I'}
 18843,{'best speech in the history of speeches if she wins': 'she'}
 19023,{'best supporting actor': 'Christoph Waltz'}
 19082,{'Best Supporting Actress': 'Maggie Smith'}
 19132,{'best supporting actor': 'Christoph Waltz'}
-19144,{'Best Supporting Actor': '# ChristophterWaltz'}
+19144,{'Best Supporting Actor': 'ChristophterWaltz'}
 19186,{'best supporting actor at': 'Christoph Waltz'}
 19272,{'Best Miniseries': 'the Hour'}
 19276,{'Best Supporting Actress': 'Maggie Smith'}
@@ -116,10 +116,10 @@
 19639,{'Best Mini': 'Game Change'}
 19693,{'best miniseries/ tv movie': 'Game Change'}
 19724,{'Best Miniseries or TV Movie': 'Game Change'}
-19742,{'best mini': '# GameChange'}
+19742,{'best mini': 'GameChange'}
 19804,{'special': 'yoshiki'}
 19952,{'Best Supp': 'Christoph Waltz'}
-19990,{'best mini series/ TV movie': 'game Change'}
+19990,{'best mini series/ TV movie': 'GoldenGlobes game Change'}
 19997,{'Best Supporting Actress in a TV show': 'Maggie Smith'}
 20003,{'Best TV Movie': 'Game Change'}
 20014,{'Best TV Movie or Miniseries': 'Game Change'}
@@ -131,7 +131,7 @@
 20329,{'Best Supporting Actor in a Motion Picture': 'Christoph Waltz'}
 20356,{'Best TV Movie': 'Game Change'}
 20368,{'best supporting actor': 'Christoph Waltz'}
-20401,{'best TV movie': 'Game Change'}
+20401,{'best TV movie': 'the Palin thing'}
 20498,{'best supporting actor': 'Christoph Waltz'}
 20574,{'Best Mini': 'Game Change'}
 20697,{'Best Mini Series or TV Movie': 'Game Change'}
@@ -143,7 +143,7 @@
 21386,{'best supporting actor': 'Christoph Waltz'}
 21409,{'best supporting actor at': 'Christoph Waltz'}
 21414,{'Best Supporting Actress in a TV show': 'Maggie Smith'}
-21446,{'best mini': '# GameChange'}
+21446,{'best mini': 'GameChange'}
 21490,{'Best TV Movie': 'Game Change'}
 21500,{'whenever Maggie Smith wins': 'Maggie Smith'}
 21551,{'best supporting actress': 'Maggie Smith'}
@@ -161,7 +161,7 @@
 22745,{'Best Director at': 'Hope'}
 22771,{'Best Actress in a Miniseries or Motion Picture Made': '.@_JulianneMoore'}
 22775,{'best actress': 'Julianna Moore'}
-22810,{'Best Actress in a TV Series': '# JulianneMoore'}
+22810,{'Best Actress in a TV Series': 'JulianneMoore'}
 22847,{'Best Actress in Mini': 'Julianne Moore'}
 22975,{'best supporting actor': 'Christoph Waltz'}
 23025,{'best supporting actor at': 'Christoph Waltz'}
@@ -186,19 +186,19 @@
 24013,{'best TV actress': 'Julianne Moore'}
 24092,{'best supporting actor': 'Christoph Waltz'}
 24110,{'Best tv movie': 'Game Change'}
-24149,{'best mini': '# GameChange'}
+24149,{'best mini': 'GameChange'}
 24243,{'Best Actress in a Miniseries or TV Movie': 'Julianne Moore'}
 24298,{'best facial hair of the night': 'Bill Murray'}
 24325,{'Best Director at': 'Hope'}
 24339,{'Best Actress in a Miniseries or TV Movie': 'Julianne Moore'}
-24685,{'the sassy stereotype in the most overrated sitcom ever': 'The lady'}
+24685,{'the sassy stereotype in the most overrated sitcom ever': 'The Latina lady'}
 24737,{'Best Performance by an Actress in a TV series at the': 'Julianne Moore'}
 24768,{'best TV movie': 'HBO'}
 25033,{'Best Actress in a Miniseries': 'Julianne Moore'}
 25484,{'Best Actress in a Miniseries or TV Movie': 'Julianne Moore'}
 25565,{'Best Tux of the night': 'Ben Affleck'}
 25785,{'best actress in a mini': 'Julianne Moore'}
-25799,{'best mini': '# GoldenGlobes Game Change'}
+25799,{'best mini': 'GoldenGlobes Game Change'}
 25833,{'Best Supporting Actor': 'Christoph Waltz'}
 25887,{'Best Actress in a Miniseries or TV Movie': 'Julianne Moore'}
 25926,{'Best Actress in a Miniseries or Motion Picture Made': '.@_JulianneMoore'}
@@ -220,7 +220,7 @@
 28989,{'Best Actor TV Series or Drama': 'Damien Lewis'}
 29073,{'Best Actress in a Miniseries or TV Movie': 'Julianne Moore'}
 29101,{'Best Actor Drama': 'Damien Lewis'}
-29257,{'Best Supporting Ginger Who Also': 'Damian Lewis'}
+29257,{'Best Supporting Ginger Who Also Makes My Panties Wet': 'Damian Lewis'}
 29308,{'Best Actor': 'Damian Lewis'}
 29349,{'Best Actor in a TV Series': 'Damian Lewis'}
 29361,{'Best Actor in a TV Series': 'Homeland'}
@@ -245,7 +245,7 @@
 30710,{'best supporting actor': 'Christoph Waltz'}
 30714,{'best drama': '# Homeland'}
 30866,{'Best TV Series': 'Homeland'}
-30947,{'Best TV Series Drama': '# Homeland'}
+30947,{'Best TV Series Drama': 'Homeland'}
 31249,{'Best Television Series': 'Homeland'}
 31251,{'best TV series': 'Homeland'}
 31339,{'Best TV Drama': '# Homeland'}
@@ -258,24 +258,25 @@
 31763,{'best TV drama': 'GoldenGlobes'}
 31773,{'Best Television Series': 'Homeland'}
 31780,{'best series': '# Homeland'}
-31831,{'best TV drama': 'Homeland'}
+31831,{'best TV drama': 'WINNER'}
 31913,{'best drama': 'Homeland'}
 31918,{'best TV drama': 'GoldenGlobes'}
 31928,{'Best Television Series': 'Homeland'}
-31975,{'best TV drama': 'Homeland'}
+31975,{'best TV drama': 'WINNER'}
 32010,{'Best Drama and Best Lead Actor here too': 'Homeland'}
 32044,{'best TV drama': 'GoldenGlobes'}
-32324,{'best actor in a TV drama': 'WINNER'}
-32395,{'best TV series drama': '# Homeland'}
-32401,{'Best TV Drama Series': 'congratulations'}
+32324,{'best actor in a TV drama': 'Damian Lewis'}
+32332,{'best TV drama': 'GoldenGlobes'}
+32395,{'best TV series drama': 'Homeland'}
+32401,{'Best TV Drama Series': '# Homeland'}
 32419,{'best TV drama series at': 'Homeland'}
 32465,{'best Drama': 'Homeland'}
 32480,{'best TV Drama': 'Homeland'}
 32522,{'best show in the history of TV': 'something'}
 32580,{'best something': 'Homeland'}
 32693,{'Best Television Series': 'Homeland'}
-32731,{'best TV series drama': '# Homeland'}
-32981,{'best actor in a drama at the Golden Globes in LA': 'BREAKING'}
+32731,{'best TV series drama': 'Homeland'}
+32981,{'best actor in a drama at the Golden Globes in LA': 'Brit Damien Lewis'}
 32985,{'best TV series': 'Homeland'}
 33114,{'Best Actor in a TV Drama Series': 'Damian Lewis'}
 33161,{'best TV Drama': 'Homeland'}
@@ -289,7 +290,7 @@
 33382,{'Best Drama': 'Homeland'}
 33442,{'best TV drama': 'Homeland'}
 33638,{'best TV drama': 'Homeland'}
-33691,{'Best': '# Homeland'}
+33691,{'Best': 'Homeland'}
 33767,{'Best Telelvision Series at the Golden Globes': 'Homeland'}
 33781,{'best TV drama': 'Homeland'}
 33804,{'best TV series': 'Homeland'}
@@ -301,7 +302,7 @@
 34090,{'Best Television Series': 'Homeland'}
 34160,{'Best Well': 'Homeland'}
 34220,{'Best Actor and Best Drama Series': 'HOMELAND'}
-34257,{'best TV series drama': '# Homeland'}
+34257,{'best TV series drama': 'FuckYeah # Homeland'}
 34264,{'an': 'Christoph Waltz'}
 34359,{'best drama at the': 'Homeland'}
 34395,{'best drama at the': 'Homeland'}
@@ -326,11 +327,11 @@
 34878,{'best drama at the': 'Homeland'}
 34907,{'best TV series': 'Homeland'}
 34988,{'best drama at the': 'Homeland'}
-35049,{'best actor in a drama at the Golden Globes in LA': 'BREAKING'}
+35049,{'best actor in a drama at the Golden Globes in LA': 'Brit Damien Lewis'}
 35186,{'Best TV Series drama': 'Homeland'}
 35295,{'best TV drama': 'Homeland'}
 35394,{'best drama at the': 'Homeland'}
-35507,{'Best TV Series Drama': '# Homeland'}
+35507,{'Best TV Series Drama': 'Homeland'}
 35601,{'best TV drama': 'GoldenGlobes'}
 35628,{'Best Supporting Actor': 'Christoph Waltz'}
 35864,{'best drama at the': 'Homeland'}
@@ -339,7 +340,7 @@
 36014,{'Best Supporting Actor in': 'Christoph Waltz'}
 36017,{'first': 'Christoph Waltz'}
 36036,{'Best American accent by a Brit in a major TV series': '# goldenglobes'}
-36084,{'best TV series drama': '# Homeland'}
+36084,{'best TV series drama': 'Homeland'}
 36181,{'best drama at the': 'Homeland'}
 36200,{'best drama at the': 'Homeland'}
 36266,{'Best Supporting Actor': 'Christoph Waltz'}
@@ -348,12 +349,12 @@
 36738,{'Best TV Series drama': 'Homeland'}
 37054,{'Best Picture due to a typo': 'Fargo'}
 37318,{'best show in the history of TV': 'something'}
-37404,{'Best Original Score': '# LifeOfPie'}
-37478,{'Best original score': '# GoldenGlobes Life'}
+37404,{'Best Original Score': 'LifeOfPie'}
+37478,{'Best original score': 'GoldenGlobes Life'}
 37557,{'best drama at the': 'Homeland'}
-37606,{'Best original score': '# GoldenGlobes Life'}
+37606,{'Best original score': 'GoldenGlobes Life'}
 37661,{'Best Score': 'Life'}
-37790,{'the only': 'Life of Pi'}
+37790,{'the only': 'GoldenGlobes'}
 37817,{'an': 'Everytime Life'}
 37864,{'the': 'Jennifer Lopez'}
 37954,{'best Score': 'Canada'}
@@ -400,8 +401,9 @@
 40639,{'best original song': '# Skyfall'}
 40668,{'Best Original Song in a Motion Picture': 'Skyfall'}
 40672,{'Best Original Song in a Motion Picture': 'Skyfall'}
-40760,{'best song at the': '# Adele'}
+40760,{'best song at the': 'Adele'}
 40843,"{""best winner 's reaction"": 'Adele'}"
+40964,{'Best bond song ever': 'skyfall'}
 40994,{'Best Original Song': 'Adele'}
 41008,{'Best Song': 'Skyfall'}
 41009,"{""best winner 's reaction"": 'Adele'}"
@@ -414,14 +416,14 @@
 41317,"{""best winner 's reaction"": 'Adele'}"
 41325,"{""best winner 's reaction"": 'Adele'}"
 41361,{'Best Song': 'Adele'}
-41424,{'best original song': 'a comeback # adele'}
+41424,{'best original song': 'adele'}
 41426,{'Best Original Song': 'Adele'}
-41456,{'best original song': 'a comeback # adele'}
+41456,{'best original song': 'adele'}
 41523,{'Best Original Song Motion Picture': 'Skyfall'}
 41620,{'Best Original Song in a Motion Picture': 'Skyfall'}
 41623,{'Best Original Song': 'Adele'}
 41627,{'an': 'she'}
-41633,{'Best Original Song at the Golden Globes in LA': 'BREAKING'}
+41633,{'Best Original Song at the Golden Globes in LA': 'singer Adele'}
 41636,{'best original song': 'Skyfall'}
 41778,{'best song': 'Skyfall'}
 41809,"{""best winner 's reaction"": 'Adele'}"
@@ -434,7 +436,7 @@
 42002,{'Best Original Song': 'Adele'}
 42036,{'Best Original Song': 'Adele'}
 42092,{'Best Original Song': 'Adele'}
-42111,{'Best Song at the Golden Globes': '# Adele'}
+42111,{'Best Song at the Golden Globes': 'Adele'}
 42147,{'best original song': '# Skyfall'}
 42203,{'Best Original Song': 'Adele'}
 42213,{'Golden Globe': 'Canadian'}
@@ -465,16 +467,16 @@
 43168,{'best song': 'Adele'}
 43360,{'best original song': '# Skyfall'}
 43405,{'Best Original Song': 'Adele'}
-43434,{'best original song': 'Adele'}
+43434,{'best original song': 'Skyfall'}
 43452,{'Best Original Song': 'Adele'}
 43488,{'Best Song': 'Skyfall'}
 43505,"{""best winner 's reaction"": 'Adele'}"
 43633,{'Best Original Song': 'Adele'}
 43649,{'best speech of the night': 'Adele'}
 43651,{'Best Song': 'Skyfall'}
-43653,{'Best Original Song': '# Adele'}
+43653,{'Best Original Song': 'Adele'}
 43660,{'Best Original Song': 'Adele'}
-43740,{'Golden Globe': 'Golden Globe'}
+43740,{'Golden Globe': 'Canadian'}
 43780,{'Best Original Song in a Motion Picture': 'Skyfall'}
 43812,{'best original song in a motion picture': '# Skyfall'}
 44036,{'Best Director at': 'Hope'}
@@ -482,21 +484,21 @@
 44052,{'best drama series': 'homeland'}
 44067,{'best TV drama': 'GoldenGlobes'}
 44078,{'Best Original Song': 'Adele'}
-44093,{'Best Song at the Golden Globes': '# Adele'}
+44093,{'Best Song at the Golden Globes': 'Adele'}
 44152,{'best original song in a motion picture': '# Skyfall'}
 44186,{'Golden Globe': 'Canadian'}
 44416,{'best TV movie': 'HBO'}
 44426,{'Best Original Song': 'Adele'}
 44547,{'best TV drama series': 'Homeland'}
 44575,{'best original song': '# Skyfall'}
-44593,{'Best Original Song': '# Adele'}
-44648,{'Best Original Song': '# Adele'}
+44593,{'Best Original Song': 'Adele'}
+44648,{'Best Original Song': 'Adele'}
 44720,{'best original song': '# Skyfall'}
 44721,{'Best Song': 'Skyfall'}
 44729,"{""best winner 's reaction"": 'Adele'}"
 44737,{'best supporting actress': 'Maggie Smith'}
 44795,{'best original score': 'Life'}
-44845,{'Best Original Song': '# Adele'}
+44845,{'Best Original Song': 'Adele'}
 45022,{'best original song in a motion picture': '# Skyfall'}
 45138,{'best original song in a motion picture': 'Adele'}
 45168,{'best TV drama series': 'Homeland'}
@@ -504,33 +506,32 @@
 45285,{'on banning Adele out of all': 'This lady'}
 45299,{'best original song in a motion picture': 'Adele'}
 45336,{'best original song at the': 'Adele'}
-45341,{'best TV series drama': '# Homeland'}
+45341,{'best TV series drama': 'Homeland'}
 45396,{'Best Song': 'Skyfall'}
 45444,{'Best Supporting Actress in a TV Movie': '# MaggieSmith'}
-45455,{'Best Original Song': '# Adele'}
-45551,{'Best Original Song': '# Adele'}
+45455,{'Best Original Song': 'Adele'}
+45551,{'Best Original Song': 'Adele'}
 45577,{'best acceptance speech': 'Adele'}
 45642,{'best original song at the': 'Adele'}
 45690,{'Best Original Song': 'Skyfall'}
 45746,{'best original song at the': 'Adele'}
-45764,{'Best TV Drama': 'Drama'}
 45770,{'Best Original Song': 'Adele'}
 45801,{'Best Song': 'Best Song'}
 45809,{'best original song at the': 'Adele'}
 45910,{'best original song at the': 'Adele'}
 46011,{'Best Original Song': 'Adele'}
 46059,{'Best Original Song': 'Adele'}
-46079,"{'Best Original Song': 'Best Original Song for "" Skyfall'}"
-46088,{'Best Original Song': '# Adele'}
+46079,{'Best Original Song': 'Best Original Song'}
+46088,{'Best Original Song': 'Adele'}
 46135,{'best Original Song': 'Skyfall'}
 46211,{'Best Score': 'Mychael Danna'}
 46311,{'best original song at the': 'Adele'}
-46330,{'Best Original Song': '# Adele'}
+46330,{'Best Original Song': 'Adele'}
 46353,{'Best Original Song in a Motion Picture': 'Skyfall'}
 46410,{'best acceptance speech so far': 'Adele'}
 46564,"{""Best Original Song w/ ' Skyfall"": 'Adele'}"
-46572,{'best original song': 'a comeback # adele'}
-46579,{'Best Original Song': '# Adele'}
+46572,{'best original song': 'adele'}
+46579,{'Best Original Song': 'Adele'}
 46645,{'best speech so far': 'Adele'}
 46771,{'best original song at the': 'Adele'}
 46805,{'best original song in a motion picture': '# Skyfall'}
@@ -545,7 +546,7 @@
 47865,{'Best Animation Golden Globes': 'who'}
 47900,{'Best Original Song': 'Adele'}
 48040,{'best thank you speech so far lolol': 'Adele'}
-48173,{'Best Actor in a mini': '# GoldenGlobes Kevin Costner'}
+48173,{'Best Actor in a mini': 'GoldenGlobes Kevin Costner'}
 48225,{'Best Actor in a Mini': 'Kevin Costner'}
 48501,{'Best Actor in a Miniseries or TV Movie': 'Kevin Costner'}
 48572,{'best original song at the': 'Adele'}
@@ -565,10 +566,10 @@
 49660,{'best original song at the': 'Adele'}
 49730,{'Best Original Song': 'Adele'}
 49745,{'Best Actor in a Miniseries or TV Movie': 'Kevin Costner'}
-49784,{'Best Actor in a Mini': 'Kevin Costner'}
+49784,{'Best Actor in a Mini': 'McCoys'}
 49815,{'best TV series': 'Homeland'}
 50096,{'best accent': 'Skyfall'}
-50296,{'Best Actor in a Mini': 'Kevin Costner'}
+50296,{'Best Actor in a Mini': 'McCoys'}
 50380,{'Best Actor': 'Kevin Costner'}
 50471,{'Best Original Song': 'GoldenGlobes'}
 50614,{'best actor in miniseries': 'Kevin Costner'}
@@ -581,9 +582,9 @@
 52627,{'Best Original Song': 'Adele'}
 52661,{'best actor who did not have sex with that woman': 'Bill Clinton'}
 52732,{'best actor in miniseries': 'Kevin Costner'}
-52824,{'best everything': 'jessica'}
+52824,{'best everything': 'jessica alba'}
 52943,{'Best Original Song': 'Adele'}
-52953,{'best heist of her mothers drapes in lieu of a dress': '1NANCY'}
+52953,{'best heist of her mothers drapes in lieu of a dress': 'Adele'}
 52996,{'Best Original Song in a Motion Picture': 'Skyfall'}
 53084,{'Best Original Song in a Motion Picture': 'Skyfall'}
 53093,{'best actor who did not have sex with that woman': 'Bill Clinton'}
@@ -591,23 +592,23 @@
 53363,{'Best Song': 'Adele'}
 53439,{'Best Original Song in the Golden Globes': 'Skyfall'}
 53463,{'Best Original Song in a Motion Picture': 'Skyfall'}
-53613,{'best TV series drama': '# Homeland'}
-53922,{'Christoph Waltz wins first': 'Christoph Waltz'}
+53613,{'best TV series drama': 'Homeland'}
+53922,{'first': 'Christoph Waltz'}
 53974,{'Best Song': 'Adele'}
 54159,{'best actor who did not have sex with that woman': 'Bill Clinton'}
-54179,"{""best reaction to Pimp Billy the Real 's entrance"": 'hands'}"
-54655,{'Best Original Song': '# Adele'}
+54179,"{""best reaction to Pimp Billy the Real 's entrance"": 'Pimp Billy'}"
+54655,{'Best Original Song': 'Adele'}
 54783,{'Best Actor in a Miniseries': 'Kevin Costner'}
 54965,{'best picture and DDL': 'Lincoln'}
 54975,{'There must be SOME category where that wins him an': 'that'}
 55089,{'best actor': 'Damian Lewis'}
-55313,{'Best Actor in a Mini': 'Kevin Costner'}
+55313,{'Best Actor in a Mini': 'McCoys'}
 55367,{'best actor who did not have sex with that woman': 'Bill Clinton'}
 55524,{'best actor who did not have sex with that woman': 'Bill Clinton'}
-55590,{'Best Actor in a Mini': 'Kevin Costner'}
+55590,{'Best Actor in a Mini': 'McCoys'}
 55920,{'Best': 'R2D2'}
 56070,{'best pic': 'Lincoln'}
-56404,{'Best Actor in a Mini': 'Kevin Costner'}
+56404,{'Best Actor in a Mini': 'McCoys'}
 56615,{'best actress in mini': 'Julianne Moore'}
 56673,{'Best Supporting Actor at Golden Globes 2013': 'Christoph Waltz'}
 56836,{'best presenter of any award': 'Feral'}
@@ -621,11 +622,11 @@
 60156,{'Best Actress in a Comedy or Musical': 'Jennifer Lawrence'}
 60221,{'best actress in a comedy': 'Jennifer Lawrence'}
 60245,{'best actress in a comedy': 'Jennifer Lawrence'}
-60415,{'Best Actress Motion Picture': '# JenniferLawrence'}
+60415,{'Best Actress Motion Picture': 'JenniferLawrence'}
 60425,{'best actress in a comedy or musical movie': 'Jennifer Lawrence'}
 60560,{'Best Actress Motion Picture Comedy or Musical': 'Jennifer Lawrence'}
-60588,{'Best Actress Motion Picture': '# JenniferLawrence'}
-60761,{'Best Actress Motion Picture': '# JenniferLawrence'}
+60588,{'Best Actress Motion Picture': 'JenniferLawrence'}
+60761,{'Best Actress Motion Picture': 'JenniferLawrence'}
 60770,{'best actress in a comedy or musical': 'Jennifer Lawrence'}
 61076,{'Best Actress': 'Jennifer Lawrence'}
 61125,{'Best actress in a motion picture': 'Jennifer Lawrence'}
@@ -682,15 +683,15 @@
 64270,{'Best Actress in a comedy': 'Jennifer Lawrence'}
 64315,{'Best Actress Award': 'Jennifer Lawrence'}
 64330,{'best actress in a comedy or musical movie': 'movie'}
-64347,{'best actress |': 'Globes'}
-64355,{'best actress |': 'Globes'}
-64408,{'best actress in a motion picture comedy or musical': '# GoldenGlobes Jennifer Lawrence'}
+64347,{'best actress |': 'Jennifer Lawrence'}
+64355,{'best actress |': 'Jennifer Lawrence'}
+64408,{'best actress in a motion picture comedy or musical': 'GoldenGlobes Jennifer Lawrence'}
 64426,{'Best Actress': 'Jennifer Lawrence'}
 64527,{'best': 'LINCOLN'}
 64639,{'Best speech of the night so far': 'Jennifer Lawrence'}
 64686,{'Best Actress in a Comedy or Musical': 'Jennifer Lawrence'}
 64833,{'best actress': 'Jennifer Lawrence'}
-64905,{'Best Original Song': '# Adele'}
+64905,{'Best Original Song': 'Adele'}
 64933,{'Best Actress Award': 'Jennifer Lawrence'}
 64986,{'best actress in a comedy or musical movie': 'Jennifer Lawrence'}
 65070,{'best actress at the': 'Jennifer Lawrence'}
@@ -704,15 +705,15 @@
 65563,{'Best Actress in Musical or Comedy': 'Jennifer Lawrence'}
 65590,{'best actress motion picture': 'Goldenglobes Jennifer Lawrence'}
 65637,{'Best Actress in Musical or Comedy': 'Jennifer Lawrence'}
-65666,{'best movie of the year': '# JenniferLawrence'}
+65666,{'best movie of the year': 'Whohoooo # JenniferLawrence'}
 65792,{'best original song': '# Skyfall'}
 65868,"{""to actors that have n't done shit in awhile when someone wins an"": 'someone'}"
 66013,{'Best Actress in a Comedy or Musical': 'Jennifer Lawrence'}
 66068,{'best actress in a comedy or musical movie': 'Jennifer Lawrence'}
-66128,{'With every': 'Lawrence'}
+66128,{'With every': 'every award'}
 66271,{'best actress at the': 'Jennifer Lawrence'}
 66326,{'best drama at the': 'Homeland'}
-66690,{'best actress': '# GoldenGlobes Jennifer Lawrence'}
+66690,{'best actress': 'GoldenGlobes Jennifer Lawrence'}
 66840,{'best actress': 'GoldenGlobes Jennifer Lawrence'}
 66863,{'Best Actress': 'Jennifer Lawrence'}
 66880,{'Best Supporting Actor': 'Ed Harris'}
@@ -774,7 +775,7 @@
 70057,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 70167,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 70315,{'Best Supporting Actress in': 'Anne Hathaway'}
-70317,{'that Breaking Bad wins every': 'Breaking Bad'}
+70317,{'that Breaking Bad wins every': 'Walter White'}
 70423,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 70515,{'best supporting actress': 'GoldenGlobes Anne Hathaway'}
 70676,{'Best Actress in Musical or Comedy': 'Jennifer Lawrence'}
@@ -856,7 +857,7 @@
 73287,{'best actress in a comedy or musical movie': 'Jennifer Lawrence'}
 73299,{'best actress in a musical or comedy': 'Jennifer Lawrence'}
 73342,{'best actress in a comedy or musical movie': 'Jennifer Lawrence'}
-73440,{'Best Actress Motion Picture': '# JenniferLawrence'}
+73440,{'Best Actress Motion Picture': 'JenniferLawrence'}
 73441,{'best supporting actress': 'Anne Hathaway'}
 73473,{'Best Supporting Actress': 'she'}
 73510,{'best supporting actress': 'Anne Hathaway'}
@@ -919,14 +920,14 @@
 75882,{'best supporting actress': 'Anne Hathaway'}
 75992,{'Best Screenplay': 'Quentin Tarantino'}
 76076,{'best screenplay': 'Tarantino'}
-76080,{'Best Original Screenplay': 'Quentin Tarantino'}
+76080,{'Best Original Screenplay': 'FUCK YES Quentin Tarantino'}
 76088,{'Best Screenplay': 'Quentin'}
 76115,{'best motion picture screenplay': 'Quentin Tarantino'}
 76190,{'best original screenplay': 'Quentin Tarantino'}
-76196,{'best writer': 'Django'}
+76196,{'best writer': 'Tarantino'}
 76258,{'Best Supporting Actress in Les Miserables': 'Anne Hathaway'}
 76288,{'Best Gauze Bandage': 'Amanda Seyfried'}
-76307,{'Best Screenplay but Quentin Tarantino wins': 'Tony Kushner'}
+76307,{'Best Screenplay but Quentin Tarantino': 'Quentin Tarantino'}
 76318,{'Best Supporting Actress in': 'Anne Hathaway'}
 76364,{'Best Screenplay': 'Quentin Tarantino'}
 76385,{'best original screenplay': 'Quentin Tarantino'}
@@ -934,7 +935,7 @@
 76480,{'Best Screenplay': 'Django Unchained'}
 76482,{'Best Screenplay': 'Quentin Tarantino'}
 76497,{'Best Screenplay': 'Quentin Tarantino'}
-76505,{'Best Actress Motion Picture': '# JenniferLawrence'}
+76505,{'Best Actress Motion Picture': 'JenniferLawrence'}
 76667,{'Best Screenplay': 'Quentin Tarantino'}
 76681,{'best Screenplay well deserved': 'Quentin Tarantino'}
 76764,{'Best Screenplay': 'Quentin Tarantino'}
@@ -943,14 +944,14 @@
 76799,{'Best Screenplay': 'Quentin Tarantino'}
 76806,{'Best Actress in a Musical or Comedy Golden Globes 2013': 'Jennifer Lawrence'}
 76815,{'Best Screenplay': 'Quentin Tarantino'}
-76863,{'Best Screenplay': 'GoldenGlobes'}
+76863,{'Best Screenplay': 'Tarantino'}
 76891,{'screenplay': 'Quentin Tarantino'}
 77027,{'best motion picture screenplay': 'Quentin Tarantino'}
-77181,{'Best Screenplay': 'GoldenGlobes'}
-77216,{'best screenplay': 'Quentin Tarantino'}
+77181,{'Best Screenplay': 'Tarantino'}
+77216,{'best incorporating foot fetishes into a script': 'Quentin Tarantino'}
 77226,{'best supporting actress': 'Anne Hathaway'}
 77245,{'best motion picture screenplay': 'Quentin Tarantino'}
-77249,{'Best Screenplay': 'GoldenGlobes'}
+77249,{'Best Screenplay': 'Tarantino'}
 77336,{'Best Screenplay': 'Quentin Tarantino'}
 77350,{'Best Screenplay': 'Quentin'}
 77379,{'best screenplay': 'Django'}
@@ -958,7 +959,7 @@
 77441,{'best motion picture screenplay': 'Quentin Tarantino'}
 77500,{'best actress in a comedic or musical film': 'Lawrence'}
 77521,{'Best Gauze Bandage': 'LOLOL Amanda Seyfried'}
-77600,{'best supporting actress via': 'Anne Hathaway'}
+77600,{'best supporting actress via': '# GoldenGlobes'}
 77605,{'Best Original Screenplay': 'Quentin Tarantino'}
 77620,"{""best winner 's reaction"": 'Adele'}"
 77634,{'best motion picture screenplay': 'Quentin Tarantino'}
@@ -975,7 +976,7 @@
 77867,{'Best Actor in a Miniseries': 'Kevin Costner'}
 77874,{'Best Screenplay': 'Quentin Tarantino'}
 77979,{'best supporting actress': 'Anne Hathaway'}
-78009,{'Best Screenplay': 'GoldenGlobes'}
+78009,{'Best Screenplay': 'Tarantino'}
 78151,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 78157,{'Best Supporting Actress': 'Anne Hathaway'}
 78303,{'Best Screenplay': 'Quentin Tarantino'}
@@ -1001,7 +1002,7 @@
 79845,{'best actress at the': 'Jennifer Lawrence'}
 79854,{'Best Supporting Actress': 'she'}
 79901,{'Best Actor in a Television Series': '.@IamDonCheadle'}
-79905,{'Best Actress Motion Picture': '# JenniferLawrence'}
+79905,{'Best Actress Motion Picture': 'JenniferLawrence'}
 80004,{'Best Actress in a Motion Picture': 'Jennifer Lawrence'}
 80048,{'best': 'Don Cheadle'}
 80077,{'best actor in a comedy': 'Don Cheadle'}
@@ -1024,7 +1025,7 @@
 80589,{'Best Actor': 'Don Cheadle'}
 80644,{'best actor in a comedy or musical TV series': 'GoldenGlobes Don Cheadle'}
 80715,{'Best Actress in a Motion Picture': 'Jennifer Lawrence'}
-80717,{'Best Actor Comedy and the entire world collectively goes': 'Don Cheadle'}
+80717,{'Best Actor Comedy and the entire world collectively': 'Don Cheadle'}
 80783,{'best actor in a comedy or musical TV series': 'Don Cheadle'}
 80863,{'best motion picture screenplay': 'Quentin Tarantino'}
 80885,{'Best Screenplay': 'Quentin Tarantino'}
@@ -1039,7 +1040,7 @@
 81111,{'Best Actress in a Motion Picture': 'Jennifer Lawrence'}
 81139,{'Best Actor in a TV Series': 'Don Cheadle'}
 81309,{'best supporting actress': 'Anne Hathaway'}
-81354,{'best screenplay': 'Globes'}
+81354,{'best screenplay': 'Quentin Tarantino'}
 81395,{'best actor in a comedy or musical TV series': 'GoldenGlobes Don Cheadle'}
 81471,{'best actress': 'J. Lawrence'}
 81493,{'best actor in a comedy or musical TV series': 'Don Cheadle'}
@@ -1058,7 +1059,7 @@
 81849,{'best actress': 'Jennifer Lawrence'}
 81871,{'Best Original Screenplay': 'Quentin Tarantino'}
 81893,{'Best Actress in a Musical or Comedy Golden Globes 2013': 'Jennifer Lawrence'}
-82017,{'Best Actor in a Mini': 'Kevin Costner'}
+82017,{'Best Actor in a Mini': 'McCoys'}
 82064,{'Best Screenplay': 'Quentin Tarantino'}
 82086,{'No': 'Adele'}
 82338,{'best Screenplay': 'Quentin # Tarantino'}
@@ -1071,7 +1072,7 @@
 82592,{'best original song': 'Skyfall'}
 82699,{'best actor in a comedy or musical TV series': 'Don Cheadle'}
 82733,{'Best Actress in a Motion Picture': 'Jennifer Lawrence'}
-82823,{'Best Original Song goes to': 'Globes'}
+82823,{'Best Original Song goes to': 'ADELE'}
 83003,{'the Token Black': 'Don Cheadle'}
 83004,{'best TV drama series': 'Homeland'}
 83016,{'Best Actor in a comedy': 'Don Cheadle'}
@@ -1086,7 +1087,7 @@
 83887,{'Best Foreign Language Film at the': 'Amour'}
 83910,{'best supporting actress': 'Anne Hathaway'}
 83971,{'Best Actor in a Television Series': 'Yay'}
-84025,{'the Foreign Film': '# GoldenGlobes Amour'}
+84025,{'the Foreign Film': 'GoldenGlobes Amour'}
 84161,{'best motion picture screenplay': 'Quentin Tarantino'}
 84172,{'Best Original Song': 'Adele'}
 84214,{'best motion picture screenplay': 'Quentin Tarantino'}
@@ -1101,7 +1102,7 @@
 84934,{'Best Foreign Film': 'Amour'}
 84945,{'best screenplay': 'Quentin Tarantino'}
 85218,{'Best Original Song': 'Adele'}
-85415,{'Best Original Song goes to': 'Globes'}
+85415,{'Best Original Song goes to': 'ADELE'}
 85500,{'best supporting actress': 'Hathaway'}
 85530,{'Best Performance by an Actress In A Television Series': 'Claire Danes'}
 85536,{'best supporting actress': 'Anne Hathaway'}
@@ -1126,12 +1127,12 @@
 86441,{'best supporting actress': 'Anne Hathaway'}
 86584,{'Best Actress': 'Claire Danes'}
 86654,{'Best Performance In TV Series': 'Claire Danes'}
-86660,{'best part of the': 'GoldenGlobes'}
+86660,{'best part of the': 'people'}
 86771,{'Best Actress': 'Claire Danes'}
 86812,{'best supporting actress': 'Anne Hathaway'}
 86829,{'best actress in drama': 'Clare Danes'}
 86861,{'best actress in a TV series drama': 'Claire Danes'}
-86876,{'best actress in a': 'WINNER'}
+86876,{'best actress in a': 'Claire Danes'}
 86894,{'a great': 'Claire Danes'}
 86901,{'Best Actess in a TV series Drama': 'Claire Danes'}
 86980,{'best actress in a TV series drama': 'Claire Danes'}
@@ -1141,11 +1142,11 @@
 87082,{'best original song at the': 'Adele'}
 87124,{'how her last': 'Claire Danes'}
 87127,{'Best Actress in a TV Series': 'Claire Danes'}
-87174,{'Best Original Song': '# Adele'}
-87219,{'Best Actress at the Golden Globes': 'girl crush'}
+87174,{'Best Original Song': 'Adele'}
+87219,{'Best Actress at the Golden Globes': 'crush Jennifer Lawrence'}
 87232,{'Best Actress in a TV Series': 'Claire Danes'}
 87264,{'best actress': 'Goldenglobes Claire Danes'}
-87303,{'Best Actress': 'Yesssss Claire Danes'}
+87303,{'Best Actress': 'Claire Danes'}
 87418,{'best original song': '# Skyfall'}
 87470,{'best actress in TV drama': 'Claire Danes'}
 87497,{'Best Supporting Actress in': 'Anne Hathaway'}
@@ -1171,14 +1172,14 @@
 88471,{'best actress in TV drama': 'A Claire Danes'}
 88518,{'best actress in TV drama': 'A Claire Danes'}
 88615,{'Best Original Song in a Motion Picture': 'Skyfall'}
-88627,{'Best Actress TV': '# ClaireDanes'}
+88627,{'Best Actress TV Series- Drama': '# ClaireDanes'}
 88661,{'best actress in TV drama': 'A Claire Danes'}
 88682,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 88689,{'best actress in a TV series drama': 'Claire Danes'}
 88708,{'best actress in TV drama': 'A Claire Danes'}
 88733,{'best foreign language film': 'Amour'}
 88805,{'Best Actress in a TV Series': 'Claire Danes'}
-88852,{'Best Actress': 'Celebrity Globes'}
+88852,{'Best Actress': 'Globes Jennifer Lawrence'}
 88884,{'best actress in TV drama': 'A Claire Danes'}
 88961,{'BEST PART OF THE SHOW': 'thing'}
 88967,{'Best TV Series': 'Homeland'}
@@ -1207,24 +1208,23 @@
 89605,{'best actress': 'Claire Danes'}
 89674,{'best actress in TV drama': 'A Claire Danes'}
 89682,{'best actress in TV drama': 'A Claire Danes'}
-89744,{'best drama series': 'wohoooo'}
 89880,{'Best Original Song in a Motion Picture': 'Skyfall'}
 89917,{'best actress in TV drama': 'Claire Danes'}
 89919,{'BEST PART OF THE SHOW': 'thing'}
-89968,{'Best Supporting Actress at': '# AnneHathaway'}
+89968,{'Best Supporting Actress at': 'AnneHathaway'}
 90116,{'best part of MY night': 'Leo'}
 90150,{'best actress in TV drama': 'A Claire Danes'}
 90309,{'best supporting actress': 'Anne Hathaway'}
 90570,{'best song': 'Adele'}
 90618,{'Best Original Song': 'Adele'}
 90632,{'best song': 'Adele'}
-90859,{'Best Animated Feature': 'Best Animated'}
+90859,{'Best Animated Feature': 'BRAVE'}
 90966,{'best screenplay': 'Quentin Tarantino'}
 91130,{'Best Animated Feature': 'Brave'}
 91141,{'Best Animated Feature Film': 'BRAVE'}
 91167,{'Best Animated Feature Film': 'Best Animated Feature Film'}
 91273,{'best animated feature film': 'Brave'}
-91276,{'best animated film': 'Family Guy'}
+91276,{'best animated film': 'Brave'}
 91298,{'best animated film': '# Brave'}
 91301,{'best animated film': '# Brave'}
 91309,{'Best Supporting Actress in a Motion Picture': 'Anne Hathway'}
@@ -1235,15 +1235,15 @@
 91473,{'best actress in TV drama': 'A Claire Danes'}
 91510,{'best animated film': '# Brave'}
 91587,{'Best Foreign Film | via': 'Amour'}
-91610,{'Everyone watching every': 'GoldenGlobes'}
-91621,{'Everyone watching every': 'GoldenGlobes'}
+91610,{'Everyone watching every': 'the movie'}
+91621,{'Everyone watching every': 'the movie'}
 91626,{'Best Screenplay': 'Quentin Tarantino'}
 91671,{'Best Animated Film': 'Brave'}
 91677,{'best actress in a drama series': 'Claire Danes'}
 91786,{'best supporting actress': 'Anne Hathaway'}
 91810,{'Best Animated Feature Film': 'Brave'}
-91822,{'Best Actress TV': '# ClaireDanes'}
-91869,{'Best Animated Film': 'Brave'}
+91822,{'Best Actress TV Series- Drama': '# ClaireDanes'}
+91869,{'Best Animated Film': 'YAY'}
 91877,{'Best Animated Feature Film | via': 'Brave'}
 91888,{'best actress in TV drama': 'A Claire Danes'}
 91892,{'best supporting actress': 'Anne Hathaway'}
@@ -1262,18 +1262,18 @@
 92767,{'Best Animated Feature Film': 'Brave'}
 92778,{'Best Animated Film': 'Brave'}
 92784,{'best actor and actress respectively in drama series': 'Brody'}
+92814,{'the tiger goes up to accept the': 'Life'}
 92816,{'Best Animated Film': 'Brave'}
 92873,{'Best Animated Feature Film | via': 'Brave'}
-92896,{'Everyone watching every': 'GoldenGlobes'}
+92896,{'Everyone watching every': 'the movie'}
 92947,{'Best Animated Film': 'Brave'}
-92948,{'Everyone watching every': 'GoldenGlobes'}
+92948,{'Everyone watching every': 'the movie'}
 93007,{'best actress at the': 'Jennifer Lawrence'}
-93008,{'Everyone watching every': 'GoldenGlobes'}
+93008,{'Everyone watching every': 'the movie'}
 93009,{'Best Animated Film': 'Brave'}
 93088,{'Best Animated Feature Film at the': 'Brave'}
 93108,{'Best Actress in a Motion Picture': 'Jennifer Lawrence'}
 93217,{'best actress in TV drama': 'A Claire Danes'}
-93239,{'best moments and biggest wins so far at the': 'GoldenGlobes'}
 93251,{'best animated feature film award': '# Brave'}
 93481,{'best animated feature film': 'Brave'}
 93606,{'best animated film': '# Brave'}
@@ -1288,8 +1288,7 @@
 94196,{'Best Actress in a Comedy': 'Amy Poehler'}
 94212,{'Best Actress in a TV comedy': 'GoldenGlobes'}
 94254,{'Best Foreign Language Film': 'Amour'}
-94338,{'Everyone watching every': 'GoldenGlobes'}
-94416,{'Best Actress': 'GoldenGlobes'}
+94338,{'Everyone watching every': 'the movie'}
 94460,{'best animated film': 'Brave'}
 94497,{'Best Animated Feature Film | via': 'Brave'}
 94510,{'best actress in a TV series': 'Lena Dunham'}
@@ -1305,10 +1304,10 @@
 94975,{'best actress in a drama series': 'Claire Danes'}
 95239,{'Best Actress': 'Claire Danes'}
 95276,{'best actress in a television series': 'HBO'}
-95287,{'a separate': 'GoldenGlobes'}
-95300,{'Everyone watching every': 'GoldenGlobes'}
+95287,{'a separate': 'I'}
+95300,{'Everyone watching every': 'the movie'}
 95305,{'Best Actress in a TV Series': 'Lena Dunham'}
-95310,{'Best Actress in a TV comedy': 'GoldenGlobes'}
+95310,{'Best Actress in a TV comedy': '.@LenaDunham'}
 95439,{'Best Animated Feature Film | via': 'Brave'}
 95532,{'Best TV actress': 'Lena Dunham'}
 95569,{'best TV comedy actress': 'Lena Dunham'}
@@ -1324,11 +1323,11 @@
 96160,{'Best Animated Film': 'Brave'}
 96349,"{'the tiger accepts the': ""' Life of Pi '""}"
 96441,{'Best seat in the house': 'Amy'}
-96452,{'Everyone watching every': 'GoldenGlobes'}
+96452,{'Everyone watching every': 'the movie'}
 96476,{'Best Actress': 'Lena Dunham'}
 96553,{'best actress in a mini': 'Julianne Moore'}
 96586,{'best actress in TV drama': 'A Claire Danes'}
-96598,{'best': 'Girls'}
+96598,{'best': 'GoldenGlobes'}
 96603,{'Best Performance By An Actress in TV Comedy Or Musical': '.@lenadunham'}
 96668,{'Best Director': 'Hoping'}
 96722,{'best animated film': '# Brave'}
@@ -1339,53 +1338,53 @@
 96879,{'the': 'Lena Dunham'}
 96904,{'Best Actress Award': 'Jennifer Lawrence'}
 96972,{'best actress in a TV series': 'Lena Dunham'}
-96978,{'Best Actress Motion Picture': '# JenniferLawrence'}
+96978,{'Best Actress Motion Picture': 'JenniferLawrence'}
 97033,{'best supporting actress in a s': 'Adele'}
 97044,{'Best TV Series': 'Homeland'}
 97069,{'best animated film': 'Brave'}
 97129,{'best actress in TV drama': 'A Claire Danes'}
 97230,{'Best Performance By An Actress in TV Comedy Or Musical': '.@lenadunham'}
-97366,{'Everyone watching every': 'GoldenGlobes'}
+97366,{'Everyone watching every': 'the movie'}
 97482,{'the': 'Lena Dunham'}
 97535,{'best TV drama series': 'Homeland'}
-97565,{'best supporting actress': 'star Anne Hathaway'}
+97565,{'best supporting actress': '# Goldenglobes'}
 97594,{'Best Actor in a Miniseries or TV Movie': 'Kevin Costner'}
 97818,{'best performance by an actress in a TV musical or comedy': 'Lena Dunham'}
 97907,{'Best Actress in TV': 'Lena Dunham'}
 98179,{'Best Actor in a TV Series': 'Lena Dunham'}
 98182,{'best animated film': 'Brave'}
 98195,{'best animated film': 'Brave'}
-98221,{'Best Actress Motion Picture': '# JenniferLawrence'}
+98221,{'Best Actress Motion Picture': 'JenniferLawrence'}
 98312,{'best hosts ever': 'Globes'}
 98322,{'Best Actress In A Comedy': 'The actress'}
 98871,{'best TV drama actress': 'Claire Danes'}
 99019,{'Best Actress': 'Claire Danes'}
-99207,{'Everyone watching every': 'GoldenGlobes'}
+99207,{'Everyone watching every': 'the movie'}
 99315,{'best animated film': 'Brave'}
-100206,{'Best Supporting Actor': '# GoldenGlobes'}
+100206,{'Best Supporting Actor': 'Mychael Danna'}
 100485,{'Best Supporting Actress': 'Anne Hathaway'}
 100779,{'best performance by an actress in a TV musical or comedy': 'Lena Dunham'}
 100782,{'best actress in a drama series': 'Claire Danes'}
 100812,{'Best TV Series Actress': 'Lena Dunham'}
 101225,{'Best Supporting Actress in': 'Anne Hathaway'}
-101298,{'Best Actress in a TV Series': 'GoldenGlobe'}
+101298,{'Best Actress in a TV Series': 'Best Actress'}
 101319,{'important': 'star Lena Dunham'}
 101393,{'best cleavage award': 'She'}
-101699,{'Everyone watching every': 'GoldenGlobes'}
+101699,{'Everyone watching every': 'the movie'}
 101723,{'Best Original Song': 'Queen Madonna'}
 101865,{'Best Actress in a TV Series': 'Claire Danes'}
-101976,{'Everyone watching every': 'GoldenGlobes'}
+101976,{'Everyone watching every': 'the movie'}
 102027,{'Best Original Song': 'Queen Madonna'}
 102163,{'best actress in a comedy series': 'Lena Dunham'}
 102186,{'best actress in a comedy series': 'Lena Dunham'}
 102222,{'best actress at the': 'Jennifer Lawrence'}
 102241,{'best animated feature film': 'Brave'}
 102460,{'best actress in a comedy series': 'Lena Dunham'}
-102493,{'Best Song': 'mom'}
+102493,{'Best Song': 'mom Adele'}
 102724,{'best actress in a comedy series': 'Lena Dunham'}
 102821,{'Cecil B. Demille lifetime achievement': 'Jodie Foster'}
 102848,{'Cecil B. Demille lifetime achievement': 'Jodie Foster'}
-102878,{'best screenplay': 'Globes'}
+102878,{'best screenplay': 'Quentin Tarantino'}
 102960,"{'the tiger accepts the': ""' Life of Pi '""}"
 103240,{'an extremely deserved honorary Cecille B. DeMille': 'Jodie Foster'}
 103392,{'best actress in a comedy series': 'Lena Dunham'}
@@ -1401,9 +1400,9 @@
 105033,{'best animated feature film award': '# Brave'}
 105045,{'best animated film': 'Brave'}
 105350,{'best actress in a drama series': 'Claire Danes'}
-105571,{'Best Original Song': '# Adele'}
+105571,{'Best Original Song': 'Adele'}
 105618,{'best screenplay': 'Quentin Tarantino'}
-105675,{'best supporting actress': 'star Anne Hathaway'}
+105675,{'best supporting actress': '# Goldenglobes'}
 105851,{'the': 'Jodie Foster'}
 106034,{'best animated film': '# Brave'}
 106231,{'best speech writer': 'Mel Gibson'}
@@ -1416,14 +1415,14 @@
 107574,{'best actress in TV drama': 'A Claire Danes'}
 108975,{'best TV comedy actress': 'Lena Dunham'}
 109568,{'best supporting actress': 'Anne Hathaway'}
-109798,{'Best Original Song': 'Globes'}
+109798,{'Best Original Song': 'ADELE'}
 110154,{'best animated feature film award': '# Brave'}
 110196,{'Best Foreign Film | via': 'Amour'}
 110307,{'best screenplay': 'Quentin Tarantino'}
 110818,{'best actress': 'Jennifer Lawrence'}
 111403,{'Best Director': 'it'}
 111500,{'best director': 'Ben Affleck'}
-111532,{'Best': 'Halle Berry'}
+111532,{'Best Dressed': 'Halle Berry'}
 111795,{'Best Director at the': 'Ben Affleck'}
 111852,{'Best Director at': 'Ben Affleck'}
 112178,{'best animated feature film': 'Brave'}
@@ -1445,22 +1444,22 @@
 113048,{'Best Director': 'Ben Affleck'}
 113079,{'best director': 'Ben Affleck'}
 113105,{'best director': 'Argo'}
-113172,{'best movies i ve watched in recent years': 'Life of Pi'}
-113213,{'best director': 'GoldenGlobes'}
+113172,{'best movies i ve watched in recent years': 'Life'}
+113213,{'best director': 'Idiocy of # OscarNoms Affleck'}
 113222,{'Best Director': 'Ben Affleck'}
-113244,{'Best Director': 'That Ben Affleck'}
-113245,{'Best Director': 'Oscar snub Ben Affleck'}
+113244,{'Best Director': 'Ben Affleck'}
+113245,{'Best Director': 'snub Ben Affleck'}
 113260,{'best director': 'Ben Affleck'}
-113272,{'Everyone watching every': 'GoldenGlobes'}
+113272,{'Everyone watching every': 'the movie'}
 113277,{'best film director': 'Ben Affleck'}
 113300,{'Best Director and a standing ovation': 'Ben Affleck'}
-113350,{'best director': 'Non - Oscar'}
+113350,{'best director': 'Ben Affleck'}
 113398,{'Best Director': 'Ben Affleck'}
 113496,{'Best Director and he': 'Ben Affleck'}
 113511,{'best director': 'Ben Affleck'}
 113538,{'Best Director': 'Ben Affleck'}
 113552,{'best director': 'Ben Affleck'}
-113607,{'Best Director': '# BenAffleck'}
+113607,{'Best Director': 'BenAffleck'}
 113644,{'Best Director': 'Ben Affleck'}
 113651,{'Best Director': 'Ben Affleck'}
 113656,{'best actress in a comedy series': 'Lena Dunham'}
@@ -1496,10 +1495,10 @@
 114783,{'Best Director': 'Ben Affleck'}
 114799,{'Best Director and a standing ovation': 'Ben Affleck'}
 114823,{'lifetime achievement': 'Jodie Foster'}
-114849,{'best director': 'Non - Oscar'}
+114849,{'best director': 'Ben Affleck'}
 114890,{'best director category': 'Ben Affleck'}
 114905,{'Best Director': 'Ben Affleck'}
-114957,"{'Best Director': 'Argo "" & amp'}"
+114957,{'Best Director': 'GoldenGlobes'}
 115000,{'best director': 'Ben Affleck'}
 115003,{'Best Actor': 'Ben Affleck'}
 115028,{'Best Director': 'Ben Affleck'}
@@ -1537,11 +1536,12 @@
 115836,{'best director category': 'Ben Affleck'}
 115839,{'Best Director': 'Ben Affleck'}
 115846,{'Best TV Series': 'Girls'}
+115868,"{'Best Director at the Golden Globes': 'Hey , Academy'}"
 115882,{'Best Supporting Actress in': 'Anne Hathaway'}
 115951,{'best comedy series': 'Girls'}
 115975,{'Best TV Series': 'Girls'}
 115999,{'Best Director': 'Ben Affleck'}
-116035,{'GoldenGlobes director': 'GoldenGlobes'}
+116035,{'GoldenGlobes director': 'HA'}
 116054,{'best TV series': '# Girls'}
 116057,{'Best Director': 'Ben Affleck'}
 116167,{'best director category': 'Ben Affleck'}
@@ -1569,7 +1569,7 @@
 116868,{'Best Director and a standing ovation': 'Ben Affleck'}
 116932,{'Best Director': 'Ben Affleck'}
 116934,{'Best Director': 'Ben Affleck'}
-116951,{'Best Television Show Musical': 'Best Television Show Musical / Comedy'}
+116951,{'Best Television Show Musical': 'XOXOXOXO'}
 117008,{'best comedy series': '# Girls'}
 117038,{'Best Television Series': 'Girls'}
 117044,{'Best Director': 'Ben Affleck'}
@@ -1653,21 +1653,21 @@
 119759,{'Best Director': 'Ben Affleck'}
 119785,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 119796,{'Best TV Comedy': '# Girls'}
-119882,{'Best Comedy TV Series': '# GoldenGlobes'}
+119882,{'Best Comedy TV Series': 'Girls'}
 119927,{'Best Supporting Actress in a Motion Picture': 'Anne Hathaway'}
 119965,{'Best TV Series': 'Girls'}
 120103,{'best director category': 'Ben Affleck'}
 120112,{'best director': 'Ben Affleck'}
 120221,{'best director category': 'Ben Affleck'}
 120237,{'Best Director': 'Ben Affleck'}
-120259,{'Best Actress Motion Picture': '# JenniferLawrence'}
+120259,{'Best Actress Motion Picture': 'JenniferLawrence'}
 120296,{'Best TV Series': 'Girls'}
 120436,{'best actress in a': 'WINNER'}
 120446,{'best TV series': '# Girls'}
 120594,{'best director': 'Ben Affleck'}
 120611,{'Best Director': '# BenAffleck'}
 120619,{'best director category': 'Ben Affleck'}
-120672,{'best Best Television Comedy': '# GoldenGlobes'}
+120672,{'best Best Television Comedy': '# Girls'}
 120705,{'Best Director': 'Ben Affleck'}
 120727,{'best TV series': '# GIRLS'}
 120894,{'best Best Television Comedy': '# Girls'}
@@ -1718,7 +1718,7 @@
 123428,{'Best Actor': 'Hugh Jackman'}
 123452,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 123595,{'best actor in a motion picture': 'Hugh Jackman'}
-123675,{'best actor in a comedy or musical': 'celebrity crush'}
+123675,{'best actor in a comedy or musical': 'crush Hugh Jackman'}
 123686,{'best actor in a motion picture': 'Hugh Jackman'}
 123777,{'Best Actor': 'Hugh Jackman'}
 123794,{'best comedy or musical TV series at the': 'Girls'}
@@ -1727,8 +1727,8 @@
 123862,{'Best Director': 'Ben Affleck'}
 123875,{'best actor': 'Hugh Jackman'}
 123878,{'best actor in a motion picture': 'Hugh Jackman'}
-123919,{'Best Actor in a comedy or musical': 'guy'}
-123920,{'Best Director': '# BenAffleck'}
+123919,{'Best Actor in a comedy or musical': 'the guy'}
+123920,{'Best Director': 'BenAffleck'}
 123960,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 123983,{'Best Actor': 'Hugh Jackman'}
 124009,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -1739,15 +1739,15 @@
 124391,{'best actor in a motion picture': 'Hugh Jackman'}
 124434,{'best actor in a motion picture': 'Hugh Jackman'}
 124436,{'Best Actor': 'Hugh Jackman'}
-124450,{'Hugh Jackman wins the husband': 'Hugh Jackman'}
+124450,{'the husband': 'Hugh Jackman'}
 124455,{'best actor in a motion picture': 'Hugh Jackman'}
 124510,{'Best Director': 'Ben Affleck'}
 124541,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 124580,{'Best Actor in Musical or Comedy': 'Hugh Jackman'}
 124585,{'best actor in a motion picture': 'Hugh Jackman'}
-124591,{'Best Actor in a comedy or musical': 'the nicest'}
+124591,{'Best Actor in a comedy or musical': 'the guy'}
 124651,{'Best Comedy': 'Girls'}
-124702,{'Best Actor in a comedy or musical': 'the nicest'}
+124702,{'Best Actor in a comedy or musical': 'the guy'}
 124710,{'Best Director': 'Ben Affleck'}
 124752,{'best actor': 'Hugh Jackman'}
 124763,{'best director category': 'Ben Affleck'}
@@ -1764,12 +1764,12 @@
 125067,{'best actor': 'Hugh Jackman'}
 125073,{'best actor in a motion picture': 'Hugh Jackman'}
 125082,{'Best Husband of the Year': 'Hugh Jackmon'}
-125088,{'Best Director': '# BenAffleck'}
+125088,{'Best Director': 'BenAffleck'}
 125114,{'best actor in a motion picture': 'Hugh Jackman'}
 125117,{'Best Director': 'Ben Affleck'}
 125126,{'Best Actor in Musical': 'Jean Valjean'}
 125142,{'best performance in a motion picture': 'Hugh Jackman'}
-125150,{'Best Actor in a comedy or musical': 'the nicest'}
+125150,{'Best Actor in a comedy or musical': 'the guy'}
 125203,{'best actor in a motion picture': 'Hugh Jackman'}
 125221,{'best director': 'Ben Affleck'}
 125379,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
@@ -1777,7 +1777,7 @@
 125428,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 125463,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 125476,{'best foreign film': '# Amour'}
-125538,"{'Best Motion Picture': ""Moonrise Kingdom '""}"
+125538,{'Best Motion Picture': 'Moonrise Kingdom'}
 125541,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 125542,{'best actor in a motion picture': 'Hugh Jackman'}
 125578,{'best animated film': '# Brave'}
@@ -1816,7 +1816,7 @@
 126296,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 126301,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 126324,{'best actor in a motion picture': 'Hugh Jackman'}
-126326,{'Best Actor in a comedy or musical': 'the nicest'}
+126326,{'Best Actor in a comedy or musical': 'the guy'}
 126385,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 126402,{'best actor in a motion picture': 'Hugh Jackman'}
 126406,{'best picture': 'who'}
@@ -1827,16 +1827,16 @@
 126449,{'best actor in a motion picture': 'Hugh Jackman'}
 126476,{'best actor in a motion picture': 'Hugh Jackman'}
 126636,{'Best Actor': 'Daniel Day Lewis'}
-126651,{'Best Director': 'a boo boo'}
+126651,{'Best Director': 'a boo'}
 126740,{'best actor': 'Hugh Jackman'}
 126755,{'best actor in a motion picture': 'Hugh Jackman'}
-126764,{'Best Director': '# BenAffleck'}
+126764,{'Best Director': 'BenAffleck'}
 126773,{'best actor in a motion picture': 'Hugh Jackman'}
-126789,{'Best Actor in a comedy or musical': 'the nicest'}
-126807,{'Best Actor in a comedy or musical': 'the nicest'}
+126789,{'Best Actor in a comedy or musical': 'the guy'}
+126807,{'Best Actor in a comedy or musical': 'the guy'}
 126894,{'best supporting actress': 'Anne Hathaway'}
 126999,{'best actor in a motion picture': 'Hugh Jackman'}
-127077,{'Best Supporting Actor': '# GoldenGlobes'}
+127077,{'Best Supporting Actor': 'Mychael Danna'}
 127109,{'best actress in a comedy series': 'Lena Dunham'}
 127265,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 127273,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -1845,7 +1845,7 @@
 127523,{'best actor at': 'Hugh Jackman'}
 127598,{'best actress': 'jennifer lawrence'}
 127614,{'Best Motion Picture': 'Les Miserables'}
-127631,{'Best Actor': 'Goldenglobes'}
+127631,{'Best Actor': 'Les Miserables'}
 127641,{'Best Motion Picture': 'Les Miserables'}
 127713,{'Best Animated Feature Film | via': 'Brave'}
 127728,{'the big': 'Les Miz'}
@@ -1863,15 +1863,14 @@
 127877,{'best actor in a motion picture': 'Hugh Jackman'}
 127880,{'Best Motion Picture': 'Les Miserables'}
 127892,{'Best Motion Picture': 'Les Miserables'}
-127901,{'best picture': 'The movie'}
 127912,{'Best Motion Picture': 'Les Miserables'}
 127914,{'best actor at': 'Hugh Jackman'}
 127923,{'Best Motion Picture': 'Les Miserables'}
 127928,{'Best Motion Picture': 'Les Miserables'}
-127974,{'Best Actor in a comedy or musical': 'the nicest'}
+127974,{'Best Actor in a comedy or musical': 'the guy'}
 127981,{'Best Motion Picture': 'Les Miserables'}
 127997,{'best picture': 'Les Miserables'}
-128002,"{'Best Comedy': ""Les Miserables '""}"
+128002,{'Best Comedy': 'Les Miserables'}
 128032,{'Best Picture Musical': 'Les Miserables'}
 128068,{'best comedy': 'Les Miserables'}
 128084,{'Best Picture': 'Les Mis'}
@@ -1879,11 +1878,11 @@
 128106,{'best actor in a motion picture': 'Hugh Jackman'}
 128135,{'Best Director': 'Argo director'}
 128144,{'Best Comedy Series at the Globes': 'Lena Dunham'}
-128152,{'best movie comedy or musical at the Golden Globes': 'Les Miserables'}
+128152,{'best movie comedy or musical at the Golden Globes': 'Awesome Les Miserables'}
 128163,{'Best Motion Picture': 'Les Miserables'}
 128166,{'Best Motion Picture': 'Les Miserables'}
 128217,{'best actor in a motion picture': 'Hugh Jackman'}
-128236,{'Best Actor in a comedy or musical': 'the nicest'}
+128236,{'Best Actor in a comedy or musical': 'the guy'}
 128254,{'best musical': 'Les Miserables'}
 128255,{'Best Comedy': 'Les Miserables'}
 128267,{'best comedy or musical': 'Les Mis'}
@@ -1891,12 +1890,12 @@
 128317,{'Best Motion Picture': 'Les Miserables'}
 128323,{'best actor': 'Hugh Jackman'}
 128329,{'Best Husband of the Year': 'Hugh Jackmon'}
-128347,{'Best Motion Picture': '.@LesMiserables'}
+128347,{'Best Motion Picture': 'Best Motion Picture'}
 128353,{'Best Actor in a Miniseries or Motion Picture Made': 'Kevin Costner'}
 128360,{'Best Motion Picture': 'Les Miserables'}
 128400,{'Best Motion Picture': 'Les Miserables'}
 128417,{'Best Motion Picture': 'Les Miserables'}
-128436,{'Best Motion Picture': '# LesMis'}
+128436,{'Best Motion Picture': 'LesMis'}
 128457,{'Best Motion Picture': 'Les Miserables'}
 128463,{'best actor at': 'Hugh Jackman'}
 128467,{'best picture': '# LesMis'}
@@ -1916,7 +1915,7 @@
 128800,{'best motion picture': 'Les Miserables'}
 128815,{'Best Motion Picture': 'Les Miserables'}
 128821,{'best actor at': 'Hugh Jackman'}
-128823,"{'Best Comedy or Musical': ""Les Mis '""}"
+128823,{'Best Comedy or Musical': 'Les Mis'}
 128826,{'best motion picture': 'Les Miserables'}
 128828,{'best motion picture': 'Les Miserables'}
 128833,{'Best Motion Picture': 'Les Miserables'}
@@ -1929,7 +1928,7 @@
 128922,{'an': 'Moonrise Kingdom'}
 128930,{'Best Motion Picture': 'Les Miserables'}
 128966,{'Best Motion Picture': 'Les Miserables'}
-128972,{'best picture': '# LesMis'}
+128972,{'best picture': 'LesMis'}
 128977,{'Best Motion Picture': 'Les Miserables'}
 128981,{'best actor at': 'Hugh Jackman'}
 129033,{'best foreign film at': 'Amour'}
@@ -1942,7 +1941,7 @@
 129148,{'Best Director Award at Golden Globes': 'Ben Affleck'}
 129152,{'Best Motion Picture': 'Les Miserables'}
 129185,{'Best Musical or whatever': '# LesMis'}
-129191,{'Best Motion Picture': '# LesMis'}
+129191,{'Best Motion Picture': 'LesMis'}
 129200,{'Best Motion Picture': 'Les Miserables'}
 129217,{'Best Motion Picture Comedy': '# LesMiserables'}
 129228,{'best picture': 'Les Miserables'}
@@ -1959,7 +1958,7 @@
 129547,{'best picture': 'Les Miserables'}
 129585,{'Best Motion Picture': 'Les Miserables'}
 129591,{'best foreign film at': 'Amour'}
-129596,{'Best Picture': 'Best Picture'}
+129596,{'Best Picture': 'GoldenGlobes'}
 129611,{'Best Motion Picture': 'Les Miserables'}
 129626,{'Best Comedy or Musicial': '# LesMiserables'}
 129638,{'Best Motion Picture': '.@LesMiserables'}
@@ -1972,11 +1971,11 @@
 129753,{'best motion picture': 'Les Miserables'}
 129761,{'Best Animated Film': 'Brave'}
 129763,{'best motion picture': 'Les Miserables'}
-129805,{'best actor': '# GoldenGlobes Hugh Jackman'}
+129805,{'best actor': 'GoldenGlobes Hugh Jackman'}
 129810,{'best actor in miniseries': 'Kevin Costner'}
 129824,{'Best Motion Picture': 'Les Miserables'}
 129881,{'Best Motion Picture': 'Les Miserables'}
-129973,{'Best Actor & amp': 'Best Actor & amp'}
+129973,{'Best Actor & amp': 'Best Actor &'}
 130002,{'best picture': 'Les Miserables'}
 130005,{'Best Motion Picture': 'Les Miserables'}
 130018,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -1985,7 +1984,7 @@
 130107,{'Best Motion Picture': '.@LesMiserables'}
 130119,{'best picture': 'Les Miserables'}
 130121,{'best picture': 'Les Miserables'}
-130123,{'best picture': 'Les Miserables'}
+130123,{'best picture': 'GoldenGlobes Les Miserables'}
 130124,{'best picture': 'Les Miserables'}
 130151,{'Best Motion Picture': '.@LesMiserables'}
 130154,{'Best Motion Picture': 'Les Miserables'}
@@ -2006,18 +2005,18 @@
 130277,{'best picture': 'Les Miserables'}
 130334,{'best picture': 'Les Miserables'}
 130344,{'Best Actor': 'Hugh Jackman'}
-130403,{'Best Motion Picture Comedy or Musical': 'Les Miserables'}
+130403,{'Best Motion Picture Comedy or Musical': 'GoldenGlobes Les Miserables'}
 130410,{'Best Picture Oscar race': 'Affleck'}
 130415,{'best picture': 'Les Miserables'}
-130422,{'Best Motion Picture Comedy or Musical': 'Les Miserables'}
+130422,{'Best Motion Picture Comedy or Musical': 'GoldenGlobes Les Miserables'}
 130424,{'best actor in a motion picture': 'Hugh Jackman'}
 130456,{'Best Motion Picture': '# LesMiserables'}
 130493,{'Best Actor in Musical': 'Jean Valjean'}
 130495,{'best actor in a motion picture': 'Hugh Jackman'}
-130515,{'best actor': '# GoldenGlobes Hugh Jackman'}
+130515,{'best actor': 'GoldenGlobes Hugh Jackman'}
 130581,{'Best Motion Picture': 'Les Miserables'}
 130659,{'best picture': 'Les Miserables'}
-130671,{'best director': 'GoldenGlobes'}
+130671,{'best director': 'Idiocy of # OscarNoms Affleck'}
 130678,{'Best Kanye Interruption at the': 'Anne Hathaway'}
 130705,{'Best Motion Picture': 'Les Miserables'}
 130730,{'best picture': 'Les Miserables'}
@@ -2040,7 +2039,7 @@
 131211,{'best picture': 'Les Miserables'}
 131222,{'best picture': 'Les Miserables'}
 131241,{'best picture': 'Les Miserables'}
-131252,{'Best Original Song via': 'Globes'}
+131252,{'Best Original Song via': 'ADELE'}
 131342,{'best motion picture at': 'Les Miserables'}
 131346,{'Best Director': 'Ben Affleck'}
 131347,{'Best Motion Picture': 'Les Miserables'}
@@ -2053,11 +2052,13 @@
 131506,{'Best Actress in a Motion Picture- Drama': 'Jessica Chastain'}
 131559,{'best actress': 'Jessica Chastain'}
 131590,{'Best Actress in Motion Picture': 'Jessica Chastain'}
-131595,{'BEST PICTURE': 'LES MISERABLES'}
+131595,{'BEST PICTURE': 'BEST PICTURE - MUSIC OR'}
+131601,{'best': 'the underdog'}
 131604,{'Best Motion Picture': 'Les Miserables'}
 131606,{'best actor in a motion picture': 'Hugh Jackman'}
+131630,{'best': 'the underdog'}
 131656,{'Best Motion Picture': '# LesMiserables'}
-131697,{'best actress in a dramatic film': 'WINNER'}
+131697,{'best actress in a dramatic film': 'Jessica Chastain'}
 131709,{'best picture': '# LesMis'}
 131712,{'Best Actress': 'Jessica Chastain'}
 131735,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
@@ -2082,7 +2083,7 @@
 132079,{'best actress': 'Jessica Chastain'}
 132109,{'best musical': 'Les Miserables'}
 132144,{'best picture': 'Les Miserables'}
-132167,{'best actress in a dramatic film': 'WINNER'}
+132167,{'best actress in a dramatic film': 'Jessica Chastain'}
 132214,{'best actress': 'Jessica Chastain'}
 132229,{'Best Actress in a motion Picture': 'Jessica Chastain'}
 132243,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -2098,7 +2099,7 @@
 132482,{'best actress': 'Jessica Chastain'}
 132501,{'Best Motion Picture': 'Les Miserables'}
 132519,{'Best Bipartisan Freak Out Bait': 'Jessica Chastain'}
-132520,{'best actor': '# GoldenGlobes Hugh Jackman'}
+132520,{'best actor': 'GoldenGlobes Hugh Jackman'}
 132545,{'best actor in a motion picture': 'Hugh Jackman'}
 132548,{'Best Actress': 'girl'}
 132629,{'best actor': 'Hugh Jackman'}
@@ -2145,14 +2146,14 @@
 133713,{'Best Performance by an Actor in a Motion Picture': 'Daniel Day Lewis'}
 133739,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
 133776,{'best actress in a drama at the': 'Jessica Chastain'}
-133798,{'best actress in a dramatic film': 'WINNER'}
+133798,{'best actress in a dramatic film': 'Jessica Chastain'}
 133843,{'Best Actor in a Drama': 'Daniel Day Lewis'}
 133895,{'Best Motion Picture': 'Les Miserables'}
 133917,{'Best Actress and': 'Jessica Chastain'}
 133934,{'Best Actor': 'Daniel Day Lewis'}
 133940,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 133941,{'Best Motion Picture': 'Les Miserables'}
-134010,{'best actor': 'GoldenGlobes # DanielDayLewis'}
+134010,{'best actor': 'Lincoln'}
 134011,{'best actor': 'Daniel Day Lewis'}
 134021,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 134054,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -2165,7 +2166,7 @@
 134199,{'best foreign language film': 'Amour'}
 134225,{'best actor at': 'Hugh Jackman'}
 134246,{'Best Actor': 'Day Lewis'}
-134256,{'best film in the comedy': 'Golden Globe'}
+134256,{'best film in the comedy': 'Les Miserables'}
 134264,{'Best Actor': 'Day Lewis'}
 134286,{'Best Actor in Drama': 'Day Lewis'}
 134296,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
@@ -2177,20 +2178,20 @@
 134441,{'best actor': 'Daniel Day Lewis'}
 134458,{'best lead actor in a drama': 'Daniel Day Lewis'}
 134467,{'best actor': 'Daniel Day Lewis'}
-134477,{'best film in the comedy': '# GoldenGlobes VW'}
+134477,{'best film in the comedy': 'Les Miserables'}
 134497,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 134505,{'best actress in a motion picture': 'Jessica Chastain'}
 134520,{'Best Actress in a Comedy or Musical': 'Jennifer Lawrence'}
 134537,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
 134539,{'Best Motion Picture': 'Les Miserables'}
 134542,{'best actor': 'Daniel Day Lewis'}
-134563,{'best film in the comedy': '# GoldenGlobes VW'}
+134563,{'best film in the comedy': 'Les Miserables'}
 134597,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
-134605,{'Best Actor of All': '# DanielDayLewis'}
+134605,{'Best Actor of All': 'The Best Actor'}
 134628,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 134655,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 134704,{'Best Actor': 'Day Lewis'}
-134726,{'best film in the comedy': '# GoldenGlobes VW'}
+134726,{'best film in the comedy': 'Les Miserables'}
 134747,{'best actor': 'Daniel Day Lewis'}
 134763,{'best actor': 'Daniel Day Lewis'}
 134775,{'best actor': 'Daniel Day Lewis'}
@@ -2210,7 +2211,7 @@
 134992,{'Best Motion Picture': 'Les Miserables'}
 135036,{'Best Actor': 'Daniel Day Lewis'}
 135045,{'best actor in a motion picture': 'Hugh Jackman'}
-135051,{'best film in the comedy': '# GoldenGlobes VW'}
+135051,{'best film in the comedy': 'Les Miserables'}
 135101,{'Best Actor': 'Day Lewis'}
 135209,{'best foreign film at': 'Amour'}
 135215,{'best actress': 'Jessica Chastain'}
@@ -2219,7 +2220,7 @@
 135328,{'Best Motion Picture': 'Les Miserables'}
 135340,{'best motion picture screenplay': 'Quentin Tarantino'}
 135422,{'Best Motion Picture': 'Les Miserables'}
-135442,{'best actress in a dramatic film': 'WINNER'}
+135442,{'best actress in a dramatic film': 'Jessica Chastain'}
 135455,{'best actor in a drama': 'Daniel Day Lewis'}
 135496,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
 135527,{'best award speech': 'Day Lewis'}
@@ -2232,8 +2233,8 @@
 135670,{'best actor at': 'Hugh Jackman'}
 135705,{'best actor': 'Daniel Day Lewis'}
 135706,{'Best Actress': 'Jessica Chastain'}
-135731,{'Best Actor in a Motion Picture in the Comedy or Musical category': 'moment'}
-135732,{'best film in the comedy': '# GoldenGlobes VW'}
+135731,{'Best Actor in a Motion Picture in the Comedy or Musical category': 'GoldenGlobes'}
+135732,{'best film in the comedy': 'Les Miserables'}
 135734,{'best actor in a drama': 'Daniel Day Lewis'}
 135759,{'best actor': 'Daniel Day Lewis'}
 135771,{'best actor': 'Daniel Day Lewis'}
@@ -2241,7 +2242,7 @@
 135881,{'best motion picture': 'Les Miserables'}
 135886,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 135933,{'Best Motion Picture': 'Les Miserables'}
-135946,{'best film in the comedy': '# GoldenGlobes VW'}
+135946,{'best film in the comedy': 'Les Miserables'}
 135950,{'best actor in a motion picture': 'Hugh Jackman'}
 136019,{'best actor': 'Daniel Day Lewis'}
 136029,{'best actress': 'Jessica Chastain'}
@@ -2253,13 +2254,13 @@
 136122,{'best picture': 'Les Miserables'}
 136147,{'best comedy or musical TV series at the': 'Girls'}
 136154,{'Best Motion Picture': 'Les Miserables'}
-136161,{'Best Actor in a Motion Picture': 'Day Lewis'}
+136161,{'Best Actor in a Motion Picture': 'This'}
 136185,{'Lewis melts down every': 'he'}
 136380,{'Best Actress in a Comedy': 'Jennifer Lawrence'}
 136385,{'Best Motion Picture': '.@LesMiserables'}
 136409,{'best actor': 'Daniel Day Lewis'}
 136441,{'best comedy or musical TV series at the': 'Girls'}
-136456,{'Best Motion Picture': '# LesMis'}
+136456,{'Best Motion Picture': 'LesMis'}
 136468,{'best actress in a drama at the': 'Jessica Chastain'}
 136470,{'Best Actor in a Motion Picture': 'Day Lewis'}
 136472,{'best actor in a motion picture': 'Hugh Jackman'}
@@ -2267,20 +2268,20 @@
 136617,{'best actor in a drama': 'Daniel Day Lewis'}
 136645,{'Best TV Series': 'Girls'}
 136658,{'Best Motion Picture': 'Les Miserables'}
-136670,{'Best Actor in a comedy or musical': 'the nicest'}
+136670,{'Best Actor in a comedy or musical': 'the guy'}
 136787,{'Best Actor Award': 'Day Lewis'}
 136808,{'best actor': 'Hugh Jackman'}
 136831,{'best actor in a motion picture': 'Hugh Jackman'}
-136848,{'best film in the comedy': '# GoldenGlobes VW'}
-136857,{'Best Director': '# BenAffleck'}
-136883,{'Best Motion Picture': '# LesMis'}
+136848,{'best film in the comedy': 'Les Miserables'}
+136857,{'Best Director': 'BenAffleck'}
+136883,{'Best Motion Picture': 'LesMis'}
 137081,{'best motion picture': 'Les Miserables'}
 137105,{'best actor in a motion picture': 'Hugh Jackman'}
 137194,{'best actor at': 'Hugh Jackman'}
 137220,{'Best Motion Picture': 'Les Miserables'}
-137276,{'Lewis wins': 'Daniel Day Lewis'}
+137276,{'Lewis wins': 'Daniel Day - Lewis'}
 137364,{'best actor in a drama': 'Daniel Day Lewis'}
-137394,{'best picture': 'job # LesMis'}
+137394,{'best picture': '♥ # LesMis'}
 137496,{'best director': 'Ben Affleck'}
 137563,{'best picture': 'Argo'}
 137573,{'Best Motion Picture': 'Argo'}
@@ -2290,9 +2291,9 @@
 137693,{'best picture': '# Argo'}
 137703,{'best picture': 'Argo'}
 137718,{'best picture': 'Argo'}
-137733,{'best picture': 'Big Trouble'}
+137733,{'best picture': 'Trouble'}
 137763,{'Best Original Song': 'Adele'}
-137780,{'Best Picture': 'Best Picture'}
+137780,{'Best Picture': 'Argo'}
 137802,{'Best Motion Picture': 'Argo'}
 137821,{'Best Motion Picture': 'Argo'}
 137830,{'Best Motion Picture': 'Argo'}
@@ -2305,7 +2306,7 @@
 137891,{'best dramatic picture': 'Argo'}
 137900,{'Best Motion Picture': 'Argo'}
 137915,{'Best Motion Picture': 'Argo'}
-137963,{'Best Picture': 'Argo'}
+137963,{'Best Picture': '# Argo'}
 137999,{'best foreign film at': 'Amour'}
 138040,{'best motiion picture': 'Argo'}
 138087,{'Best Picture -Drama': 'Argo'}
@@ -2317,7 +2318,7 @@
 138204,{'best picture': 'Argo'}
 138209,{'Best Picture': 'ARGO'}
 138213,{'Best Actress': 'The Jessica Chastain'}
-138240,{'Best Picture': 'Best Picture'}
+138240,{'Best Picture': 'Argo'}
 138246,{'best actor in a drama': 'Daniel Day Lewis'}
 138249,{'Best Picture': 'ARGO'}
 138253,{'best drama': 'Argo'}
@@ -2326,7 +2327,7 @@
 138320,{'best picture drama': 'Argo'}
 138332,{'Best Motion Picture': 'Argo'}
 138358,{'Best Motion Picture Drama': 'Argo'}
-138375,{'Best Actress Motion Picture': '# JenniferLawrence'}
+138375,{'Best Actress Motion Picture': 'JenniferLawrence'}
 138412,{'Best Motion Picture': 'Les Miserables'}
 138435,{'Best Motion Picture': 'The film'}
 138441,{'Best Picture': '# Argo'}
@@ -2335,16 +2336,16 @@
 138472,{'Best Picture': 'ARGO'}
 138480,{'Best Drama Movie': 'Argo'}
 138505,{'Best Motion Picture': 'Argo'}
-138551,{'best picture drama at': 'Argo'}
+138551,{'best picture drama at': '# Argo'}
 138579,{'Best Motion Picture Drama': 'Argo'}
 138594,{'Best Motion Picture Drama': 'Argo'}
 138598,{'best actor in a motion picture': 'Hugh Jackman'}
 138600,{'best actress': 'Jessica Chastain'}
 138647,{'best picture': 'Argo'}
-138695,{'Best Drama over': 'the movie'}
+138695,{'Best Drama over': 'movies'}
 138789,{'best actress in TV drama': 'A Claire Danes'}
 138802,{'Best Picture- Drama': 'Argo'}
-138810,{'best actress in a dramatic film': 'WINNER'}
+138810,{'best actress in a dramatic film': 'Jessica Chastain'}
 138820,{'best actor in a drama': 'Daniel Day Lewis'}
 138832,{'Best Picture & amp': 'Argo'}
 138844,{'Best Original Song': 'Adele'}
@@ -2355,14 +2356,14 @@
 138907,{'best actor': 'Daniel Day Lewis'}
 138911,{'Best Motion Picture': 'Argo'}
 138914,{'Best Motion Picture': 'The film'}
-138980,{'Best Picture': 'Best Picture'}
+138980,{'Best Picture': 'Argo'}
 138985,{'best actor': 'Daniel Day Lewis'}
-139010,{'Best Motion Picture': 'Lincoln'}
+139010,{'Best Motion Picture': 'Argo'}
 139023,{'best actor': 'Daniel Day Lewis'}
 139026,{'Best Motion Picture': 'Argo'}
 139054,{'best actor at': 'Hugh Jackman'}
-139056,{'Best Picture': 'Best Picture'}
-139083,{'best animated movie': '# Brave'}
+139056,{'Best Picture': 'Argo'}
+139083,{'best animated movie': 'Brave'}
 139108,"{""Best Picture Drama and we 're"": 'Argo'}"
 139128,{'best picture': '# Argo'}
 139136,{'Best Actress in a Television Series': 'Claire Danes'}
@@ -2390,7 +2391,7 @@
 139726,{'best actor in a musical or comedy award at': 'Hugh Jackman'}
 139729,{'best song': 'Adele'}
 139760,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
-139784,{'best drama I': '# argo'}
+139784,"{""best drama I ' m sure a good movie but it"": '# argo'}"
 139786,{'best actor': 'Daniel Day Lewis'}
 139789,{'best drama': 'ARGO'}
 139863,{'best lead actor in a drama': 'Daniel Day Lewis'}
@@ -2400,15 +2401,15 @@
 139916,{'Best Picture': 'Argo'}
 139980,{'best picture': 'Argo'}
 140005,{'Best Picture': 'Argo'}
-140013,{'best dramatic picture': 'Argo'}
-140048,"{""Best Motion Picture Drama yet it was n't"": 'Argo'}"
+140013,{'best dramatic picture': '# Argo'}
+140048,"{""Best Motion Picture Drama yet it was n't nominated"": 'Argo'}"
 140079,{'best drama to close the': 'Argo'}
-140103,{'best picture': 'Argo'}
+140103,{'best picture': '# Argo'}
 140152,{'Best Motion Picture': 'The film'}
 140160,{'the last': 'Argo'}
 140178,{'Best Motion Picture': 'Argo'}
 140179,{'Best Motion Picture': 'Les Miserables'}
-140238,{'Best motion picture and Best director at': '# ARGO'}
+140238,{'Best motion picture and Best director at': 'ARGO'}
 140263,{'Best Drama Motion Picture': 'Argo'}
 140267,{'Best Picture by Foreign Press': 'Argo'}
 140327,{'Best movie': '# Argo'}
@@ -2418,7 +2419,7 @@
 140453,{'Best Motion Picture Drama': '# Argo'}
 140469,{'best supporting actress i': 'Adele'}
 140519,{'best actor in a motion picture': 'Hugh Jackman'}
-140522,{'Best Motion Picture Drama': 'Argo'}
+140522,{'Best Motion Picture Drama': '# Argo'}
 140533,{'Best Picture': 'Argo'}
 140583,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 140584,{'best picture': 'Argo'}
@@ -2432,11 +2433,11 @@
 140831,{'best actor': 'Daniel Day Lewis'}
 140908,{'the last': 'Argo'}
 140935,{'best actor in a motion picture': 'Hugh Jackman'}
-140939,{'best': '# DanielDayLewis'}
+140939,{'best': '#'}
 140967,{'Best Picture': 'Les Mis'}
-140969,{'best': '# DanielDayLewis'}
+140969,{'best': '#'}
 141013,{'the last': 'Argo'}
-141034,{'best': '# DanielDayLewis'}
+141034,{'best': '#'}
 141052,{'best motion picture': 'Argo'}
 141062,{'Best Picture Drama': 'Argo'}
 141079,{'Best Animated Feature Film | via': 'Brave'}
@@ -2453,7 +2454,7 @@
 141717,{'Best Motion Picture': 'Argo'}
 141726,{'Best Motion Picture': 'Les Miserables'}
 141734,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
-141761,{'best picture': 'Argo'}
+141761,{'best picture': '# Argo'}
 141795,{'best motion picture': 'Argo'}
 141816,{'Best Motion Picture': 'Argo'}
 141822,{'Best Motion Picture': 'Argo'}
@@ -2462,9 +2463,9 @@
 141881,{'Best Motion Picture': 'Les Miserables'}
 141905,{'best drama to close the': 'Argo'}
 141906,{'best actor in a motion picture': 'Hugh Jackman'}
-141910,{'best film in the comedy': '# GoldenGlobes VW'}
+141910,{'best film in the comedy': 'Les Miserables'}
 141912,{'best director': 'Ben Affleck'}
-141934,{'best film in the comedy': '# GoldenGlobes VW'}
+141934,{'best film in the comedy': 'Les Miserables'}
 141954,{'best actor': 'Daniel Day Lewis'}
 141956,{'best film drama': 'ARGO'}
 142042,{'best drama': '# Homeland'}
@@ -2488,42 +2489,42 @@
 142729,{'best motion picture': 'Argo'}
 142779,{'best motion picture': 'Argo'}
 142787,{'best foreign language film': 'Amour'}
-142808,{'best film in the comedy': '# GoldenGlobes VW'}
+142808,{'best film in the comedy': 'Les Miserables'}
 142832,{'best supporting actress i': 'Adele'}
 142840,{'Best Actress Award': 'Jennifer Lawrence'}
 142874,{'best song': 'Adele'}
-142926,{'best actor': 'film tonton ini'}
+142926,{'best actor': 'film wajib tonton ini'}
 142930,{'Best Pic': 'Oscar'}
 142938,{'Best Picture': 'ARGO'}
 142939,{'best movie drama': 'Argo'}
-142980,{'best director wins': 'Surprised'}
+142980,{'best director wins': 'Argo'}
 142991,{'Best Motion Picture': 'Argo'}
 143016,{'best actor': 'Daniel Day Lewis'}
 143018,{'best motion picture': 'Argo'}
 143064,{'best actor in a musical or comedy film': 'Hugh Jackman'}
 143110,{'best actor': 'Daniel Day Lewis'}
 143145,{'best motion picture at golden globes': 'Argo'}
-143164,{'Best Picture and Best Director but Affleck is snubbed': 'Best Picture and Best'}
+143164,{'Best Picture and Best Director but Affleck is': 'Argo'}
 143185,{'best actor': 'Daniel Day Lewis'}
 143212,{'best actor in a motion picture': 'Hugh Jackman'}
-143232,{'Best Motion Picture Drama & amp': 'Argo'}
+143232,{'Best Motion Picture Drama & amp': '# Argo'}
 143250,{'best actor in a musical or comedy award at': 'Hugh Jackman'}
 143273,{'best actor': 'Hugh Jackman'}
-143309,{'Best Actor and Anne Hathaway': 'Hugh Jackman'}
-143316,{'Best Actor and Anne Hathaway': 'Hugh Jackman'}
+143309,{'Best Actor and Anne Hathaway wins Best Featured Actress': 'Hugh Jackman'}
+143316,{'Best Actor and Anne Hathaway wins Best Featured Actress': 'Hugh Jackman'}
 143317,{'Best Director and his movie': 'Ben Affleck'}
-143327,{'Best Actor and Anne Hathaway': 'Hugh Jackman'}
+143327,{'Best Actor and Anne Hathaway wins Best Featured Actress': 'Hugh Jackman'}
 143386,{'Best Motion Picture': 'Argo'}
 143522,{'best actor in a comedy': 'Hugh Jackman'}
 143567,{'best actor': 'Daniel Day Lewis'}
 143574,{'best actress': 'Jessica Chastain'}
-143664,{'best film in the comedy': '# GoldenGlobes VW'}
+143664,{'best film in the comedy': 'Les Miserables'}
 143723,{'best actress in a drama at the': 'Jessica Chastain'}
 143823,{'Best Motion Picture': 'Ben Affleck'}
 143857,{'best picture': 'Les Miserables'}
 143872,{'best actor': 'Daniel Day Lewis'}
 143895,{'best picture': 'Argo'}
-143987,{'best film in the comedy': '# GoldenGlobes VW'}
+143987,{'best film in the comedy': 'Les Miserables'}
 144069,{'Best Motion Picture': 'Les Miserables'}
 144085,{'best picture at the': 'Argo'}
 144095,{'for next year when Chris Tucker wins the Cecil B. DeMille': 'Chris Tucker'}
@@ -2549,7 +2550,7 @@
 144863,{'best picture': 'Argo'}
 144916,{'best picture': 'Les Miserables'}
 144918,{'best actor at': 'Hugh Jackman'}
-144934,{'best film in the comedy': '# GoldenGlobes VW'}
+144934,{'best film in the comedy': 'Les Miserables'}
 144971,{'Best Picture': 'ARGO'}
 144991,{'best actor at': 'Hugh Jackman'}
 145041,{'Best Motion Picture': '# LesMis'}
@@ -2568,29 +2569,28 @@
 145781,{'Best Picture': 'Argo'}
 145829,{'Best Actress at': 'Review'}
 145832,{'best drama': 'it'}
-145847,{'best film in the comedy': '# GoldenGlobes VW'}
+145847,{'best film in the comedy': 'Les Miserables'}
 145862,{'best actor': 'Daniel Day Lewis'}
 145907,{'Best Motion Picture': 'Les Miserables'}
 145974,{'best actor': 'Daniel Day Lewis'}
 145982,{'Best Picture': 'Argo'}
 145994,{'Best Screenplay': 'Quentin Tarantino'}
-146028,{'best actor in a TV drama': 'WINNER'}
+146028,{'best actor in a TV drama': 'Damian Lewis'}
 146053,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
 146083,{'Best Actor in a Motion Picture': 'Hugh Jackman'}
 146160,{'Best Motion Picture': 'Les Miserables'}
 146194,{'best motion picture': 'Les Miserables'}
 146199,{'best picture': 'Argo'}
-146230,{'best director and best picture at Golden Globes': 'boston'}
 146236,{'best picture': 'Les Miserables'}
 146261,{'Best Motion Picture': 'Argo'}
 146284,{'best actress in a TV series': 'Lena Dunham'}
-146308,{'best actor': '# GoldenGlobes Hugh Jackman'}
+146308,{'best actor': 'GoldenGlobes Hugh Jackman'}
 146364,{'best film': 'argo'}
 146396,{'Best Actress in a Motion Picture': 'Jessica Chastain'}
-146466,{'best dramatic picture': 'Argo'}
+146466,{'best dramatic picture': '# Argo'}
 146556,{'Best Director': 'Ben Affleck'}
 146572,{'Best Motion Picture': '.@LesMiserables'}
-146635,{'Best Director': '# BenAffleck'}
+146635,{'Best Director': 'BenAffleck'}
 146644,{'Best Motion Picture': 'Les Miserables'}
 146649,{'best actor': 'Hugh Jackman'}
 146841,{'best picture': 'Argo'}
@@ -2602,7 +2602,7 @@
 147004,{'best picture': 'Argo'}
 147091,{'best actor in a motion picture': 'Hugh Jackman'}
 147149,{'best actor in a drama': 'Daniel Day Lewis'}
-147176,{'best school in asia': 'GoldenGlobes baba'}
+147176,{'best school in asia': 'Gandhi school'}
 147202,{'best actor': 'Daniel Day Lewis'}
 147213,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 147272,{'best actor': 'Daniel Day Lewis'}
@@ -2612,14 +2612,14 @@
 147463,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 147583,{'Best Director': 'Ben Affleck'}
 147749,{'Best Dressed and Best Eloquently Kick': 'Jessica Chastain'}
-147789,{'Best Director': '# BenAffleck'}
+147789,{'Best Director': 'BenAffleck'}
 147808,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 147814,{'best actor in motion picture': 'Hugh Jackman'}
 147832,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 147876,{'best actor': 'Daniel Day Lewis'}
 147896,{'best director': 'Argo'}
 147934,{'best actor in a musical or comedy award at': 'Hugh Jackman'}
-147969,{'best director': 'Stunned Ben Affleck'}
+147969,{'best director': 'Globes'}
 148131,{'Best Actor': 'Daniel Day Lewis'}
 148142,{'best actor in a musical or comedy award at': 'Hugh Jackman'}
 148227,{'best actress in a comedy series': 'Lena Dunham'}
@@ -2633,7 +2633,7 @@
 148432,{'best actor in a musical or comedy award at': 'Hugh Jackman'}
 148483,{'best original song': 'Skyfall'}
 148536,{'best actress in a drama at the': 'Jessica Chastain'}
-148580,{'Best Director': '# India Ben Affleck'}
+148580,{'Best Director': 'India Ben Affleck'}
 148606,{'best actress in TV drama': 'A Claire Danes'}
 148628,{'best actress': 'Jessica Chastain'}
 148669,{'Best Director': 'Ben Affleck'}
@@ -2649,7 +2649,7 @@
 148968,{'Best Motion Picture': 'Les Miserables'}
 148992,{'Best Motion Picture': 'Les Miserables'}
 148994,{'Best Actress Comedy': 'Jennifer Lawrence'}
-149074,{'best awards show in years': 'Amy'}
+149074,{'best awards': 'Amy'}
 149097,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 149151,{'Best Animated Feature Film | via': 'Brave'}
 149291,{'best actor in a musical or comedy at the Golden Globes': 'Hugh Jackman'}
@@ -2682,46 +2682,46 @@
 150360,{'best director category': 'Ben Affleck'}
 150466,{'best actor in a drama': 'Daniel Day Lewis'}
 150467,{'best actress': 'Jessica Chastain'}
-150545,{'best film in the comedy': '# GoldenGlobes VW'}
+150545,{'best film in the comedy': 'Les Miserables'}
 150664,{'the big': 'Argo'}
 150771,{'Best Motion Picture': 'LesMiserables'}
 150840,{'Best Actor in a Motion Picture': 'Daniel Day Lewis'}
 150850,{'best actor': 'Hugh Jackman'}
-150882,{'best film in the comedy': '# GoldenGlobes VW'}
+150882,{'best film in the comedy': 'Les Miserables'}
 150898,{'the original screenplay': 'Quentin Tarantino'}
 150989,{'best director': 'Ben Affleck'}
 151099,{'best animated feature film': 'Brave'}
 151182,{'best foreign language film': 'Amour'}
 151183,{'best foreign language film': 'Amour'}
-151399,{'Best Original Song goes to Skyfall 2013 Go': 'Globes'}
-151403,{'best motion picture': '# fb'}
+151399,{'Best Original Song goes to Skyfall 2013 Go': 'ADELE'}
+151403,{'best motion picture': 'Les Miserables'}
 151432,{'Best Actress': 'Jessica Chastain'}
 151449,{'best motion picture': 'Argo'}
 151533,{'best actor in a motion picture': 'Hugh Jackman'}
 151563,{'best foreign film at': 'Amour'}
 151568,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 151592,{'Best Actor in a Miniseries or Motion Picture Made': 'Kevin Costner'}
-151701,{'Best Actor in a comedy or musical': 'the nicest'}
+151701,{'Best Actor in a comedy or musical': 'the guy'}
 151742,{'best actress in a TV series': 'Lena Dunham'}
 151817,{'best actress in a drama at the': 'Jessica Chastain'}
 151849,{'Best TV Series': 'Girls'}
 151866,{'best actress': 'Jessica Chastain'}
 151949,{'best comedy': 'Les Miserables'}
 151983,{'Best Motion Picture': 'Les Miserables'}
-152015,{'best film in the comedy': '# GoldenGlobes VW'}
+152015,{'best film in the comedy': 'Les Miserables'}
 152020,{'Best Actor Motion Picture': 'Daniel Day Lewis'}
 152070,{'best actor in a motion picture': 'Hugh Jackman'}
 152100,{'Best Actor': 'Day Lewis'}
 152151,{'best actor in a motion picture': 'Hugh Jackman'}
 152276,{'Best Motion Picture': 'Les Miserables'}
-152361,{'Best Actress Motion Picture': '# JenniferLawrence'}
-152503,{'best actor': '# GoldenGlobes Hugh Jackman'}
+152361,{'Best Actress Motion Picture': 'JenniferLawrence'}
+152503,{'best actor': 'GoldenGlobes Hugh Jackman'}
 152587,{'the Cecil B. DeMille': 'Jodie Foster'}
 152602,{'Best Actress Award': 'Jennifer Lawrence'}
-152668,{'hope wins an': 'hope'}
+152668,{'an': 'hope'}
 152712,{'a Golden Globe': 'Globes'}
 152741,{'best picture': 'Les Miserables'}
 152749,{'best actor in a motion picture': 'Hugh Jackman'}
 152758,{'Best Actor In a Motion Picture': 'Hugh Jackman'}
-152778,{'Best Actress': 'Jennifer Lawrence'}
+152778,{'Best Actress': 'a video Jennifer Lawrence'}
 152885,{'Best Motion Picture': 'Les Miserables'}

@@ -23,6 +23,15 @@ award_show_names = [
     'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
 ]
 
+irrelevant_words = [
+    'kiss', 'son', 'daughter', 'mom', 'dad', 'present', 'win', 'won', 'could', 
+    'either', 'famous', 'hosting', 'someone', 'this', 'that', 'cheek', 'when', 
+    'nostalgic', 'seeing', 'my', 'your', 'his', 'her', 'their', 'its', 'you', 
+    'he', 'she', 'they', 'we', 'me', 'him', 'us', 'who', 'whom', 'it', 's', 've', 'another'
+]
+
+common_verbs = ['win', 'wins', 'won', 'receives', 'present', 'presenting']
+
 def clean(text):
     # Check for foreign language characters (alphabets beyond basic ASCII) not including emoji's since those tweets can be useful
     if re.search(r'[^\x00-\x7F\u263a-\U0001f645]', text): 
@@ -58,12 +67,14 @@ def extract_full_subject_as_nominee(doc):
     return None
 
 def extract_award_name_after_best(doc):
+    """Extract the award name starting from 'Best' using pattern matching."""
     award_phrases = []
     for i, token in enumerate(doc):
         if token.text.lower() == 'best':
             award_tokens = [token]
             for j in range(i + 1, len(doc)):
                 next_token = doc[j]
+                # Stop capturing at punctuation, verbs, or if a likely phrase end is reached
                 if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or next_token.dep_ == 'punct':
                     break
                 if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
@@ -72,13 +83,15 @@ def extract_award_name_after_best(doc):
                     break
                 award_tokens.append(next_token)
             award_phrase = ' '.join([t.text for t in award_tokens]).strip()
-            if award_phrase:
+            # Add only phrases of a sensible length that could be awards
+            if 3 <= len(award_phrase.split()) <= 10:
                 award_phrases.append(award_phrase)
     if award_phrases:
         return max(award_phrases, key=len)
     return None
 
 def extract_award_name_before_award(doc):
+    """Extract the award name preceding 'award' using pattern matching."""
     award_phrases = []
     for i, token in enumerate(doc):
         if token.text.lower() == 'award':
@@ -90,24 +103,45 @@ def extract_award_name_before_award(doc):
                     break
                 award_tokens.insert(0, left_token)
             award_phrase = ' '.join([t.text for t in award_tokens]).strip()
-            if award_phrase:
+            # Add only phrases of a sensible length that could be awards
+            if 3 <= len(award_phrase.split()) <= 10:
                 award_phrases.append(award_phrase)
     if award_phrases:
         return max(award_phrases, key=len)
     return None
 
+# def extract_award_names(text):
+#     doc = nlp(text)
+#     best_award = extract_award_name_after_best(doc)
+#     award_name = extract_award_name_before_award(doc)
+#     extracted_award = best_award or award_name
+#     if extracted_award:
+#         # Normalize award name for comparison
+#         award_text = extracted_award.strip().lower()
+#         award_show_names_lower = [name.lower() for name in award_show_names]
+#         if award_text not in award_show_names_lower:
+#             return extracted_award
+#     return None
+
 def extract_award_names(text):
+    """Extract award names using both 'Best' and 'award' triggers and filter irrelevant results."""
     doc = nlp(text)
     best_award = extract_award_name_after_best(doc)
     award_name = extract_award_name_before_award(doc)
     extracted_award = best_award or award_name
+
     if extracted_award:
-        # Normalize award name for comparison
         award_text = extracted_award.strip().lower()
-        award_show_names_lower = [name.lower() for name in award_show_names]
-        if award_text not in award_show_names_lower:
-            return extracted_award
-    return None
+        award_words = award_text.split()
+        if (
+            len(award_words) < 3 or len(award_words) > 10 or
+            any(word in irrelevant_words for word in award_words) or
+            any(word in common_verbs for word in award_words) or
+            not re.search(r'\b(best|actor|actress|director|performance|picture|series|film|song|score)\b', award_text)  # Typical award pattern
+        ):
+            return None
+
+    return extracted_award
 
 def ignore_rt_and_mentions(text):
     doc = nlp(text)
@@ -145,21 +179,71 @@ def get_winners():
     win_output = win_output.dropna()
     return win_output
 
+# def process_win_output(win_output):
+#     award_data = defaultdict(lambda: {"nominees": [], "presenters": [], "winner": None})
+    
+#     # Iterate through each extracted winner entry to populate award data
+#     for _, row in win_output.items():  # Use items() for Series iteration
+#         if isinstance(row, dict):
+#             for award_name, winner in row.items():
+#                 # Set winner and handle duplicates or additional nominees if necessary
+#                 if not award_data[award_name]["winner"]:
+#                     award_data[award_name]["winner"] = winner
+#                 else:
+#                     # if winner not in award_data[award_name]["nominees"]:
+#                         # award_data[award_name]["nominees"].append(winner)
+#                     award_data[award_name]["nominees"].append(winner)
+    
+#     return award_data
+
+def deduplicate_entries(entries):
+    unique_entries = []
+    seen = set()
+
+    for entry in entries:
+        entry_lower = entry.lower()
+        
+        # Check against seen names using fuzzy matching
+        duplicate_found = False
+        for unique_entry in unique_entries:
+            if fuzz.token_set_ratio(entry_lower, unique_entry.lower()) > 90:  # Adjust threshold as needed
+                duplicate_found = True
+                break
+
+        # If no close match, add to unique entries
+        if not duplicate_found:
+            unique_entries.append(entry)
+            seen.add(entry_lower)
+
+    return unique_entries
+
+def clean_award_data(award_data):
+    cleaned_data = {}
+    for award_name, data in award_data.items():
+        # Deduplicate nominees, presenters, and winners
+        cleaned_data[award_name] = {
+            "nominees": deduplicate_entries(data.get("nominees", [])),
+            "presenters": deduplicate_entries(data.get("presenters", [])),
+            "winner": data.get("winner")
+        }
+    return cleaned_data
+
+# Modify the function call to apply this clean-up before saving
 def process_win_output(win_output):
     award_data = defaultdict(lambda: {"nominees": [], "presenters": [], "winner": None})
     
-    # Iterate through each extracted winner entry to populate award data
-    for _, row in win_output.items():  # Use items() for Series iteration
+    # Populate award data
+    for _, row in win_output.items():
         if isinstance(row, dict):
             for award_name, winner in row.items():
-                # Set winner and handle duplicates or additional nominees if necessary
                 if not award_data[award_name]["winner"]:
                     award_data[award_name]["winner"] = winner
                 else:
-                    if winner not in award_data[award_name]["nominees"]:
-                        award_data[award_name]["nominees"].append(winner)
+                    award_data[award_name]["nominees"].append(winner)
     
-    return award_data
+    # Clean and deduplicate data
+    return clean_award_data(award_data)
+
 
 def format_award_data(award_data):
     """Format the award data to match the final submission format."""
@@ -227,50 +311,43 @@ def consolidate_presenters(row):
 def process_presenter_data():
     cleaned_df = pd.read_csv('text_cleaned.csv')
     presenter_keywords = r'\b(presenter|presenting|presented|presents|present)\b'
-    presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)]
-    presenter_data = presenter_data.reset_index(drop=True)
-    
-    # Apply entity extraction and pair extraction functions
+
+    # Extract rows containing presenter-related keywords and match the pattern
+    presenter_data = cleaned_df[cleaned_df['text'].str.extract(f'({presenter_keywords})', flags=re.IGNORECASE).notnull().any(axis=1)].copy()
+    presenter_data['presenter_matches'] = presenter_data['text'].str.extract(f'({presenter_keywords})', flags=re.IGNORECASE)[0]
     presenter_data['Presenters'] = presenter_data['text'].apply(extract_person_entities)
     presenter_data['Presenter_Award_Pairs'] = presenter_data['text'].apply(extract_presenter_award_pairs)
     
-    # Keep only rows with non-empty Presenter_Award_Pairs
-    presenter_data = presenter_data[presenter_data['Presenter_Award_Pairs'].map(len) > 0]
-    
-    # Consolidate presenters per award
+    presenter_data = presenter_data[presenter_data['Presenter_Award_Pairs'].map(len) > 0].copy()
     presenter_data['Consolidated_Pairs'] = presenter_data.apply(consolidate_presenters, axis=1)
     
-    # Combine all presenter-award pairs
     final_output = defaultdict(set)
     for pairs in presenter_data['Consolidated_Pairs']:
         for award, presenters in pairs.items():
             final_output[award].update(presenters)
     
-    # Convert sets to lists
     final_output = {award: list(presenters) for award, presenters in final_output.items()}
     return final_output
 
 def get_hosts_list():
-    cleaned_data = pd.read_csv('./text_cleaned.csv')['text']
-    host_keywords = r'\b(hosts?|hosting)\b'
-    host_tweets = cleaned_data[cleaned_data.str.contains(host_keywords, case=False, na=False)]
-    host_tweets = host_tweets.dropna()
+    cleaned_data = pd.read_csv('text_cleaned.csv')['text']
+    host_keywords = r'(\b(hosts?|hosting)\b)'
+    host_tweets = cleaned_data[cleaned_data.str.extract(host_keywords, flags=re.IGNORECASE).notnull().any(axis=1)].dropna().copy()
 
     host_names = []
     for text in host_tweets:
-        doc = nlp(text)
-        for ent in doc.ents:
-            if ent.label_ == 'PERSON':
-                host_names.append(ent.text)
+        if isinstance(text, str):  # Ensure each entry is a string
+            doc = nlp(text)
+            for ent in doc.ents:
+                if ent.label_ == 'PERSON':
+                    host_names.append(ent.text)
 
-    # Count occurrences
     host_counts = Counter(host_names)
-    # Get the most common hosts
-    most_common_hosts = host_counts.most_common(2)  # Assuming there are up to 2 hosts
+    most_common_hosts = host_counts.most_common(2)
 
     hosts = [host for host, count in most_common_hosts]
-
     return hosts
+
 
 def pre_ceremony():
     '''This function loads/fetches/processes any data your program
@@ -327,6 +404,9 @@ def pre_ceremony():
 def get_hosts(year):
     '''Hosts is a list of one or more strings. Do NOT change the name
     of this function or what it returns.'''
+
+    print("Getting hosts")
+
     # Read hosts from 'hosts.json'
     with open('hosts.json', 'r') as f:
         hosts = json.load(f)
@@ -335,6 +415,9 @@ def get_hosts(year):
 def get_awards(year):
     '''Awards is a list of strings. Do NOT change the name
     of this function or what it returns.'''
+
+    print("Getting awards")
+
     with open('awards.json', 'r') as f:
         awards = json.load(f)
     return awards
@@ -343,6 +426,9 @@ def get_nominees(year):
     '''Nominees is a dictionary with the hard coded award
     names as keys, and each entry a list of strings. Do NOT change
     the name of this function or what it returns.'''
+
+    print("Getting nominees")
+
     # Read the winners from 'winners.json'
     with open('winners.json', 'r') as f:
         formatted_winner_data = json.load(f)
@@ -400,6 +486,9 @@ def get_winner(year):
     '''Winners is a dictionary with the hard coded award
     names as keys, and each entry containing a single string.
     Do NOT change the name of this function or what it returns.'''
+
+    print("Getting winners")
+
     # Read the winners from 'winners.json'
     with open('winners.json', 'r') as f:
         formatted_winner_data = json.load(f)
@@ -457,6 +546,9 @@ def get_presenters(year):
     '''Presenters is a dictionary with the hard coded award
     names as keys, and each entry a list of strings. Do NOT change the
     name of this function or what it returns.'''
+
+    print("Getting presenters")
+
     # Read the presenters from 'presenters.json'
     with open('presenters.json', 'r') as f:
         presenter_output = json.load(f)
@@ -522,11 +614,12 @@ def main():
     presenters = get_presenters(year)
 
     # Print or do something with the results
-    print("Hosts:", hosts)
-    print("Awards:", awards)
-    print("Nominees:", nominees)
-    print("Winners:", winners)
-    print("Presenters:", presenters)
+    print("Results obtained, print if necessary")
+    # print("Hosts:", hosts)
+    # print("Awards:", awards)
+    # print("Nominees:", nominees)
+    # print("Winners:", winners)
+    # print("Presenters:", presenters)
     return
 
 if __name__ == '__main__':

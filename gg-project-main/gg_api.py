@@ -9,9 +9,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rapidfuzz import fuzz, process
 import csv
+import wikipediaapi
 
 # Initialize spaCy model globally
 nlp = spacy.load('en_core_web_sm')
+
+wiki = wikipediaapi.Wikipedia('student_homework')
 
 # List of award show names to exclude
 award_show_names = [
@@ -329,25 +332,41 @@ def process_presenter_data():
     final_output = {award: list(presenters) for award, presenters in final_output.items()}
     return final_output
 
+def lookup_wikipedia(name):
+    page = wiki.page(name)
+    if page.exists():
+        return re.search("born", page.summary, re.IGNORECASE) is not None
+    return False
+
+def extract_person_names(text):
+    doc = nlp(text)
+    return [ent.text for ent in doc.ents if ent.label_ == 'PERSON']
+
 def get_hosts_list():
-    cleaned_data = pd.read_csv('text_cleaned.csv')['text']
-    host_keywords = r'(\b(hosts?|hosting)\b)'
-    host_tweets = cleaned_data[cleaned_data.str.extract(host_keywords, flags=re.IGNORECASE).notnull().any(axis=1)].dropna().copy()
-
-    host_names = []
-    for text in host_tweets:
-        if isinstance(text, str):  # Ensure each entry is a string
-            doc = nlp(text)
-            for ent in doc.ents:
-                if ent.label_ == 'PERSON':
-                    host_names.append(ent.text)
-
-    host_counts = Counter(host_names)
-    most_common_hosts = host_counts.most_common(2)
-
-    hosts = [host for host, count in most_common_hosts]
+    cleaned_data = pd.read_csv('./text_cleaned.csv')['text']
+    host_keywords = r'\b(host|hosts|hosting)\b'
+    
+    # Extract host data matching the keywords without triggering regex warnings
+    host_data = cleaned_data[cleaned_data.str.extract(f'({host_keywords})', flags=re.IGNORECASE).notnull().any(axis=1)].copy()
+    
+    # Process first 10% of the data to capture names mentioned early in the tweets
+    early_host_data = host_data[:int(0.1 * len(host_data))].apply(extract_person_names)
+    
+    # Flatten list of names and count occurrences
+    all_names = [name for names_list in early_host_data for name in names_list]
+    name_counts = Counter(all_names)
+    
+    # Determine likely hosts by verifying their Wikipedia pages
+    hosts = []
+    potential = name_counts.most_common()
+    i = 0
+    while len(hosts) < 2 and i < len(potential):
+        current_name = potential[i][0]
+        if lookup_wikipedia(current_name):
+            hosts.append(current_name)
+        i += 1
+    
     return hosts
-
 
 def pre_ceremony():
     '''This function loads/fetches/processes any data your program

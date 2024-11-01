@@ -130,7 +130,7 @@ def find_award_winner(text):
             nominee = extract_entities_as_nominee(doc)
 
         # Extract the award category
-        award_category = extract_award_names(filtered_text)
+        award_category = extract_award_names(doc)
         
         if award_category != None and nominee != None:
             return {award_category: nominee}

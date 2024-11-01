@@ -626,19 +626,37 @@ def main():
     what it returns.'''
     # For demonstration purposes, we can call the functions and print the results
     year = 2013
-    hosts = get_hosts(year)
+    # hosts = get_hosts(year)
+    hosts = [host.lower() for host in get_hosts(year)]
     awards = get_awards(year)
     nominees = get_nominees(year)
     winners = get_winner(year)
     presenters = get_presenters(year)
 
-    # Print or do something with the results
-    print("Results obtained, print if necessary")
-    # print("Hosts:", hosts)
-    # print("Awards:", awards)
-    # print("Nominees:", nominees)
-    # print("Winners:", winners)
-    # print("Presenters:", presenters)
+    print("Results obtained")
+
+    # Assemble the award data, normalizing and verifying content
+    award_data = {}
+    for award in awards:
+        award_lower = award.lower()  # Normalize each award name
+        award_data[award_lower] = {
+            "nominees": [nominee.lower() for nominee in nominees.get(award, []) if nominee],
+            "presenters": [presenter.lower() for presenter in presenters.get(award, []) if presenter],
+            "winner": winners.get(award, "").lower() if winners.get(award) else None
+        }
+
+    # Build final output dictionary
+    final_output = {
+        "hosts": hosts,
+        "award_data": award_data
+    }
+
+    # Save final consolidated JSON output
+    with open('final_output.json', 'w') as f:
+        json.dump(final_output, f, indent=2)
+
+    print("Final output saved to final_output.json")
+
     return
 
 if __name__ == '__main__':

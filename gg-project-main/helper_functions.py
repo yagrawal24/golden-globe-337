@@ -47,18 +47,28 @@ def extract_full_subject_as_nominee(doc):
     return None
 
 def extract_award_name_after_best(doc):
+    # NEED TO FIND WAY TO REMOVE NAMES, MOVIES FROM AWARD NAMES
+    # EITHER FOUND WITH DOC.ENTS OR AFTER "-" IN DOC.ENTS
+    
     award_phrases = []
-    entities = [i.text.lower() for i in doc.ents]
+    punct_count = 0
+    
     for i, token in enumerate(doc):
         if token.text.lower() == 'best':
             award_tokens = [token]
             for j in range(i + 1, len(doc)):
                 next_token = doc[j]
+                if next_token.dep_ == 'punct':
+                    punct_count += 1
+                if punct_count >= 2:
+                    break
                 if next_token.text in ('.', ',', ':', ';', '!', '?', 'RT', '@', '#'):# or next_token.dep_ == 'punct':
                     break
                 if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
                     break
-                if next_token.text.lower() in ['for','win', 'won', 'or'] or [ent.find(next_token.text.lower()) for ent in entities]:
+                if next_token.text.lower() in ['for','win', 'won', 'by', 'goes']:# or [ent.find(next_token.text.lower()) for ent in entities]:
+                    break
+                if j+1 < len(doc) and next_token.dep_ == 'punct' and (doc[j+1].dep_ == 'compound' or doc[j+1].dep_ == 'punct'):
                     break
                 award_tokens.append(next_token)
             award_phrase = ' '.join([t.text for t in award_tokens]).strip()

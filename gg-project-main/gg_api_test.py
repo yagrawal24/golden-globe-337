@@ -146,11 +146,41 @@ def main():
     run when grading. Do NOT change the name of this function or
     what it returns.'''
     year = 2013
+    award_names = [
+        "best screenplay - motion picture",
+        "best director - motion picture",
+        "best performance by an actress in a television series - comedy or musical",
+        "best foreign language film",
+        "best performance by an actor in a supporting role in a motion picture",
+        "best performance by an actress in a supporting role in a series, mini-series or motion picture made for television",
+        "best motion picture - comedy or musical",
+        "best performance by an actress in a motion picture - comedy or musical",
+        "best mini-series or motion picture made for television",
+        "best original score - motion picture",
+        "best performance by an actress in a television series - drama",
+        "best performance by an actress in a motion picture - drama",
+        "cecil b. demille award",
+        "best performance by an actor in a motion picture - comedy or musical",
+        "best motion picture - drama",
+        "best performance by an actor in a supporting role in a series, mini-series or motion picture made for television",
+        "best performance by an actress in a supporting role in a motion picture",
+        "best television series - drama",
+        "best performance by an actor in a mini-series or motion picture made for television",
+        "best performance by an actress in a mini-series or motion picture made for television",
+        "best animated feature film",
+        "best original song - motion picture",
+        "best performance by an actor in a motion picture - drama",
+        "best television series - comedy or musical",
+        "best performance by an actor in a television series - drama",
+        "best performance by an actor in a television series - comedy or musical"
+    ]
 
     cleaned_data = clean_data()
+    # human_readable_version(award_names)
     # winners = get_winner(year)
     # presenters = get_presenters(year)
     # hosts = get_hosts(year)
+    print(get_nominees(year))
     return
 
 if __name__ == '__main__':

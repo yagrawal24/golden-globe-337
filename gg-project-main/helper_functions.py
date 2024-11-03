@@ -281,3 +281,43 @@ def convert_results_to_match_awards(awards, win_output):
         d2[award] = d1[best_match_key]
 
     return d2
+
+def find_nominees(text, nlp, nom_keywords, award_show_names):
+    filtered_text = ignore_rt_and_mentions(text, nlp)
+    doc = nlp(filtered_text)
+
+    if re.search(nom_keywords, filtered_text, re.IGNORECASE):
+        nominee = extract_full_subject_as_nominee(doc)
+        if not nominee:
+            nominee = extract_entities_as_nominee(doc)
+
+        award_category = extract_award_names(doc, nlp, award_show_names)
+        
+        if award_category != None and nominee != None:
+            if re.search(r"(win|#|@)", award_category, re.IGNORECASE) != None:
+                return None
+            if re.search(r"(win|#|@)", nominee, re.IGNORECASE) != None:
+                return None
+    
+            return {award_category: nominee}
+    
+    return None
+
+def help_get_nominees():
+    nlp = spacy.load('en_core_web_sm')
+    nominee_keywords = r"(\bnominee\b|\bnominate\b|\bnominated\b)"
+    award_show_names = [
+        'GoldenGlobes', 'Golden Globes', 'Oscars', 'Academy Awards', 'Emmys',
+        'Grammy Awards', 'BAFTA', 'SAG Awards', 'Tony Awards', 'Cannes Film Festival',
+        'MTV Video Music Awards', 'American Music Awards', 'Critics Choice Awards',
+        "People's Choice Awards", 'Billboard Music Awards', 'BET Awards',
+        'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
+        'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
+    ]
+
+    cleaned_data = pd.read_csv('text_cleaned.csv')['text']
+    nom_data = cleaned_data[cleaned_data.apply(lambda x: re.search(nominee_keywords, x) != None)]
+    nom_output = nom_data.apply(find_nominees, args=(nlp, nominee_keywords, award_show_names))
+    nom_output = nom_output.dropna()
+    # nom_output.to_csv('nominees.csv')
+    return nom_output

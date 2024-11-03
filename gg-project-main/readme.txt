@@ -1,5 +1,5 @@
 Files to run:
-- gg_api_test.py to get readable human output
+- "python3 gg_api_test.py" to get readable human output
 - helper_functions.py is imported into gg_api_test.py
 
 Human readable output
@@ -14,4 +14,3 @@ Packages to download:
     - matplotlib
     - scikit-learn
     - rapidfuzz
-

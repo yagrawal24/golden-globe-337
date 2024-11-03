@@ -7,7 +7,7 @@ This project uses a variety of natural language processing (NLP) and text-proces
 ## Our Project Overview
 
 Files to run:
-- gg_api_test.py to get readable human output
+- "python3 gg_api_test.py" to get readable human output
 - helper_functions.py is imported into gg_api_test.py
 
 Human readable output

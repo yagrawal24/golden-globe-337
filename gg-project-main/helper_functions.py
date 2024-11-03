@@ -224,7 +224,6 @@ def extract_presenter_award_pairs(text, nlp, award_show_names):
     else:
         return None
 
-# Consolidate presenters per award entry
 def consolidate_presenters(row):
     presenter_award_pairs = row['Presenter_Award_Pairs']
     consolidated = defaultdict(set)
@@ -365,3 +364,44 @@ def help_get_nominees():
     nom_output = nom_output.dropna()
     # nom_output.to_csv('nominees.csv')
     return nom_output
+
+# def get_extra_credit():
+
+
+def human_readable_version(award_names):
+    cleaned_data = clean_data()
+    hosts = help_get_hosts()
+    award_list = help_get_awards()
+    winners = help_get_winners()
+    presenters = help_get_presenters()
+    nominees = help_get_nominees()
+
+    ## extra_credit = get_extra_credit()
+
+    text_winners = convert_results_to_match_awards(award_names, winners)
+    text_presenters = convert_results_to_match_awards(award_names, presenters)
+    text_nominees = convert_results_to_match_awards(award_names, nominees)
+
+    output = ""
+    output += f"Host: {', '.join(hosts)}\n\n"
+
+    for award in award_names:
+        output += f"Award: {award}\n"
+        
+        # Add presenters, nominees, and winner for each award
+        presenters = text_presenters.get(award, [])
+        nominees = text_nominees.get(award, [])
+        winner = text_winners.get(award, "")
+
+        output += f"Presenters: {', '.join(presenters)}\n"
+        # output += f"Nominees: {', '.join(nominees)}\n"
+        output += f"Nominees: {nominees}\n\n" # RIGHT NOW FOR BAD NOMINEES, CHANGE TO LIST VERSION WHEN NOMINEES IS A LIST
+        output += f"Winner: {winner}\n\n"
+    
+    # Add the list of awards at the bottom
+    output += "List of Predicted Awards:\n" + "\n".join(award_list)
+
+    # Write the output to a text file
+    with open("human_readable_output.txt", "w") as file:
+        file.write(output)
+

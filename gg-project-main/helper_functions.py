@@ -341,6 +341,9 @@ def convert_results_to_match_awards(awards, win_output, n=1):
         # Retrieve the corresponding top n keys from d1 and add to the list in d2
         top_n_matches = [list(d1.keys())[i] for i in top_n_indices]
         d2[award] = [d1[match] for match in top_n_matches]  # Store as (award, value)
+        
+        if n == 1:
+            d2[award] = d2[award][0]
 
     return d2
 

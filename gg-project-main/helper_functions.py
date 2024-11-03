@@ -51,16 +51,17 @@ def extract_full_subject_as_nominee(doc):
 
 def extract_award_name_after_best(doc):
     award_phrases = []
+    entities = [i.text.lower() for i in doc.ents]
     for i, token in enumerate(doc):
         if token.text.lower() == 'best':
             award_tokens = [token]
             for j in range(i + 1, len(doc)):
                 next_token = doc[j]
-                if next_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or next_token.dep_ == 'punct':
+                if next_token.text in ('.', ',', ':', ';', '!', '?', 'RT', '@', '#'):# or next_token.dep_ == 'punct':
                     break
                 if next_token.pos_ in ('VERB', 'AUX') and next_token.dep_ in ('ROOT', 'conj'):
                     break
-                if next_token.text.lower() == 'for':
+                if next_token.text.lower() in ['for','win', 'won', 'or'] or [ent.find(next_token.text.lower()) for ent in entities]:
                     break
                 award_tokens.append(next_token)
             award_phrase = ' '.join([t.text for t in award_tokens]).strip()
@@ -71,22 +72,41 @@ def extract_award_name_after_best(doc):
     return None
 
 def extract_award_name_before_award(doc):
-    award_phrases = []
-    for i, token in enumerate(doc):
-        if token.text.lower() == 'award':
-            award_tokens = []
-            for left_token in reversed(doc[:i]):
-                if left_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or left_token.dep_ == 'punct':
-                    break
-                if left_token.pos_ in ('VERB', 'AUX') and left_token.dep_ in ('ROOT', 'conj'):
-                    break
-                award_tokens.insert(0, left_token)
-            award_phrase = ' '.join([t.text for t in award_tokens]).strip()
-            if award_phrase:
-                award_phrases.append(award_phrase)
-    if award_phrases:
-        return max(award_phrases, key=len)
+    award_list = ['award', 'honor', 'prize', 'trophy']
+
+    award_name = ""
+    prev_type = ""
+    for i, token in enumerate(reversed(doc)):
+        if str(token) in award_list:
+            award_name += " " + str(token)
+            prev_type = "dobj"
+        elif prev_type == "dobj" and token.dep_ == "compound":
+            award_name += " " + str(token)
+        else:
+            break
+
+    if len(award_name) > 0:
+        a = award_name.split(" ")
+        a.reverse()
+        return ' '.join(a)
     return None
+# def extract_award_name_before_award(doc):
+#     award_phrases = []
+#     for i, token in enumerate(doc):
+#         if token.text.lower() == 'award':
+#             award_tokens = []
+#             for left_token in reversed(doc[:i]):
+#                 if left_token.text in ('.', ',', ':', ';', '!', '?', '-', 'RT', '@', '#') or left_token.dep_ == 'punct':
+#                     break
+#                 if left_token.pos_ in ('VERB', 'AUX') and left_token.dep_ in ('ROOT', 'conj'):
+#                     break
+#                 award_tokens.insert(0, left_token)
+#             award_phrase = ' '.join([t.text for t in award_tokens]).strip()
+#             if award_phrase:
+#                 award_phrases.append(award_phrase)
+#     if award_phrases:
+#         return max(award_phrases, key=len)
+#     return None
 
 def extract_award_names(text, nlp, award_show_names):
     doc = nlp(text)
@@ -127,6 +147,8 @@ def find_award_winner(text, nlp, win_keywords, award_show_names):
     return None
 
 def help_get_awards():
+    from itertools import islice
+    
     nlp = spacy.load('en_core_web_sm')
     award_keywords = r"(\bbest\b|\baward\b|\boutstanding\b|\bfavorite\b|\bfavourite\b|\btop\b|\bhonor\b|\bprize\b|\bchoice\b)"
     award_show_names = [
@@ -137,12 +159,34 @@ def help_get_awards():
         'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
         'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
     ]
-    
     cleaned_data = pd.read_csv('text_cleaned.csv')['text']
-    award_data = cleaned_data[cleaned_data.apply(lambda x: re.search(award_keywords, x) != None)]
-    award_data = award_data.apply(extract_award_names, args=(nlp, award_show_names))
-    award_data = award_data.dropna()
-    # award_data.to_csv('award_names.csv')
+    
+    account_rts = {}
+
+    for text in cleaned_data:
+        tweet = text.split(' ')
+        if tweet[0] == 'RT':
+            if tweet[1] in account_rts:
+                account_rts[tweet[1]] += 1
+            else:
+                account_rts.update({tweet[1]:1})
+
+    account_dicts = dict(sorted(account_rts.items(), key=lambda item: item[1], reverse=True))
+
+    top_accounts = list(islice(account_dicts, 20))
+    
+    retweet_pattern = r'RT\s' + '|'.join(top_accounts)
+    reputable_df = cleaned_data.apply(lambda text: text if re.search(retweet_pattern, text, re.IGNORECASE) else None)
+    reputable_df.dropna(inplace=True)
+    
+    award_data = reputable_df.apply(lambda x: x if re.search(award_keywords, x.lower()) != None else None)
+    award_data.dropna(inplace=True)
+    
+    award_data = award_data.apply(lambda x: extract_award_names(x, nlp, award_show_names))
+    award_data = award_data.dropna().apply(lambda x: x.lower()).unique()
+    
+    print(len(award_data))
+    
     return award_data
 
 def help_get_winners():

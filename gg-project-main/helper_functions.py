@@ -318,10 +318,11 @@ def help_get_hosts():
 
     return hosts
 
-def convert_results_to_match_awards(awards, win_output):
-    d2 = {award: None for award in awards}
+def convert_results_to_match_awards(awards, win_output, n=1):
+    d2 = {award: [] for award in awards}
     input_list = win_output
 
+    # Flatten the win_output into a dictionary
     d1 = {k: v for item in input_list for k, v in item.items()}
 
     all_keys = list(d2.keys()) + list(d1.keys())
@@ -329,12 +330,17 @@ def convert_results_to_match_awards(awards, win_output):
     award_vectors = vectorizer.transform(list(d2.keys())) 
     d1_vectors = vectorizer.transform(list(d1.keys()))
 
+    # Compute cosine similarity between all awards and win_output keys
     similarity_matrix = cosine_similarity(award_vectors, d1_vectors)
 
-    best_match_indices = np.argmax(similarity_matrix, axis=1)
+    # Get top n similar awards for each award in d2
     for idx, award in enumerate(d2.keys()):
-        best_match_key = list(d1.keys())[best_match_indices[idx]]
-        d2[award] = d1[best_match_key]
+        # Sort indices by similarity in descending order and take the top n
+        top_n_indices = np.argsort(similarity_matrix[idx])[::-1][:n]
+        
+        # Retrieve the corresponding top n keys from d1 and add to the list in d2
+        top_n_matches = [list(d1.keys())[i] for i in top_n_indices]
+        d2[award] = [d1[match] for match in top_n_matches]  # Store as (award, value)
 
     return d2
 
@@ -427,7 +433,7 @@ def human_readable_version(award_names):
 
     extra_credit = get_best_dressed_and_jokes()
 
-    text_winners = convert_results_to_match_awards(award_names, winners)
+    text_winners = convert_results_to_match_awards(award_names, winners, 5)
     text_presenters = convert_results_to_match_awards(award_names, presenters)
     text_nominees = convert_results_to_match_awards(award_names, nominees)
 

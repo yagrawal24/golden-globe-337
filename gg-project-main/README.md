@@ -4,6 +4,25 @@ CS337 Project 1 -- Tweet Mining & The Golden Globes
 
 This project uses a variety of natural language processing (NLP) and text-processing libraries for handling various text-related tasks. The following libraries are included in the project:
 
+## Our Project Overview
+
+Files to run:
+- gg_api_test.py to get readable human output
+- helper_functions.py is imported into gg_api_test.py
+
+Human readable output
+- Includeds best hosts, winners, presenters, nominees, best dressed, best joke
+
+Packages to download:
+- pip install:
+    - langdetect # Install langdetect via pip
+    - pandas
+    - emoji
+    - cairosvg
+    - matplotlib
+    - scikit-learn
+    - rapidfuzz
+
 ## Libraries Overview
 
 1. **SpaCy**: A powerful NLP library for advanced text processing such as tokenization, lemmatization, named entity recognition, etc.

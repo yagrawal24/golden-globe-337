@@ -185,8 +185,8 @@ def main():
     # presenters = get_presenters(year)
     # hosts = get_hosts(year)
     # print(get_nominees(year))
-    print("Best Dressed:", best_dressed)
-    print("Best Joke:", best_joke)
+    # print("Best Dressed:", best_dressed)
+    # print("Best Joke:", best_joke)
     return
 
 if __name__ == '__main__':

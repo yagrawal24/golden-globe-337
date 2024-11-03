@@ -1,32 +1,32 @@
 Host: Amy Poehler, Tina Fey
 
 Award: best screenplay - motion picture
-Presenters: GoldenGlobes, Quentin Tarantino, Rob
-Nominees: Les Mis
+Presenters: Rob, Quentin Tarantino
+Nominees: GoldenGlobes
 
 Winner: Quentin Tarantino
 
 Award: best director - motion picture
-Presenters: GoldenGlobes, Drama, GeorgeClooney, JuliaRoberts
-Nominees: Les Mis
+Presenters: JuliaRoberts, GoldenGlobes
+Nominees: GoldenGlobes
 
-Winner: Ben Affleck
+Winner: ARGO
 
 Award: best performance by an actress in a television series - comedy or musical
-Presenters: GoldenGlobes, Will Ferrell, Kristen Wiig
+Presenters: GoldenGlobes, Kristen Wiig, Will Ferrell
 Nominees: Jennifer Lawrence
 
-Winner: Lena Dunham
+Winner: Claire Danes
 
 Award: best foreign language film
-Presenters: Sylvester Stallone, GoldenGlobes
-Nominees: Amour
+Presenters: Sylvester Stallone
+Nominees: Cajas
 
 Winner: Amour
 
 Award: best performance by an actor in a supporting role in a motion picture
-Presenters: GoldenGlobes, Bradley Cooper, Kate Hudson
-Nominees: Best Supporting Actor
+Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
+Nominees: Black Coffins
 
 Winner: Anne Hathaway
 
@@ -37,67 +37,67 @@ Nominees: GoldenGlobes
 Winner: Game Change
 
 Award: best motion picture - comedy or musical
-Presenters: Dustin Hoffman, GoldenGlobes
+Presenters: Dustin Hoffman
 Nominees: Les Miserables
 
 Winner: Les Miserables
 
 Award: best performance by an actress in a motion picture - comedy or musical
-Presenters: Dustin Hoffman, GoldenGlobes
+Presenters: Dustin Hoffman
 Nominees: Les Miserables
 
-Winner: Jennifer Lawrence
+Winner: GoldenGlobes Jennifer Lawrence
 
 Award: best mini-series or motion picture made for television
-Presenters: GoldenGlobes, Drama, GeorgeClooney, JuliaRoberts
-Nominees: BigAng
+Presenters: JuliaRoberts, GoldenGlobes
+Nominees: GoldenGlobes
 
 Winner: Game Change
 
 Award: best original score - motion picture
-Presenters: GoldenGlobes, GettheLook
-Nominees: GoldenGlobes
+Presenters: Mychael Danna, Jason Statham, GoldenGlobes
+Nominees: ActofValor
 
 Winner: Skyfall
 
 Award: best performance by an actress in a television series - drama
-Presenters: GoldenGlobes, Lea Michele, Nathan Fillion
+Presenters: Lea Michele
 Nominees: GoldenGlobes
 
 Winner: Claire Danes
 
 Award: best performance by an actress in a motion picture - drama
-Presenters: GoldenGlobes, George Clooney, Jessica Chastain
+Presenters: George Clooney, Jessica Chastain, GoldenGlobes
 Nominees: Clinton
 
 Winner: Hugh Jackman
 
 Award: cecil b. demille award
-Presenters: Kanye West
+Presenters: Sylvester, Arnold
 Nominees: Ben Affleck
 
 Winner: Jennifer Lawrence
 
 Award: best performance by an actor in a motion picture - comedy or musical
-Presenters: Dustin Hoffman, GoldenGlobes
+Presenters: Dustin Hoffman
 Nominees: Les Miserables
 
 Winner: Hugh Jackman
 
 Award: best motion picture - drama
-Presenters: GoldenGlobes, Drama, GeorgeClooney, JuliaRoberts
+Presenters: JuliaRoberts, GoldenGlobes
 Nominees: Clinton
 
 Winner: Argo
 
 Award: best performance by an actor in a supporting role in a series, mini-series or motion picture made for television
-Presenters: GoldenGlobes, Bradley Cooper, Kate Hudson
-Nominees: BigAng
+Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
+Nominees: GoldenGlobes
 
 Winner: Game Change
 
 Award: best performance by an actress in a supporting role in a motion picture
-Presenters: GoldenGlobes, George Clooney, Jessica Chastain
+Presenters: George Clooney, Jessica Chastain, GoldenGlobes
 Nominees: Black Coffins
 
 Winner: Anne Hathaway
@@ -109,19 +109,19 @@ Nominees: Globe
 Winner: Girls
 
 Award: best performance by an actor in a mini-series or motion picture made for television
-Presenters: GoldenGlobes, Bradley Cooper, Kate Hudson
-Nominees: BigAng
+Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
+Nominees: GoldenGlobes
 
 Winner: Game Change
 
 Award: best performance by an actress in a mini-series or motion picture made for television
-Presenters: GoldenGlobes, George Clooney, Jessica Chastain
-Nominees: BigAng
+Presenters: George Clooney, Jessica Chastain, GoldenGlobes
+Nominees: GoldenGlobes
 
 Winner: Game Change
 
 Award: best animated feature film
-Presenters: Cohen, GoldenGlobes
+Presenters: GoldenGlobes, Cohen
 Nominees: AskGlobes
 
 Winner: Brave
@@ -133,35 +133,37 @@ Nominees: ActofValor
 Winner: Skyfall
 
 Award: best performance by an actor in a motion picture - drama
-Presenters: GoldenGlobes, Bradley Cooper, Kate Hudson
+Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
 Nominees: Clinton
 
 Winner: Hugh Jackman
 
 Award: best television series - comedy or musical
-Presenters: Jimmy Fallon, Jay Leno
+Presenters: Jay Leno, Jimmy Fallon
 Nominees: Jennifer Lawrence
 
 Winner: Girls
 
 Award: best performance by an actor in a television series - drama
-Presenters: Jennifer Lawrence, Bradley Cooper, GoldenGlobes
-Nominees: Globe
+Presenters: Jennifer Lawrence, GoldenGlobes, Bradley Cooper
+Nominees: GoldenGlobes
 
 Winner: Yay
 
 Award: best performance by an actor in a television series - comedy or musical
-Presenters: Jimmy Fallon, Jay Leno
+Presenters: Jay Leno, Jimmy Fallon
 Nominees: Jennifer Lawrence
 
-Winner: Don Cheadle
+Winner: Yay
 
-best_dressed: Kate Hudson
-best_joke: Taylor Swift
+Best Dressed: Kate Hudson
+Best Joke: Taylor Swift
+
+
 List of Predicted Awards:
 best dressed
 best
-best golden globes opening ever
+best golden globes
 best extreme closeups at the golden globes via @buzzfeedceleb
 best supporting actor in a motion picture
 best supporting actor in " django unchained
@@ -180,9 +182,10 @@ best supporting actress in tv
 best performance
 best miniseries or motion picture made
 best tv movie or miniseries
-best mini - series or motion picture
+best mini - series or motion picture made
 best actress in a tv movie or miniseries
 best actress in a miniseries or tv movie
+best miniseries or motion picture
 best actress in a miniseries
 best actress in a miniseries or motion picture made
 best actress in a mini - series
@@ -193,6 +196,7 @@ best television series actor
 best actor in a television series
 best actor in a tv series
 best actor in a tv drama
+best television series - drama
 best television series
 best drama
 best tv series
@@ -200,7 +204,7 @@ best show on tv
 best television series actor - drama
 best actor
 best actor in tv drama
-best television series - drama
+best tv series - drama
 best drama at the
 best original score
 best score at the
@@ -229,9 +233,9 @@ best song at the
 best supporting actress in a motion picture
 best supporting actor in a tv show
 best supporting actress in
-best supporting actress in a motion picture is awarded to anne hathaway
+best supporting actress in a motion picture is
 best supporting actor ( tv series
-best actress
+best dress - claire danes 2
 best screenplay - quentin tarantino
 best screenplay
 best screenplay - django unchained
@@ -243,12 +247,13 @@ best actor tv series - comedy or musical
 best foreign film - amour
 best foreign language film
 best actress in a television series - drama
+best actress
 best actress in a tv series
 best foreign film
 best foreign film ( and a televised meet and
 best actress in tv drama
 best animated feature film - brave
-best animated feature film is awarded to " brave
+best animated feature film is
 best part about sacha baron cohen
 best animated film
 best actress in a drama series
@@ -267,6 +272,7 @@ best actress in a tv comedy
 best & amp
 best picture ever
 best actress in a comedy series
+best screenplay - django
 best acceptance speech ever
 best moment of the night
 best director
@@ -290,21 +296,19 @@ best actor at
 best motion picture
 best motion picture - musical or comedy
 best comedy or musical
+best actress in a motion picture - drama
 best supporting actress in a motion picture anne hathaway
-best actress in a motion picture drama is jessica chastain
+best actress in a motion picture drama
+best actor in a motion picture - drama
 best actress in a drama at the
-best actor this generation has known
 best actor in a drama
-best actor in a motion picture drama -
+best actor in a motion picture drama
 best tv comedy at the golden globes
-best supporting actress in a motion picture is
-best motion picture - drama
 best motion picture drama
+best motion picture - drama
 best actor in a musical or comedy
 best motion picture drama at the
 best perfomance
-best animated feature film is
 best actor in motion picture
-best actress in a motion picture drama
 best and worst outfits at the 2013 golden globes
 best drama at the golden globes

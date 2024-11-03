@@ -380,49 +380,6 @@ def help_get_nominees():
 
 # def get_extra_credit():
 
-
-def human_readable_version(award_names):
-    cleaned_data = clean_data()
-    hosts = help_get_hosts()
-    award_list = help_get_awards()
-    winners = help_get_winners()
-    presenters = help_get_presenters()
-    nominees = help_get_nominees()
-
-    extra_credit = get_best_dressed_and_jokes()
-
-    text_winners = convert_results_to_match_awards(award_names, winners)
-    text_presenters = convert_results_to_match_awards(award_names, presenters)
-    text_nominees = convert_results_to_match_awards(award_names, nominees)
-
-    output = ""
-    output += f"Host: {', '.join(hosts)}\n\n"
-
-    for award in award_names:
-        output += f"Award: {award}\n"
-        
-        # Add presenters, nominees, and winner for each award
-        presenters = text_presenters.get(award, [])
-        nominees = text_nominees.get(award, [])
-        winner = text_winners.get(award, "")
-
-        output += f"Presenters: {', '.join(presenters)}\n"
-        # output += f"Nominees: {', '.join(nominees)}\n"
-        output += f"Nominees: {nominees}\n\n" # RIGHT NOW FOR BAD NOMINEES, CHANGE TO LIST VERSION WHEN NOMINEES IS A LIST
-        output += f"Winner: {winner}\n\n"
-    
-    # Bonus information found/bonus challenges
-    for k, v in extra_credit.items():
-        output += k + ": " + str(v) + "\n"
-
-    output += "\n"
-    # Add the list of awards at the bottom
-    output += "List of Predicted Awards:\n" + "\n".join(award_list)
-
-    # Write the output to a text file
-    with open("human_readable_output.txt", "w") as file:
-        file.write(output)
-
 def is_human_name(name):
     if re.search(r'[@#]', name) or name.lower() in {'goldenglobes', 'rt', 'tv', 'movie', 'film'}:
         return False
@@ -459,3 +416,43 @@ def get_best_dressed_and_jokes():
     best_joke = best_joke_counts.most_common(1)[0][0] if best_joke_counts else None
 
     return {"best_dressed": best_dressed, "best_joke": best_joke}
+
+def human_readable_version(award_names):
+    cleaned_data = clean_data()
+    hosts = help_get_hosts()
+    award_list = help_get_awards()
+    winners = help_get_winners()
+    presenters = help_get_presenters()
+    nominees = help_get_nominees()
+
+    extra_credit = get_best_dressed_and_jokes()
+
+    text_winners = convert_results_to_match_awards(award_names, winners)
+    text_presenters = convert_results_to_match_awards(award_names, presenters)
+    text_nominees = convert_results_to_match_awards(award_names, nominees)
+
+    output = ""
+    output += f"Host: {', '.join(hosts)}\n\n"
+
+    for award in award_names:
+        output += f"Award: {award}\n"
+        
+        # Add presenters, nominees, and winner for each award
+        presenters = text_presenters.get(award, [])
+        nominees = text_nominees.get(award, [])
+        winner = text_winners.get(award, "")
+
+        output += f"Presenters: {', '.join(presenters)}\n"
+        # output += f"Nominees: {', '.join(nominees)}\n"
+        output += f"Nominees: {nominees}\n\n" # RIGHT NOW FOR BAD NOMINEES, CHANGE TO LIST VERSION WHEN NOMINEES IS A LIST
+        output += f"Winner: {winner}\n\n"
+
+    output += f"Best Dressed: {extra_credit['best_dressed']}\n"
+    output += f"Best Joke: {extra_credit['best_joke']}\n\n"
+
+    # Add the list of awards at the bottom
+    output += "List of Predicted Awards:\n" + "\n".join(award_list)
+
+    # Write the output to a text file
+    with open("human_readable_output.txt", "w") as file:
+        file.write(output)

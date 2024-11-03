@@ -389,7 +389,7 @@ def human_readable_version(award_names):
     presenters = help_get_presenters()
     nominees = help_get_nominees()
 
-    ## extra_credit = get_extra_credit()
+    extra_credit = get_best_dressed_and_jokes()
 
     text_winners = convert_results_to_match_awards(award_names, winners)
     text_presenters = convert_results_to_match_awards(award_names, presenters)
@@ -411,6 +411,11 @@ def human_readable_version(award_names):
         output += f"Nominees: {nominees}\n\n" # RIGHT NOW FOR BAD NOMINEES, CHANGE TO LIST VERSION WHEN NOMINEES IS A LIST
         output += f"Winner: {winner}\n\n"
     
+    # Bonus information found/bonus challenges
+    for k, v in extra_credit.items():
+        output += k + ": " + str(v) + "\n"
+
+    output += "\n"
     # Add the list of awards at the bottom
     output += "List of Predicted Awards:\n" + "\n".join(award_list)
 
@@ -443,8 +448,8 @@ def extract_best_joke_mentions(texts):
                     joke_mentions.append(ent.text)
     return joke_mentions
 
-def get_best_dressed_and_jokes(cleaned_data_file):
-    texts = pd.read_csv(cleaned_data_file)['text'].dropna().tolist()
+def get_best_dressed_and_jokes():
+    texts = pd.read_csv('text_cleaned.csv')['text'].dropna().tolist()
     best_dressed_mentions = extract_best_dressed_mentions(texts)
     best_dressed_counts = Counter(best_dressed_mentions)
     best_dressed = best_dressed_counts.most_common(1)[0][0] if best_dressed_counts else None

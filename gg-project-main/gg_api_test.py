@@ -175,12 +175,8 @@ def main():
         "best performance by an actor in a television series - comedy or musical"
     ]
 
-    additional_info = get_best_dressed_and_jokes('text_cleaned.csv')
-    best_dressed = additional_info["best_dressed"]
-    best_joke = additional_info["best_joke"]
-
-    cleaned_data = clean_data()
-    # human_readable_version(award_names)
+    # cleaned_data = clean_data()
+    human_readable_version(award_names)
     # winners = get_winner(year)
     # presenters = get_presenters(year)
     # hosts = get_hosts(year)

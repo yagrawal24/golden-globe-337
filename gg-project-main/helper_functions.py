@@ -185,7 +185,8 @@ def help_get_presenters():
     ]
 
     cleaned_df = pd.read_csv('text_cleaned.csv')
-    presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)].reset_index(drop=True)
+    # presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)].reset_index(drop=True)
+    presenter_data = cleaned_df[cleaned_df['text'].str.extract(f'({presenter_keywords})', flags=re.IGNORECASE).notnull().any(axis=1)].copy()
 
     presenter_data['Presenter_Award_Pairs'] = presenter_data['text'].apply(extract_presenter_award_pairs, args=[nlp, award_show_names])
     presenter_data = presenter_data.dropna(subset=['Presenter_Award_Pairs'])
@@ -215,9 +216,11 @@ def help_get_hosts():
         
     host_keywords = r'\b(host|hosts|hosting)\b'
 
-    host_data = cleaned_data[
-        cleaned_data.str.contains(host_keywords, case=False, na=False)
-    ]
+    # host_data = cleaned_data[
+    #     cleaned_data.str.contains(host_keywords, case=False, na=False)
+    # ]
+
+    host_data = cleaned_data[cleaned_data.str.extract(f'({host_keywords})', flags=re.IGNORECASE).notnull().any(axis=1)].copy()
 
     early_host_data = host_data[:int(0.1*len(host_data))].apply(extract_person_entities, args=[nlp])
     all_names = [name for names_list in early_host_data for name in names_list]

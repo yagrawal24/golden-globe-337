@@ -1,164 +1,80 @@
-Host: Amy Poehler, Tina Fey
-
 Award: best screenplay - motion picture
-Presenters: Rob, Quentin Tarantino
-Nominees: GoldenGlobes
-
-Winner: Quentin Tarantino
+Winner: ['Quentin Tarantino', 'Quentin Tarantino', 'Quentin Tarantino', 'Les Miserables', 'Les Miserables', 'Les Miserables', 'Quentin Tarantino', 'Quentin Tarantino', 'Goldenglobes Jennifer Lawrence', 'Argo']
 
 Award: best director - motion picture
-Presenters: JuliaRoberts, GoldenGlobes
-Nominees: GoldenGlobes
-
-Winner: ARGO
+Winner: ['ARGO', 'Ben Affleck', 'Ben Affleck', 'Ben Affleck', 'Les Miserables', 'Les Miserables', 'Les Miserables', 'Goldenglobes Jennifer Lawrence', 'Argo', 'Argo']
 
 Award: best performance by an actress in a television series - comedy or musical
-Presenters: GoldenGlobes, Kristen Wiig, Will Ferrell
-Nominees: Jennifer Lawrence
-
-Winner: Claire Danes
+Winner: ['HBO', 'Claire Danes', 'Lena Dunham', 'Lena Dunham', 'Best Actress', 'Jennifer Lawrence', 'Lawrence', 'Jennifer Lawrence', 'Jennifer Lawrence', 'Lena Dunham']
 
 Award: best foreign language film
-Presenters: Sylvester Stallone
-Nominees: Cajas
-
-Winner: Amour
+Winner: ['Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'argo', 'ARGO', 'Ben Affleck']
 
 Award: best performance by an actor in a supporting role in a motion picture
-Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
-Nominees: Black Coffins
-
-Winner: Anne Hathaway
+Winner: ['Anne Hathaway', 'Christoph Waltz', 'Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman', 'Daniel Day Lewis', 'Day Lewis', 'Anne Hathaway', 'Daniel Day Lewis', 'Day Lewis']
 
 Award: best performance by an actress in a supporting role in a series, mini-series or motion picture made for television
-Presenters: Kerry Washington, Dennis Quaid
-Nominees: GoldenGlobes
-
-Winner: Game Change
+Winner: ['Game Change', 'Anne Hathaway', 'HBO', 'Claire Danes', 'Julianne Moore', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Julianne Moore', 'GoldenGlobes Julianne Moore']
 
 Award: best motion picture - comedy or musical
-Presenters: Dustin Hoffman
-Nominees: Les Miserables
-
-Winner: Les Miserables
+Winner: ['GoldenGlobes Les Miserables', 'Les Miserables', 'Les Miserables', 'LesMis', 'LesMiserables', 'Jennifer Lawrence', 'LesMis', 'Les Miserables', 'Les Miserables', 'GoldenGlobes Jennifer Lawrence']
 
 Award: best performance by an actress in a motion picture - comedy or musical
-Presenters: Dustin Hoffman
-Nominees: Les Miserables
-
-Winner: GoldenGlobes Jennifer Lawrence
+Winner: ['GoldenGlobes Jennifer Lawrence', 'Jennifer Lawrence', 'GoldenGlobes Les Miserables', 'LesMis', 'LesMiserables', 'Les Miserables', 'Les Miserables', 'Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman']
 
 Award: best mini-series or motion picture made for television
-Presenters: JuliaRoberts, GoldenGlobes
-Nominees: GoldenGlobes
-
-Winner: Game Change
+Winner: ['Game Change', 'Kevin Costner', 'Girls', 'Game change', 'Game Change', 'Game Change', 'GoldenGlobes Game Change', 'Game Change', 'Kevin Costner', 'Game Change']
 
 Award: best original score - motion picture
-Presenters: Mychael Danna, Jason Statham, GoldenGlobes
-Nominees: ActofValor
-
-Winner: Skyfall
+Winner: ['Life', 'GoldenGlobes Life', 'Skyfall', 'Canada', 'Life', 'Mychael Danna', 'Skyfall', 'Skyfall', 'Skyfall', 'Les Miserables']
 
 Award: best performance by an actress in a television series - drama
-Presenters: Lea Michele
-Nominees: GoldenGlobes
-
-Winner: Claire Danes
+Winner: ['Claire Danes', 'Claire Danes', 'Claire Danes', 'HBO', 'Claire Danes', 'Girls', 'Claire Danes', 'Yay', 'Claire Danes', 'Claire Danes']
 
 Award: best performance by an actress in a motion picture - drama
-Presenters: George Clooney, Jessica Chastain, GoldenGlobes
-Nominees: Clinton
-
-Winner: Hugh Jackman
+Winner: ['Hugh Jackman', 'Jessica Chastain', 'Jessica Chastain', 'Jessica Chastain', 'Jennifer Lawrence', 'Jessica Chastain', 'Jessica Chastain', 'Jessica Chastain', 'Argo', 'Argo']
 
 Award: cecil b. demille award
-Presenters: Sylvester, Arnold
-Nominees: Ben Affleck
-
-Winner: Jennifer Lawrence
+Winner: ['Jennifer Lawrence', 'any film', 'Day Lewis', 'Ben Affleck', 'Day Lewis', 'Affleck', 'Girls', 'She', 'Hugh Jackman', 'Ben Affleck']
 
 Award: best performance by an actor in a motion picture - comedy or musical
-Presenters: Dustin Hoffman
-Nominees: Les Miserables
-
-Winner: Hugh Jackman
+Winner: ['Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman', 'LesMis', 'Les Miserables', 'LesMiserables', 'Les Miserables', 'GoldenGlobes Les Miserables', 'GoldenGlobes Jennifer Lawrence', 'Hugh Jackman']
 
 Award: best motion picture - drama
-Presenters: JuliaRoberts, GoldenGlobes
-Nominees: Clinton
-
-Winner: Argo
+Winner: ['Argo', 'Argo', 'Argo', 'Argo', 'Argo', 'The film', 'Argo', 'Daniel Day Lewis', 'Les Miserables', 'Les Miserables']
 
 Award: best performance by an actor in a supporting role in a series, mini-series or motion picture made for television
-Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
-Nominees: GoldenGlobes
-
-Winner: Game Change
+Winner: ['Game Change', 'Yay', 'McCoys', 'Anne Hathaway', 'Kevin Costner', 'GoldenGlobes Kevin Costner', 'HBO', 'Claire Danes', 'Kevin Costner', 'Julianne Moore']
 
 Award: best performance by an actress in a supporting role in a motion picture
-Presenters: George Clooney, Jessica Chastain, GoldenGlobes
-Nominees: Black Coffins
-
-Winner: Anne Hathaway
+Winner: ['Anne Hathaway', 'Anne Hathaway', 'Hugh Jackman', 'Jessica Chastain', 'Jessica Chastain', 'Jennifer Lawrence', 'Jessica Chastain', 'Christoph Waltz', 'Adele', 'Anne Hathaway']
 
 Award: best television series - drama
-Presenters: GoldenGlobes
-Nominees: Globe
-
-Winner: Girls
+Winner: ['Girls', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'HBO', 'Claire Danes', 'Yay', 'Homeland', 'Homeland', 'Homeland']
 
 Award: best performance by an actor in a mini-series or motion picture made for television
-Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
-Nominees: GoldenGlobes
-
-Winner: Game Change
+Winner: ['Game Change', 'Kevin Costner', 'Hugh Jackman', 'Yay', 'McCoys', 'Kevin Costner', 'GoldenGlobes Kevin Costner', 'Daniel Day Lewis', 'Day Lewis', 'Hugh Jackman']
 
 Award: best performance by an actress in a mini-series or motion picture made for television
-Presenters: George Clooney, Jessica Chastain, GoldenGlobes
-Nominees: GoldenGlobes
-
-Winner: Game Change
+Winner: ['Game Change', 'Hugh Jackman', 'Kevin Costner', 'Claire Danes', 'HBO', 'Julianne Moore', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Julianne Moore']
 
 Award: best animated feature film
-Presenters: GoldenGlobes, Cohen
-Nominees: AskGlobes
-
-Winner: Brave
+Winner: ['Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'The archery lady', 'GoldenGlobes']
 
 Award: best original song - motion picture
-Presenters: J. Lo
-Nominees: ActofValor
-
-Winner: Skyfall
+Winner: ['Skyfall', 'Skyfall', 'Skyfall', 'Skyfall', 'ADELE', 'Skyfall', 'Adele', 'Adele', 'ADELE', 'mom Adele']
 
 Award: best performance by an actor in a motion picture - drama
-Presenters: Kate Hudson, GoldenGlobes, Bradley Cooper
-Nominees: Clinton
-
-Winner: Hugh Jackman
+Winner: ['Hugh Jackman', 'Day Lewis', 'Daniel Day Lewis', 'Day Lewis', 'Daniel Day Lewis', 'Hugh Jackman', 'Day Lewis', 'Hugh Jackman', 'Daniel Day Lewis', 'Hugh Jackman']
 
 Award: best television series - comedy or musical
-Presenters: Jay Leno, Jimmy Fallon
-Nominees: Jennifer Lawrence
-
-Winner: Girls
+Winner: ['Girls', 'Girls', 'Les Mis', 'Les Mis', 'Lena Dunham', 'Best Actress', 'Lena Dunham', 'Lena Dunham', 'Don Cheadle', 'Don Cheadle']
 
 Award: best performance by an actor in a television series - drama
-Presenters: Jennifer Lawrence, GoldenGlobes, Bradley Cooper
-Nominees: GoldenGlobes
-
-Winner: Yay
+Winner: ['Yay', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Girls', 'HBO', 'Claire Danes', 'Claire Danes', 'Damian Lewis', 'Homeland']
 
 Award: best performance by an actor in a television series - comedy or musical
-Presenters: Jay Leno, Jimmy Fallon
-Nominees: Jennifer Lawrence
-
-Winner: Yay
-
-Best Dressed: Kate Hudson
-Best Joke: Taylor Swift
-
+Winner: ['Yay', 'Don Cheadle', 'Don Cheadle', 'crush Hugh Jackman', 'the guy', 'Hugh Jackman', 'Hugh Jackman', 'LesMis', 'Hugh Jackman', 'Hugh Jackman']
 
 List of Predicted Awards:
 best dressed

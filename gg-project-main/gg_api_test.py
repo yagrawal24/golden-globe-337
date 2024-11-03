@@ -4,7 +4,8 @@ from helper_functions import *
 def get_hosts(year):
     '''Hosts is a list of one or more strings. Do NOT change the name
     of this function or what it returns.'''
-    # Your code here
+    hosts = help_get_hosts()
+
     return hosts
 
 def get_awards(year):
@@ -115,7 +116,8 @@ def main():
 
     cleaned_data = clean_data()
     # winners = get_winner(year)
-    presenters = get_presenters(year)
+    # presenters = get_presenters(year)
+    # hosts = get_hosts(year)
     return
 
 if __name__ == '__main__':

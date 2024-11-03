@@ -7,6 +7,7 @@ import re
 import spacy
 from collections import Counter
 from collections import defaultdict
+import wikipediaapi
 
 import csv
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -150,39 +151,15 @@ def extract_person_entities(text, nlp):
             persons.append(ent.text)
     return persons
 
-def infer_award_names(text, nlp):
-    """Extract potential award phrases using common descriptors and categories."""
-    descriptors = ["Best", "Outstanding", "Top", "Achievement in", "Excellence in"]
-    categories = [
-        "Actor", "Actress", "Director", "Picture", "Screenplay", "Soundtrack",
-        "Album", "Song", "Artist", "Performance", "Music Video", "Television Series",
-        "Drama", "Comedy", "Animated", "Documentary", "Feature Film", "Reality Show",
-        "Supporting Actor", "Supporting Actress"
-    ]
-    doc = nlp(text)
-    for desc in descriptors:
-        for cat in categories:
-            pattern = rf"{desc}.*{cat}"
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                return match.group(0)  # Return the matching phrase
-    return None
-
-# Match awards and presenters in a sentence based on common patterns
-def extract_presenter_award_pairs(text, nlp, presenter_keywords):
+def extract_presenter_award_pairs(text, nlp, award_show_names):
     """Extract presenters associated with inferred awards in a sentence."""
-    doc = nlp(text)
     people = extract_person_entities(text, nlp)
-    award_name = infer_award_names(text, nlp)
-    award_presenters = defaultdict(set)
+    award_name = extract_award_names(text, nlp, award_show_names)
 
-    for sent in doc.sents:
-        if any(keyword in sent.text.lower() for keyword in presenter_keywords):
-            for person in people:
-                if person.lower() in sent.text.lower():
-                    award_presenters[award_name].add(person)
-    
-    return {award: list(presenters) for award, presenters in award_presenters.items() if presenters}
+    if award_name != None and people != []:
+        return {award_name: people}
+    else:
+        return None
 
 # Consolidate presenters per award entry
 def consolidate_presenters(row):
@@ -209,22 +186,59 @@ def help_get_presenters():
 
     cleaned_df = pd.read_csv('text_cleaned.csv')
     presenter_data = cleaned_df[cleaned_df['text'].str.contains(presenter_keywords, case=False, na=False)].reset_index(drop=True)
-    print(f"Filtered data to {len(presenter_data)} rows with potential presenter mentions.")
-    presenter_data['Presenters'] = presenter_data['text'].apply(extract_person_entities, args=[nlp])
-    presenter_data['Presenter_Award_Pairs'] = presenter_data['text'].apply(extract_presenter_award_pairs, args=[nlp, presenter_keywords])
-    
-    presenter_data = presenter_data[presenter_data['Presenter_Award_Pairs'].map(len) > 0]
-    print(f"Found {len(presenter_data)} rows with valid presenter-award pairs.")
 
-    # Consolidate presenters per award
+    presenter_data['Presenter_Award_Pairs'] = presenter_data['text'].apply(extract_presenter_award_pairs, args=[nlp, award_show_names])
+    presenter_data = presenter_data.dropna(subset=['Presenter_Award_Pairs'])
     presenter_data['Consolidated_Pairs'] = presenter_data.apply(consolidate_presenters, axis=1)
-
-    # Print consolidated output directly
-    for idx, row in presenter_data['Consolidated_Pairs'].items():
-        print(row)
 
     return presenter_data['Consolidated_Pairs']
 
+def help_get_hosts():
+    award_show_names = [
+        'GoldenGlobes', 'Golden Globes', 'Oscars', 'Academy Awards', 'Emmys',
+        'Grammy Awards', 'BAFTA', 'SAG Awards', 'Tony Awards', 'Cannes Film Festival',
+        'MTV Video Music Awards', 'American Music Awards', 'Critics Choice Awards',
+        "People's Choice Awards", 'Billboard Music Awards', 'BET Awards',
+        'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
+        'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
+    ]
+    wiki = wikipediaapi.Wikipedia('student_homework')
+    cleaned_data = pd.read_csv('text_cleaned.csv')['text']
+    nlp = spacy.load('en_core_web_sm')
+
+    def lookup_wikipedia(name):
+        page = wiki.page(name)
+        if page.exists():
+            return re.search("born", page.summary, re.IGNORECASE) != None 
+        else:
+            return False
+        
+    host_keywords = r'\b(host|hosts|hosting)\b'
+
+    host_data = cleaned_data[
+        cleaned_data.str.contains(host_keywords, case=False, na=False)
+    ]
+
+    early_host_data = host_data[:int(0.1*len(host_data))].apply(extract_person_entities, args=[nlp])
+    all_names = [name for names_list in early_host_data for name in names_list]
+    name_counts = Counter(all_names)
+
+    hosts = []
+    i = 0
+    potential = name_counts.most_common()
+
+    filtered_potential = [
+        (name, count) for name, count in potential 
+        if name.lower() not in [award.lower() for award in award_show_names] and lookup_wikipedia(name)
+    ]
+
+    while len(hosts) < 2 and len(hosts) < len(filtered_potential):
+        curr = filtered_potential[i][0]
+        if lookup_wikipedia(curr):
+            hosts.append(curr)
+        i += 1
+
+    return hosts
 
 def convert_results_to_match_awards(awards, win_output):
     d2 = {award: None for award in awards}

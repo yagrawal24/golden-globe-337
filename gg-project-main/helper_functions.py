@@ -13,6 +13,9 @@ import csv
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+nlp = spacy.load("en_core_web_sm")
+joke_phrases = ["best joke", "funniest joke", "best comedian", "funniest moment"]
+
 def clean_data():
     df = pd.read_json('gg2013.json')['text']
     def clean(text):
@@ -361,3 +364,39 @@ def human_readable_version(award_names):
     with open("human_readable_output.txt", "w") as file:
         file.write(output)
 
+def is_human_name(name):
+    if re.search(r'[@#]', name) or name.lower() in {'goldenglobes', 'rt', 'tv', 'movie', 'film'}:
+        return False
+    return bool(re.match(r"^[A-Z][a-z]+(?: [A-Z][a-z]+)*$", name))
+
+def extract_best_dressed_mentions(texts):
+    best_dressed_mentions = []
+    for text in texts:
+        if 'best dressed' in text.lower():
+            doc = nlp(text)
+            for ent in doc.ents:
+                if ent.label_ == 'PERSON' and is_human_name(ent.text):
+                    best_dressed_mentions.append(ent.text)
+    return best_dressed_mentions
+
+def extract_best_joke_mentions(texts):
+    joke_mentions = []
+    for text in texts:
+        if any(phrase in text.lower() for phrase in joke_phrases):
+            doc = nlp(text)
+            for ent in doc.ents:
+                if ent.label_ == 'PERSON' and is_human_name(ent.text):
+                    joke_mentions.append(ent.text)
+    return joke_mentions
+
+def get_best_dressed_and_jokes(cleaned_data_file):
+    texts = pd.read_csv(cleaned_data_file)['text'].dropna().tolist()
+    best_dressed_mentions = extract_best_dressed_mentions(texts)
+    best_dressed_counts = Counter(best_dressed_mentions)
+    best_dressed = best_dressed_counts.most_common(1)[0][0] if best_dressed_counts else None
+
+    best_joke_mentions = extract_best_joke_mentions(texts)
+    best_joke_counts = Counter(best_joke_mentions)
+    best_joke = best_joke_counts.most_common(1)[0][0] if best_joke_counts else None
+
+    return {"best_dressed": best_dressed, "best_joke": best_joke}

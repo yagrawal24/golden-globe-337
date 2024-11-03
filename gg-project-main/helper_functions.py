@@ -123,6 +123,25 @@ def find_award_winner(text, nlp, win_keywords, award_show_names):
     
     return None
 
+def help_get_awards():
+    nlp = spacy.load('en_core_web_sm')
+    award_keywords = r"(\bbest\b|\baward\b|\boutstanding\b|\bfavorite\b|\bfavourite\b|\btop\b|\bhonor\b|\bprize\b|\bchoice\b)"
+    award_show_names = [
+        'GoldenGlobes', 'Golden Globes', 'Oscars', 'Academy Awards', 'Emmys',
+        'Grammy Awards', 'BAFTA', 'SAG Awards', 'Tony Awards', 'Cannes Film Festival',
+        'MTV Video Music Awards', 'American Music Awards', 'Critics Choice Awards',
+        "People's Choice Awards", 'Billboard Music Awards', 'BET Awards',
+        'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
+        'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
+    ]
+    
+    cleaned_data = pd.read_csv('text_cleaned.csv')['text']
+    award_data = cleaned_data[cleaned_data.apply(lambda x: re.search(award_keywords, x) != None)]
+    award_data = award_data.apply(extract_award_names, args=(nlp, award_show_names))
+    award_data = award_data.dropna()
+    # award_data.to_csv('award_names.csv')
+    return award_data
+
 def help_get_winners():
     nlp = spacy.load('en_core_web_sm')
     win_keywords = r"(\bwins\b)"

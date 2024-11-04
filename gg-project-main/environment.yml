@@ -17,3 +17,4 @@ dependencies:
           - emoji
           - cairosvg
           - scikit-learn
+          - wikipediaapi

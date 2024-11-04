@@ -50,9 +50,9 @@ def get_nominees(year):
     ]
     nom_output = help_get_nominees()
     
-    # nominees = convert_results_to_match_awards(award_names, nom_output)
+    nominees = convert_results_to_match_awards(award_names, nom_output)
 
-    return nom_output
+    return nominees
 
 def get_winner(year):
     '''Winners is a dictionary with the hard coded award

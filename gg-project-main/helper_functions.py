@@ -434,30 +434,26 @@ def human_readable_version(award_names):
     presenters = help_get_presenters()
     nominees = help_get_nominees()
 
-    extra_credit = get_best_dressed_and_jokes()
+    ## extra_credit = get_extra_credit()
 
-    text_winners = convert_results_to_match_awards(award_names, winners, 5)
-    text_presenters = convert_results_to_match_awards(award_names, presenters)
-    text_nominees = convert_results_to_match_awards(award_names, nominees)
+    text_winners = convert_results_to_match_awards(award_names, winners, 10)
+    text_presenters = convert_results_to_match_awards(award_names, presenters, 10)
+    text_nominees = convert_results_to_match_awards(award_names, nominees, 10)
 
     output = ""
-    output += f"Host: {', '.join(hosts)}\n\n"
+    # output += f"Host: {', '.join(hosts)}\n\n"
 
     for award in award_names:
         output += f"Award: {award}\n"
         
-        # Add presenters, nominees, and winner for each award
+        # Add presenters, nominees, and winners for each award
         presenters = text_presenters.get(award, [])
         nominees = text_nominees.get(award, [])
         winner = text_winners.get(award, "")
 
-        output += f"Presenters: {', '.join(presenters)}\n"
-        # output += f"Nominees: {', '.join(nominees)}\n"
-        output += f"Nominees: {nominees}\n\n" # RIGHT NOW FOR BAD NOMINEES, CHANGE TO LIST VERSION WHEN NOMINEES IS A LIST
-        output += f"Winner: {winner}\n\n"
-
-    output += f"Best Dressed: {extra_credit['best_dressed']}\n"
-    output += f"Best Joke: {extra_credit['best_joke']}\n\n"
+        output += f"Presenters: {', '.join(set(list(itertools.chain(*presenters))))}\n"
+        output += f"Nominees: {', '.join(set(nominees))}\n"
+        output += f"Winner: {', '.join(set(winner))}\n\n"
 
     # Add the list of awards at the bottom
     output += "List of Predicted Awards:\n" + "\n".join(award_list)

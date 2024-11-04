@@ -1,80 +1,132 @@
 Award: best screenplay - motion picture
-Winner: ['Quentin Tarantino', 'Quentin Tarantino', 'Quentin Tarantino', 'Les Miserables', 'Les Miserables', 'Les Miserables', 'Quentin Tarantino', 'Quentin Tarantino', 'Goldenglobes Jennifer Lawrence', 'Argo']
+Presenters: Robert Pattinson, Jessica Chastain, JuliaRoberts, Bradley Cooper, GoldenGlobes, George Clooney, Clinton, Amanda Seyfried, Kate Hudson, Robert Pattinson's, Quentin Tarantino, Julia Roberts, Rob
+Nominees: Argo, GoldenGlobes, ActofValor, Clinton, Ben Affleck, Black Coffins, Les Miserables, Django Unchained
+Winner: Argo, Quentin Tarantino, Goldenglobes Jennifer Lawrence, Les Miserables
 
 Award: best director - motion picture
-Winner: ['ARGO', 'Ben Affleck', 'Ben Affleck', 'Ben Affleck', 'Les Miserables', 'Les Miserables', 'Les Miserables', 'Goldenglobes Jennifer Lawrence', 'Argo', 'Argo']
+Presenters: Jessica Chastain, Jennifer Garner, JuliaRoberts, Bradley Cooper, Halle Berry, GoldenGlobes, George Clooney, Clinton, Dustin Hoffman, Ben Affleck, Ben, Kate Hudson, RT @jcpenney, Julia Roberts
+Nominees: Ang Lee, Argo, GoldenGlobes, Clinton, Ben Affleck, Black Coffins, Django Unchained
+Winner: Argo, Ben Affleck, Goldenglobes Jennifer Lawrence, ARGO, Les Miserables
 
 Award: best performance by an actress in a television series - comedy or musical
-Winner: ['HBO', 'Claire Danes', 'Lena Dunham', 'Lena Dunham', 'Best Actress', 'Jennifer Lawrence', 'Lawrence', 'Jennifer Lawrence', 'Jennifer Lawrence', 'Lena Dunham']
+Presenters: Jimmy Fallon, Jessica Chastain, Maggie Smith, George W. Bush, Kristen Wiig, GoldenGlobes, George Clooney, Claire Danes, Dustin Hoffman, Lea Michele, Kerry Washington, Will Ferrell, Dennis Quaid, Jay Leno
+Nominees: Tommy Lee Jones, GoldenGlobes, Best Actress - Musical, Claire Danes Best Actress TV, Jennifer Lawrence, NONE, Smash, Les Miserables
+Winner: Best Actress, Claire Danes, Lawrence, HBO, Jennifer Lawrence, Lena Dunham
 
 Award: best foreign language film
-Winner: ['Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'Amour', 'argo', 'ARGO', 'Ben Affleck']
+Presenters: Schwarzenegger, Bill, GoldenGlobes, Arnold, Sylvester Stallone, Flash frozen Stallone, Sylvester
+Nominees: Catherine Zeta Jones, Argo, GoldenGlobes, AskGlobes, Best Animated Film, Brave, Best Animated Film " & amp, Jeremy Irons, Cajas, Django Unchained
+Winner: argo, Amour, ARGO, Ben Affleck
 
 Award: best performance by an actor in a supporting role in a motion picture
-Winner: ['Anne Hathaway', 'Christoph Waltz', 'Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman', 'Daniel Day Lewis', 'Day Lewis', 'Anne Hathaway', 'Daniel Day Lewis', 'Day Lewis']
+Presenters: Jessica Chastain, Bradley Cooper, JuliaRoberts, GoldenGlobes, George Clooney, Lindsay Lohan, Clinton, Kate Hudson, Kerry Washington, Jennifer Lawrence, Julia Roberts, Dennis Quaid, Christoph Waltz
+Nominees: GoldenGlobes, ActofValor, Clinton, ANDREW LINCOLN, Ben Affleck, Black Coffins, Tina Fey, Amour
+Winner: Hugh Jackman, Daniel Day Lewis, Day Lewis, Anne Hathaway, Christoph Waltz
 
 Award: best performance by an actress in a supporting role in a series, mini-series or motion picture made for television
-Winner: ['Game Change', 'Anne Hathaway', 'HBO', 'Claire Danes', 'Julianne Moore', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Julianne Moore', 'GoldenGlobes Julianne Moore']
+Presenters: Maggie Smith, Jessica Chastain, Jimmy Fallon, Bradley Cooper, JuliaRoberts, George Clooney, GoldenGlobes, Dustin Hoffman, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Dennis Quaid, Jay Leno
+Nominees: GoldenGlobes, Jodie Foster 's, ActofValor, Black Coffins, Claire Danes Best Actress TV, Best Actor TV Series, Globe, Les Miserables
+Winner: Claire Danes, GoldenGlobes Julianne Moore, HBO, Julianne Moore, Anne Hathaway, Game Change
 
 Award: best motion picture - comedy or musical
-Winner: ['GoldenGlobes Les Miserables', 'Les Miserables', 'Les Miserables', 'LesMis', 'LesMiserables', 'Jennifer Lawrence', 'LesMis', 'Les Miserables', 'Les Miserables', 'GoldenGlobes Jennifer Lawrence']
+Presenters: Jimmy Fallon, Jessica Chastain, JuliaRoberts, Bradley Cooper, Kristen Wiig, GoldenGlobes, George Clooney, Clinton, Dustin Hoffman, Kate Hudson, Will Ferrell, Julia Roberts, Jay Leno
+Nominees: GoldenGlobes, Best Actress - Musical, Clinton, Ben Affleck, Jennifer Lawrence, Smash, Les Miserables
+Winner: GoldenGlobes Les Miserables, LesMiserables, GoldenGlobes Jennifer Lawrence, Jennifer Lawrence, LesMis, Les Miserables
 
 Award: best performance by an actress in a motion picture - comedy or musical
-Winner: ['GoldenGlobes Jennifer Lawrence', 'Jennifer Lawrence', 'GoldenGlobes Les Miserables', 'LesMis', 'LesMiserables', 'Les Miserables', 'Les Miserables', 'Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman']
+Presenters: Jimmy Fallon, Jessica Chastain, JuliaRoberts, Bradley Cooper, Kristen Wiig, George Clooney, GoldenGlobes, Dustin Hoffman, Lea Michele, Kate Hudson, Kerry Washington, Will Ferrell, Dennis Quaid, Julia Roberts, Jay Leno
+Nominees: GoldenGlobes, Best Actress - Musical, Black Coffins, Jennifer Lawrence, NONE, Smash, Les Miserables
+Winner: Hugh Jackman, GoldenGlobes Les Miserables, LesMiserables, GoldenGlobes Jennifer Lawrence, Jennifer Lawrence, LesMis, Les Miserables
 
 Award: best mini-series or motion picture made for television
-Winner: ['Game Change', 'Kevin Costner', 'Girls', 'Game change', 'Game Change', 'Game Change', 'GoldenGlobes Game Change', 'Game Change', 'Kevin Costner', 'Game Change']
+Presenters: Jimmy Fallon, Jessica Chastain, JuliaRoberts, Bradley Cooper, GoldenGlobes, George Clooney, Kristen Wiig, Clinton, Dustin Hoffman, Kate Hudson, Will Ferrell, Julia Roberts, Jay Leno
+Nominees: Argo, GoldenGlobes, Jodie Foster 's, Clinton, Ben Affleck, Django Unchained, Globe, Les Miserables
+Winner: Game change, GoldenGlobes Game Change, Kevin Costner, Girls, Game Change
 
 Award: best original score - motion picture
-Winner: ['Life', 'GoldenGlobes Life', 'Skyfall', 'Canada', 'Life', 'Mychael Danna', 'Skyfall', 'Skyfall', 'Skyfall', 'Les Miserables']
+Presenters: Mychael Danna, Jessica Chastain, Jennifer Lopez, JuliaRoberts, Bradley Cooper, Jason Statham, GoldenGlobes, George Clooney, Clinton, J. Lo, Dustin Hoffman, Kate Hudson, Julia Roberts
+Nominees: Jon Bon Jovi, GoldenGlobes, Argo, ActofValor, Clinton, Ben Affleck, Adele, Django Unchained
+Winner: Mychael Danna, Canada, Life, Skyfall, GoldenGlobes Life, Les Miserables
 
 Award: best performance by an actress in a television series - drama
-Winner: ['Claire Danes', 'Claire Danes', 'Claire Danes', 'HBO', 'Claire Danes', 'Girls', 'Claire Danes', 'Yay', 'Claire Danes', 'Claire Danes']
+Presenters: Maggie Smith, Jessica Chastain, George W. Bush, Bradley Cooper, George Clooney, GoldenGlobes, Claire Danes, Kristen Wiig, Lea Michele, Kerry Washington, Jennifer Lawrence, Will Ferrell, Dennis Quaid, Julia Roberts
+Nominees: GoldenGlobes, Clinton, Ben Affleck, Claire Danes Best Actress TV, Newsroom, it, NONE, Globe
+Winner: Claire Danes, Yay, Girls, HBO
 
 Award: best performance by an actress in a motion picture - drama
-Winner: ['Hugh Jackman', 'Jessica Chastain', 'Jessica Chastain', 'Jessica Chastain', 'Jennifer Lawrence', 'Jessica Chastain', 'Jessica Chastain', 'Jessica Chastain', 'Argo', 'Argo']
+Presenters: Jessica Chastain, JuliaRoberts, Bradley Cooper, George Clooney, GoldenGlobes, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Dennis Quaid, Julia Roberts
+Nominees: GoldenGlobes, Clinton, Ben Affleck, Black Coffins, Claire Danes Best Actress TV, Newsroom, it, NONE
+Winner: Argo, Jessica Chastain, Hugh Jackman, Jennifer Lawrence
 
 Award: cecil b. demille award
-Winner: ['Jennifer Lawrence', 'any film', 'Day Lewis', 'Ben Affleck', 'Day Lewis', 'Affleck', 'Girls', 'She', 'Hugh Jackman', 'Ben Affleck']
+Presenters: Mychael Danna, Jennifer Lopez, Will Ferrel, Jason Statham, Kristen Wigg, GoldenGlobes, Arnold, Kristen Wiig, Clinton, Will Feral, Tina Fey, Amy Poehler, Jennifer Lawrence, Will Ferrell, Anne Hathaway, Quentin Tarantino, Rob, Sylvester
+Nominees: Oscar, Bill Clinton, GoldenGlobes, Best Animated Film, Ben Affleck, Jeremy Renner, Newsroom
+Winner: Affleck, Hugh Jackman, Ben Affleck, Day Lewis, any film, Jennifer Lawrence, She, Girls
 
 Award: best performance by an actor in a motion picture - comedy or musical
-Winner: ['Hugh Jackman', 'Hugh Jackman', 'Hugh Jackman', 'LesMis', 'Les Miserables', 'LesMiserables', 'Les Miserables', 'GoldenGlobes Les Miserables', 'GoldenGlobes Jennifer Lawrence', 'Hugh Jackman']
+Presenters: Jimmy Fallon, Jessica Chastain, Bradley Cooper, JuliaRoberts, Christoph Waltz, Kristen Wiig, GoldenGlobes, George Clooney, Dustin Hoffman, Kate Hudson, Jennifer Lawrence, Will Ferrell, Julia Roberts, Jay Leno
+Nominees: GoldenGlobes, Best Actress - Musical, ANDREW LINCOLN, Black Coffins, Tina Fey, Jennifer Lawrence, Smash, Les Miserables
+Winner: Hugh Jackman, GoldenGlobes Les Miserables, LesMiserables, GoldenGlobes Jennifer Lawrence, LesMis, Les Miserables
 
 Award: best motion picture - drama
-Winner: ['Argo', 'Argo', 'Argo', 'Argo', 'Argo', 'The film', 'Argo', 'Daniel Day Lewis', 'Les Miserables', 'Les Miserables']
+Presenters: Jessica Chastain, JuliaRoberts, Bradley Cooper, GoldenGlobes, George Clooney, Clinton, Dustin Hoffman, Kate Hudson, Jennifer Lawrence, Julia Roberts
+Nominees: Argo, GoldenGlobes, Clinton, Ben Affleck, Newsroom, it, Globe, Django Unchained
+Winner: Argo, Daniel Day Lewis, The film, Les Miserables
 
 Award: best performance by an actor in a supporting role in a series, mini-series or motion picture made for television
-Winner: ['Game Change', 'Yay', 'McCoys', 'Anne Hathaway', 'Kevin Costner', 'GoldenGlobes Kevin Costner', 'HBO', 'Claire Danes', 'Kevin Costner', 'Julianne Moore']
+Presenters: Maggie Smith, Jessica Chastain, Jimmy Fallon, Bradley Cooper, JuliaRoberts, GoldenGlobes, George Clooney, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Dennis Quaid, Christoph Waltz, Jay Leno
+Nominees: GoldenGlobes, Jodie Foster 's, ActofValor, ANDREW LINCOLN, Black Coffins, Best Actor TV Series, Globe, Les Miserables
+Winner: GoldenGlobes Kevin Costner, McCoys, Claire Danes, Yay, HBO, Kevin Costner, Anne Hathaway, Julianne Moore, Game Change
 
 Award: best performance by an actress in a supporting role in a motion picture
-Winner: ['Anne Hathaway', 'Anne Hathaway', 'Hugh Jackman', 'Jessica Chastain', 'Jessica Chastain', 'Jennifer Lawrence', 'Jessica Chastain', 'Christoph Waltz', 'Adele', 'Anne Hathaway']
+Presenters: Maggie Smith, Jessica Chastain, Bradley Cooper, JuliaRoberts, George Clooney, GoldenGlobes, Lindsay Lohan, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Dennis Quaid, Julia Roberts
+Nominees: GoldenGlobes, ActofValor, Clinton, Ben Affleck, Black Coffins, Amour, NONE
+Winner: Jessica Chastain, Hugh Jackman, Jennifer Lawrence, Anne Hathaway, Christoph Waltz, Adele
 
 Award: best television series - drama
-Winner: ['Girls', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'HBO', 'Claire Danes', 'Yay', 'Homeland', 'Homeland', 'Homeland']
+Presenters: Maggie Smith, Jimmy Fallon, Bradley Cooper, LDunham, Will Ferrel, Kristen Wigg, GoldenGlobes, face+burn, Lea Michele, Kerry Washington, Jennifer Lawrence, George W. Bush, Dennis Quaid, Julia Roberts, Jay Leno
+Nominees: GoldenGlobes, Clinton, Ben Affleck, Claire Danes Best Actress TV, Newsroom, it, Globe
+Winner: Homeland, Claire Danes, Yay, HBO, Girls
 
 Award: best performance by an actor in a mini-series or motion picture made for television
-Winner: ['Game Change', 'Kevin Costner', 'Hugh Jackman', 'Yay', 'McCoys', 'Kevin Costner', 'GoldenGlobes Kevin Costner', 'Daniel Day Lewis', 'Day Lewis', 'Hugh Jackman']
+Presenters: Jimmy Fallon, Jessica Chastain, Bradley Cooper, JuliaRoberts, GoldenGlobes, George Clooney, Dustin Hoffman, Jay Leno, Kate Hudson, Kerry Washington, Jennifer Lawrence, Dennis Quaid, Julia Roberts, Christoph Waltz
+Nominees: GoldenGlobes, Jodie Foster 's, ANDREW LINCOLN, Ben Affleck, Black Coffins, Tina Fey, Best Actor TV Series, Les Miserables
+Winner: GoldenGlobes Kevin Costner, Hugh Jackman, Daniel Day Lewis, McCoys, Day Lewis, Yay, Kevin Costner, Game Change
 
 Award: best performance by an actress in a mini-series or motion picture made for television
-Winner: ['Game Change', 'Hugh Jackman', 'Kevin Costner', 'Claire Danes', 'HBO', 'Julianne Moore', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Julianne Moore']
+Presenters: Maggie Smith, Jessica Chastain, JuliaRoberts, Bradley Cooper, George Clooney, GoldenGlobes, Kristen Wiig, Dustin Hoffman, Lea Michele, Kate Hudson, Kerry Washington, Will Ferrell, Dennis Quaid, Julia Roberts
+Nominees: GoldenGlobes, Jodie Foster 's, Best Actress - Musical, Black Coffins, Claire Danes Best Actress TV, Jennifer Lawrence, NONE, Les Miserables
+Winner: Hugh Jackman, Claire Danes, HBO, Kevin Costner, Julianne Moore, Game Change
 
 Award: best animated feature film
-Winner: ['Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'Brave', 'The archery lady', 'GoldenGlobes']
+Presenters: Tarantino, Schwarzenegger, Bill, GoldenGlobes, Sylvester Stallone, Cohen, Flash frozen Stallone, George W. Bush
+Nominees: Catherine Zeta Jones, GoldenGlobes, ParaNorman, AskGlobes, Best Animated Film, Brave, Best Animated Film " & amp, Jeremy Irons, Cajas, Django Unchained
+Winner: GoldenGlobes, Brave, The archery lady
 
 Award: best original song - motion picture
-Winner: ['Skyfall', 'Skyfall', 'Skyfall', 'Skyfall', 'ADELE', 'Skyfall', 'Adele', 'Adele', 'ADELE', 'mom Adele']
+Presenters: Mychael Danna, Jessica Chastain, JuliaRoberts, Bradley Cooper, Jason Statham, GoldenGlobes, George Clooney, Clinton, J. Lo, Dustin Hoffman, Kate Hudson, Julia Roberts
+Nominees: Jon Bon Jovi, GoldenGlobes, ActofValor, Clinton, Ben Affleck, Black Coffins, Safe &, Adele
+Winner: Skyfall, mom Adele, Adele, ADELE
 
 Award: best performance by an actor in a motion picture - drama
-Winner: ['Hugh Jackman', 'Day Lewis', 'Daniel Day Lewis', 'Day Lewis', 'Daniel Day Lewis', 'Hugh Jackman', 'Day Lewis', 'Hugh Jackman', 'Daniel Day Lewis', 'Hugh Jackman']
+Presenters: Jessica Chastain, Bradley Cooper, JuliaRoberts, GoldenGlobes, George Clooney, Lea Michele, Kate Hudson, Jennifer Lawrence, Julia Roberts, Christoph Waltz
+Nominees: GoldenGlobes, Clinton, Ben Affleck, ANDREW LINCOLN, Black Coffins, Tina Fey, Newsroom, it
+Winner: Day Lewis, Hugh Jackman, Daniel Day Lewis
 
 Award: best television series - comedy or musical
-Winner: ['Girls', 'Girls', 'Les Mis', 'Les Mis', 'Lena Dunham', 'Best Actress', 'Lena Dunham', 'Lena Dunham', 'Don Cheadle', 'Don Cheadle']
+Presenters: Jimmy Fallon, Maggie Smith, George W. Bush, LDunham, Will Ferrel, Kristen Wigg, Kristen Wiig, GoldenGlobes, Dustin Hoffman, Lea Michele, Kerry Washington, Will Ferrell, Dennis Quaid, face+burn, Jay Leno
+Nominees: Tommy Lee Jones, GoldenGlobes, Jodie Foster 's, Globe, Best Actress - Musical, Jennifer Lawrence, Smash, Les Miserables
+Winner: Best Actress, Les Mis, Don Cheadle, Lena Dunham, Girls
 
 Award: best performance by an actor in a television series - drama
-Winner: ['Yay', 'Claire Danes', 'Claire Danes', 'Claire Danes', 'Girls', 'HBO', 'Claire Danes', 'Claire Danes', 'Damian Lewis', 'Homeland']
+Presenters: Maggie Smith, Jessica Chastain, Bradley Cooper, GoldenGlobes, Claire Danes, George Clooney, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Julia Roberts, Dennis Quaid, Christoph Waltz
+Nominees: GoldenGlobes, ANDREW LINCOLN, Tina Fey, Claire Danes Best Actress TV, Newsroom, Best Actor TV Series, Globe, it
+Winner: Homeland, Claire Danes, Yay, HBO, Girls, Damian Lewis
 
 Award: best performance by an actor in a television series - comedy or musical
-Winner: ['Yay', 'Don Cheadle', 'Don Cheadle', 'crush Hugh Jackman', 'the guy', 'Hugh Jackman', 'Hugh Jackman', 'LesMis', 'Hugh Jackman', 'Hugh Jackman']
+Presenters: Jimmy Fallon, Jessica Chastain, Bradley Cooper, Kristen Wiig, GoldenGlobes, George Clooney, Dustin Hoffman, Lea Michele, Kate Hudson, Kerry Washington, Jennifer Lawrence, Will Ferrell, Dennis Quaid, Christoph Waltz, Jay Leno
+Nominees: GoldenGlobes, Best Actress - Musical, ANDREW LINCOLN, Tina Fey, Jennifer Lawrence, Best Actor TV Series, Smash, Les Miserables
+Winner: Hugh Jackman, Don Cheadle, crush Hugh Jackman, Yay, the guy, LesMis
 
 List of Predicted Awards:
 best dressed

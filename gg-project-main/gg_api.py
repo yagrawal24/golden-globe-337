@@ -14,7 +14,7 @@ def get_awards(year):
     # Your code here
     award_list = help_get_awards()
     
-    return award_list
+    return award_list[:40]
 
 def get_nominees(year):
     '''Nominees is a dictionary with the hard coded award

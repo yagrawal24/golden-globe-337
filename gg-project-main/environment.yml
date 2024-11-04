@@ -13,8 +13,7 @@ dependencies:
     - pip:
           - langdetect # Install langdetect via pip
           - pandas
+          - numpy
           - emoji
           - cairosvg
-          - matplotlib
           - scikit-learn
-          - rapidfuzz

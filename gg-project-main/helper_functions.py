@@ -8,6 +8,7 @@ import spacy
 from collections import Counter
 from collections import defaultdict
 import wikipediaapi
+import itertools
 
 import csv
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -15,6 +16,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 nlp = spacy.load("en_core_web_sm")
 joke_phrases = ["best joke", "funniest joke", "best comedian", "funniest moment"]
+wiki = wikipediaapi.Wikipedia('student_homework')
 
 def clean_data():
     df = pd.read_json('gg2013.json')['text']
@@ -50,9 +52,6 @@ def extract_full_subject_as_nominee(doc):
     return None
 
 def extract_award_name_after_best(doc):
-    # NEED TO FIND WAY TO REMOVE NAMES, MOVIES FROM AWARD NAMES
-    # EITHER FOUND WITH DOC.ENTS OR AFTER "-" IN DOC.ENTS
-    
     award_phrases = []
     punct_count = 0
     
@@ -156,6 +155,17 @@ def find_award_winner(text, nlp, win_keywords, award_show_names):
     
     return None
 
+def remove_substring_awards(award_list):
+    sorted_awards = sorted(award_list, key=len, reverse=True)
+    
+    filtered_awards = []
+    
+    for i, award in enumerate(sorted_awards):
+        if not any(award in other_award for other_award in filtered_awards):
+            filtered_awards.append(award)
+    
+    return filtered_awards
+
 def help_get_awards():
     from itertools import islice
     
@@ -183,7 +193,7 @@ def help_get_awards():
 
     account_dicts = dict(sorted(account_rts.items(), key=lambda item: item[1], reverse=True))
 
-    top_accounts = list(islice(account_dicts, 20))
+    top_accounts = list(islice(account_dicts, 10))
     
     retweet_pattern = r'RT\s' + '|'.join(top_accounts)
     reputable_df = cleaned_data.apply(lambda text: text if re.search(retweet_pattern, text, re.IGNORECASE) else None)
@@ -195,9 +205,9 @@ def help_get_awards():
     award_data = award_data.apply(lambda x: extract_award_names(x, nlp, award_show_names))
     award_data = award_data.dropna().apply(lambda x: x.lower()).unique()
     
-    print(len(award_data))
+    pd.DataFrame(award_data, columns=['award_name']).to_csv('awards.csv', index=False)
     
-    return award_data
+    return remove_substring_awards(award_data)
 
 def help_get_winners():
     nlp = spacy.load('en_core_web_sm')
@@ -215,7 +225,7 @@ def help_get_winners():
     win_data = cleaned_data[cleaned_data.apply(lambda x: re.search(win_keywords, x) != None)]
     win_output = win_data.apply(find_award_winner, args=(nlp, win_keywords, award_show_names))
     win_output = win_output.dropna()
-    # win_output.to_csv('winners_and_awards.csv')
+    # win_output.to_csv('winners.csv')
     return win_output
 
 def extract_person_entities(text, nlp):
@@ -278,7 +288,6 @@ def help_get_hosts():
         'Teen Choice Awards', 'Country Music Association Awards', 'Academy of Country Music Awards',
         'Golden Globe Awards', 'Emmy Awards', 'Grammy', 'Cannes', 'MTV Awards',
     ]
-    wiki = wikipediaapi.Wikipedia('student_homework')
     cleaned_data = pd.read_csv('text_cleaned.csv')['text']
     nlp = spacy.load('en_core_web_sm')
 
@@ -384,7 +393,7 @@ def help_get_nominees():
     nom_data = cleaned_data[cleaned_data.apply(lambda x: re.search(nominee_keywords, x) != None)]
     nom_output = nom_data.apply(find_nominees, args=(nlp, nominee_keywords, award_show_names))
     nom_output = nom_output.dropna()
-    # nom_output.to_csv('nominees.csv')
+    nom_output.to_csv('nominees.csv')
     return nom_output
 
 # def get_extra_credit():

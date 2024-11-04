@@ -14,7 +14,7 @@ def get_awards(year):
     # Your code here
     award_list = help_get_awards()
     
-    return award_list
+    return award_list[:40]
 
 def get_nominees(year):
     '''Nominees is a dictionary with the hard coded award
@@ -50,9 +50,9 @@ def get_nominees(year):
     ]
     nom_output = help_get_nominees()
     
-    nominees = convert_results_to_match_awards(award_names, nom_output)
+    # nominees = convert_results_to_match_awards(award_names, nom_output)
 
-    return nominees
+    return nom_output
 
 def get_winner(year):
     '''Winners is a dictionary with the hard coded award

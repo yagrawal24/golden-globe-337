@@ -14,7 +14,6 @@ dependencies:
           - langdetect # Install langdetect via pip
           - pandas
           - numpy
-          - emoji
           - cairosvg
           - scikit-learn
-          - wikipediaapi
+          - wikipedia-api

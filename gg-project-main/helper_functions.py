@@ -374,7 +374,7 @@ def help_get_nominees():
     nom_data = cleaned_data[cleaned_data.apply(lambda x: re.search(nominee_keywords, x) != None)]
     nom_output = nom_data.apply(find_nominees, args=(nlp, nominee_keywords, award_show_names))
     nom_output = nom_output.dropna()
-    nom_output.to_csv('nominees.csv')
+    # nom_output.to_csv('nominees.csv')
     return nom_output
 
 def is_human_name(name):
